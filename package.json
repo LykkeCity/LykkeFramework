@@ -5,6 +5,10 @@
   "keywords": "Lykke",
   "license": "MIT",
   "author": "daycoder",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LykkeCity/LykkeFramework.git"
+  },
   "devDependencies": {
     "compass-mixins": "0.12.10",
     "del": "2.2.0",
