@@ -32,9 +32,10 @@ crashlytics-build.properties
 node_modules/
 npm-debug.log
 
-public/
-
 # .npmignore should ignore tests and Git stuff
 test
 .gitignore
 .git
+
+public/fonts
+public/img

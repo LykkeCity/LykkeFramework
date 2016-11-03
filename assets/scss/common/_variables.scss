@@ -7,7 +7,9 @@ $light: #f8f7ef;
 $text: #333333;
 $dark: #272723;
 $gray: #909c9e;
+$gray-light: #b2b8bf;
 $border: #e1e1e1;
+$border-alt: #DFE1E5;
 
 $ff: "Proxima Nova", "Segoe UI",Roboto,"Droid Sans","Helvetica Neue",Arial,sans-serif;
 
@@ -19,3 +21,9 @@ $fw-regular:    400;
 $fw-light:      200;
 
 $all: all .3s ease;
+
+
+$screen-mobile: 543px;
+$screen-landscape: 767px;
+$screen-tablet: 991px;
+$screen-desktop: 1199px;

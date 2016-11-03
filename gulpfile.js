@@ -20,53 +20,51 @@ gulp.task('sass', function () {
 
 gulp.task('copy-js-vendors', function () {
   return gulp.src([
-    './node_modules/jquery/dist/jquery.min.js',
-    './node_modules/fullpage.js/vendors/scrolloverflow.min.js',
-    './node_modules/fullpage.js/jquery.fullPage.js',
-    './assets/vendor/bootstrap-custom.min.js'
+      './node_modules/jquery/dist/jquery.min.js',
+      './node_modules/fullpage.js/jquery.fullPage.js',
+      './assets/vendor/bootstrap-custom.min.js'
     ])
     .pipe(gulp.dest('./public/js/vendor'));
 });
 
 gulp.task('copy-css-vendors', function () {
   return gulp.src([
-    './node_modules/normalize.css/normalize.css',
-    './assets/vendor/bootstrap-custom.min.css'
-  ])
+      './assets/vendor/bootstrap-custom.min.css'
+    ])
     .pipe(gulp.dest('./public/css/vendor'));
 });
 
 gulp.task('copy-scripts', function () {
   return gulp.src([
-    './assets/js/**/*.js'
-  ])
+      './assets/js/**/*.js',
+    ])
     .pipe(gulp.dest('./public/js'));
 });
 
 gulp.task('copy-fonts', function () {
   return gulp.src([
-    './assets/fonts/**/*'
-  ])
+      './assets/fonts/**/*',
+    ])
     .pipe(gulp.dest('./public/fonts'));
 });
 
 gulp.task('copy-images', function() {
   return gulp.src([
-      './assets/img/**/*'
+      './assets/img/**/*',
     ])
     .pipe(gulp.dest('./public/img'));
 });
 
 gulp.task('copy-fonts-prod', function () {
   return gulp.src([
-    './public/fonts/**/*'
+      './public/fonts/**/*'
     ])
     .pipe(gulp.dest('./dist/fonts/', {}));
 });
 
 gulp.task('copy-css-prod', function () {
   return gulp.src([
-    './public/css/vendor/*'
+      './public/css/vendor/*'
     ])
     .pipe(gulp.dest('./dist/css/vendor/', {}));
 });
