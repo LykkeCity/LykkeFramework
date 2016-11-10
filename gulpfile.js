@@ -69,6 +69,14 @@ gulp.task('copy-css-prod', function () {
     .pipe(gulp.dest('./dist/css/vendor/', {}));
 });
 
+
+gulp.task('copy-favicons', function () {
+  return gulp.src([
+      './public/favicon/*'
+    ])
+    .pipe(gulp.dest('./dist/', {}));
+});
+
 gulp.task('usemin', [
   'copy-js-vendors',
   'copy-css-vendors',
@@ -76,9 +84,9 @@ gulp.task('usemin', [
 ], function () {
   return gulp.src('./public/index.html')
     .pipe(usemin({
-      css: [rev()],
+      css: [],
       // html: [ function () {return minifyHtml({ empty: true });} ],
-      js: [uglify(), rev()],
+      js: [uglify()],
       inlinejs: [uglify()]
     }))
     .pipe(gulp.dest('./dist/'));
@@ -148,6 +156,7 @@ gulp.task('prod', ['dev'], function () {
   gulp.start('usemin');
   gulp.start('copy-fonts-prod');
   gulp.start('copy-css-prod');
+  gulp.start('copy-favicons');
   gulp.start('imagemin');
 });
 

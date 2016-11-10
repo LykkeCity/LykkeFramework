@@ -109,9 +109,6 @@
     display: none;
   }
 
-  .container {
-  }
-
   &__list {
     display: inline-block;
     width: 100%;
@@ -306,7 +303,7 @@
   }
 
   .container {
-    width: 770px + 30px;
+    width: 880px + 30px;
     max-width: 100%;
 
     &--extend {

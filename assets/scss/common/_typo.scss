@@ -133,7 +133,21 @@ figcaption {
   @include rem(font-size, 16px);
 }
 
-.lead {}
+.smallcaps {
+  text-transform: none;
+  letter-spacing: normal !important;
+}
+
+.lead {
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.64;
+  color: #3f4d60;
+
+  @include rem(font-size, 22px);
+  @include rem(margin-bottom, 30px);
+}
 
 .text {
   p, ul, ol {
