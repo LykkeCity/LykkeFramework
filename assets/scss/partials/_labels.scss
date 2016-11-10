@@ -1,35 +1,53 @@
 .label {
-  background: #3F4D60;
+  position: relative;
+  top: -1px;
   color: #fff;
-  text-transform: uppercase;
-  font-size: 13px;
+  background: $secondary;
   font-weight: $fw-semi;
   display: inline-block;
   vertical-align: baseline;
-  margin: 0 4px;
-  position: relative;
-  top: -1px;
+  text-transform: uppercase;
   border-radius: 3px;
-  padding: 6px 10px 5px;
   letter-spacing: 0.07em;
+  padding: 6px 10px 5px;
 
+  @include rem(font-size, 13px);
+  @include rem(margin, 0 4px);
   @include bg-color-mod;
 
   &:hover {
     color: #fff;
   }
 
-  &--flat {
-    background: transparent;
-    border: 2px solid;
-    padding: 4px 10px 3px;
-    letter-spacing: 0.07em;
-    color: rgba(#3F4D60, .35);
-    border-radius: 20px;
+  &:first-child {
+    margin-left: 0;
+  }
 
-    &:first-child {
-      margin-left: 0;
+  .icon {
+    @include rem(font-size, 14px);
+    @include rem(margin-right, 4px);
+  }
+
+  &--text {
+    background: transparent;
+    font-weight: $fw-semi;
+    letter-spacing: 0.04em;
+
+    @include rem(font-size, 15px);
+
+    &.label {
+      @include text-color-mod;
     }
+  }
+
+  &--flat {
+    color: $grey;
+    border: 2px solid;
+    background: transparent;
+    letter-spacing: 0.07em;
+    padding: 4px 10px 3px;
+
+    @include rem(border-radius, 20px);
 
     &.label {
       @include text-color-mod;

@@ -1,16 +1,19 @@
 .card {
   &__header {
-    margin-bottom: 16px;
     @include clearfix;
+    @include rem(margin-bottom, 16px);
   }
 
   &__title {
     overflow: hidden;
-    padding-right: 20px;
     margin-bottom: 0;
+
+    @include rem(padding-right, 20px);
+    @include rem(font-size, 22px);
 
     a {
       color: $text;
+      display: inline-block;
 
       &:hover {
         color: rgba($secondary, .6);
@@ -19,18 +22,27 @@
   }
 
   &__actions {
-    float: right;
-    padding: 13px 0;
+    color: #8C94A0;
+
+    @include rem(padding, 13px 0);
 
     .action_link {
-      color: rgba($secondary, .6);
-      padding: 1px 8px;
       display: inline-block;
       vertical-align: middle;
-      font-size: 16px;
+      border: 0;
+      background: transparent;
+      outline: none !important;
+      color: rgba($secondary, .6);
+
+      @include rem(padding, 1px);
+      @include rem(font-size, 16px);
 
       &:hover {
-        color: #3f4d60;
+        color: $secondary;
+      }
+
+      .icon {
+        @include rem(font-size, 16px);
       }
     }
   }
@@ -40,18 +52,18 @@
   }
 
   &__desc {
-
     .votes {
-      text-transform: uppercase;
       color: rgba($secondary, .6);
-      font-size: 14px;
-      line-height: 24px;
+      text-transform: uppercase;
       letter-spacing: .07em;
-      margin: 0 10px;
       display: inline-block;
       vertical-align: middle;
       position: relative;
       top: -1px;
+
+      @include rem(margin, 0 10px);
+      @include rem(font-size, 14px);
+      @include rem(line-height, 24px);
     }
 
     a.votes:hover {
@@ -61,26 +73,82 @@
     .users_stack {
       display: inline-block;
       vertical-align: middle;
-      margin-top: -6px;
-      margin-bottom: -5px;
       position: relative;
       top: -1px;
+
+      @include rem(margin-top, -6px);
+      @include rem(margin-bottom, -5px);
     }
 
     .label, .votes, .users_stack {
-      margin-bottom: 15px;
       vertical-align: middle;
+
+      @include rem(margin-bottom, 15px);
     }
   }
 
   &__text {
-    line-height: 30px;
     margin-bottom: 0;
+
+    @include rem(line-height, 30px);
   }
 
   &__sum {
-    font-weight: normal;
-    color: rgba($secondary, .6);
+    font-weight: $fw-light;
+    color: $text;
+
+    @include rem(font-size, 24px);
+  }
+
+  &__breadcrumbs {
+    @include rem(margin-bottom, 15px);
+
+    .user_badge__img {
+      @include rem(margin-right, 10px);
+    }
+
+    .user_badge__img,
+    .breadcrumb_elem,
+    .icon {
+      display: inline-block;
+      vertical-align: middle;
+      float: none;
+    }
+
+    .breadcrumb_elem {
+      letter-spacing: 0;
+      color: rgba($secondary, .8);
+
+      @include rem(font-size, 15px);
+      @include rem(line-height, 24px);
+    }
+
+    .icon--chevron-thin-right {
+      position: relative;
+      color: #B2B8BF;
+      top: 1px;
+
+      @include rem(font-size, 10px);
+      @include rem(line-height, 20px);
+      @include rem(margin-left, 6px);
+    }
+
+    a.breadcrumb_elem {
+      color: rgba($secondary, .8);
+
+      &:hover {
+        color: $secondary;
+      }
+    }
+  }
+
+  .tags_list {
+    @include rem(margin-top, 15px);
+    @include rem(margin-bottom, 0);
+  }
+
+  .label {
+    margin-left: 0;
   }
 
   .user_badge {
@@ -88,30 +156,36 @@
     overflow: hidden;
 
     &__img {
-      width: 50px;
-      height: 50px;
-      margin-right: 14px;
+      @include rem(width, 30px);
+      @include rem(height, 30px);
+      @include rem(margin-right, 14px);
+
+      img {
+        max-width: 100%;
+      }
     }
 
     &__title {
-      font-size: 16px;
       line-height: normal;
-      margin-bottom: 4px;
+
+      @include rem(font-size, 16px);
+      @include rem(margin-bottom, 4px);
     }
 
     &__info {
-      padding-top: 3px;
+      @include rem(padding-top, 3px);
     }
   }
 
   &--preview {
-    padding-right: 20px;
-    margin-bottom: 60px;
+    @include rem(padding-right, 20px);
+    @include rem(margin-bottom, 60px);
 
     .card__body {
-      height: 305px;
       overflow: hidden;
       position: relative;
+
+      @include rem(height, 290px);
 
       &:after {
         content: '';
@@ -125,8 +199,9 @@
     }
 
     .card__inner {
-      padding-bottom: 103px;
-      border-bottom: 1px solid #DFE1E5;
+      border-bottom: 1px solid $border-alt;
+
+      @include rem(padding-bottom, 70px);
     }
 
     .card__footer {
@@ -134,65 +209,26 @@
       bottom: 0;
       left: 0;
       right: 0;
-      padding: 0 0 30px;
 
+      @include rem(padding, 0 0 10px);
       @include clearfix;
     }
   }
 
   @media all and (max-width: 992px) {
-    &__actions {
-      padding: 0;
-      float: none;
-      margin-bottom: 20px;
-      text-align: right;
-
-      .action_link {
-        padding: 10px 6px;
-        margin-right: 10px;
-      }
-    }
-
     &--preview {
-      margin-bottom: 30px;
       padding-right: 0;
 
       .card__body {
         height: auto;
-        padding-bottom: 20px;
 
         &:after {
           display: none;
         }
       }
 
-      .card__actions {
-        padding: 0;
-        float: none;
-        margin-bottom: 5px;
-        text-align: right;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-
-        .action_link {
-          padding: 10px 6px;
-          margin-right: 10px;
-        }
-
-        +.user_badge {
-          padding-bottom: 40px;
-        }
-      }
-      
-      .card__text {
-        max-height: 205px;
-        overflow: hidden;
-      }
-
-      .card__footer {
-        padding-bottom: 20px;
+      .tags_list {
+        margin-bottom: 10px;
       }
 
       .card__header, .card__footer {

@@ -234,10 +234,6 @@
     margin-bottom: 30px;
   }
 
-  .section {
-
-  }
-
   &__actions {
     margin-top: -7px;
   }
@@ -391,13 +387,6 @@
 
       &__list {
         white-space: nowrap !important;
-      }
-    }
-
-    .section {
-      p, ul, ol, .page__features .features__item__text, .page__features.features .features__item__text {
-        font-size: 16px;
-        line-height: 26px;
       }
     }
 

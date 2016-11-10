@@ -217,6 +217,31 @@
   }
 }
 
+.section_header {
+  border-bottom: 1px solid #EBEDEF;
+
+  @include rem(padding-bottom, 10px);
+  @include rem(margin-bottom, 35px);
+
+  &__link {
+    font-weight: $fw-semi;
+    color: $blue;
+    letter-spacing: 0;
+
+    @include rem(margin-top, 10px);
+    @include rem(font-size, 18px);
+    @include rem(line-height, 24px);
+
+    &:hover {
+      color: #3f4d60;
+    }
+  }
+
+  &__title {
+    margin-bottom: 0;
+  }
+}
+
 @media (max-width: 539px) {
   .landing--video {
     margin-bottom: 20px;
