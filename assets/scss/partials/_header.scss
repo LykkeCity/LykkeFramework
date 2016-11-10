@@ -107,6 +107,18 @@ header {
         cursor: default;
     }
 
+    &__title {
+      font-weight: normal;
+      font-size: 30px;
+      color: #333333;
+      letter-spacing: -0.5px;
+      vertical-align: middle;
+      display: inline-block;
+      line-height: 30px;
+      position: relative;
+      top: 4px;
+    }
+
     .row {
         position: static;
         >div {
@@ -116,6 +128,10 @@ header {
 
     .btn--stroke {
         margin-left: 38px;
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        margin-top: -20px;
     }
     
     .page_nav__title {
@@ -124,6 +140,18 @@ header {
         line-height: 40px;
         font-size: 30px;
     }
+
+  &.fixed {
+    .header__title {
+      display: none;
+    }
+  }
+
+  @media all and (max-width: $screen-mobile-old) {
+    .header__title {
+      display: none;
+    }
+  }
 }
 
 .block-hidden {
@@ -198,7 +226,7 @@ header {
     background: transparent !important;
     color: #AB00FF !important;
     text-decoration: none !important;
-    margin-top: 6px;
+    margin-top: 3px;
 
     &:hover {
       color: rgba(#AB00FF, .8) !important;
@@ -211,7 +239,7 @@ header {
     position: relative;
 
     img {
-      vertical-align: top;
+      vertical-align: middle;
     }
   }
 
