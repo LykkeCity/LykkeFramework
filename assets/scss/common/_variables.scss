@@ -1,13 +1,16 @@
 $primary: #ab00ff;
 $secondary: #3F4D60;
-
-$main-font-size: 24px;
+$blue: #0DA7FC;
+$green: #13B72A;
+$red: #FF3E2E;
+$yellow: #FFAE2C;
 
 $light: #f8f7ef;
 $text: #333333;
 $dark: #272723;
 $gray: #909c9e;
 $gray-light: #b2b8bf;
+$grey: rgba(#3F4D60, .35);
 $border: #e1e1e1;
 $border-alt: #DFE1E5;
 
@@ -22,6 +25,7 @@ $fw-light:      200;
 
 $all: all .3s ease;
 
+$main-font-size: 24px;
 
 $screen-mobile: 543px;
 $screen-mobile-old: 640px;

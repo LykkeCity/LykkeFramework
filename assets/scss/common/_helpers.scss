@@ -1,0 +1,28 @@
+$theme-colors: (
+  'primary': $primary,
+  'blue': $blue,
+  'green': $green,
+  'red': $red,
+  'yellow': $yellow,
+  'gray': $grey
+);
+
+@mixin bg-color-mod {
+  @each $name, $value in $theme-colors {
+    &--#{$name} {
+      background-color: #{$value};
+    }
+  }
+}
+
+@mixin text-color-mod {
+  @each $name, $value in $theme-colors {
+    &--#{$name} {
+      color: #{$value};
+    }
+  }
+}
+
+.text-red   { color: $red; }
+.text-green { color: $green; }
+.text-muted { color: rgba($secondary, .6);  }
