@@ -342,19 +342,6 @@
     }
   }
 
-  &--competition_edit {
-    .section--lead {
-      padding-bottom: 10px !important;
-    }
-
-    @media (min-width: 768px) {
-      &.page .section--padding {
-        padding: 50px 0;
-      }
-    }
-  }
-
-
   @media (min-width: 768px) {
     .section--padding {
       padding: 80px 0;

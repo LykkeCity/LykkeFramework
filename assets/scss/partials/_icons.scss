@@ -30,9 +30,6 @@
 }
 
 
-.icon--calendar2:before {
-  content: "\e90a";
-}
 .icon--prize .path1:before {
   content: "\e900";
   color: rgb(255, 174, 44);
@@ -52,9 +49,6 @@
 }
 .icon--back:before {
   content: "\e904";
-}
-.icon--calendar:before {
-  content: "\e905";
 }
 .icon--deadline:before {
   content: "\e906";
@@ -160,25 +154,21 @@
 .icon--fb:before {
   content: "\e927";
 }
-
+.icon--mail:before {
+  content: "\e937";
+}
 .icon--comment:before {
   content: "\e922";
 }
 .icon--arrow-down:before {
   content: "\e90f";
 }
-
-.icon--facebook_icn:before {
-  content: "\e90e";
-}
-.icon--twitter_icn:before {
-  content: "\e910";
-}
-
 .icon--clock:before {
   content: "\e92c";
 }
-
+.icon--wallet:before {
+  content: "\e938";
+}
 .icon--chevron-thin-up:before {
   content: "\e928";
 }
@@ -205,6 +195,33 @@
 }
 .icon--arrow-left-alt:before {
   content: "\ea40";
+}
+.icon--envelope:before {
+  content: "\e932";
+}
+.icon--link:before {
+  content: "\e933";
+}
+.icon--follow_fill:before {
+  content: "\e934";
+}
+.icon--follow_icn:before {
+  content: "\e935";
+}
+.icon--deadline_fill:before {
+  content: "\e910";
+}
+.icon--check:before {
+  content: "\e931";
+}
+.icon--github:before {
+  content: "\e90e";
+}
+.icon--instagram:before {
+  content: "\e905";
+}
+.icon--fb_simple:before {
+  content: "\e930";
 }
 .icon--info:before {
   content: "\e92f";
