@@ -1,3 +1,7 @@
 # Lykke Framework
 
-`npm install LykkeFramework`
+`npm install gulp`
+`npm i`
+`gulp watch`
+
+`gulp buld`
