@@ -282,7 +282,7 @@
           }
         }
 
-        > a {
+        > a:not(.btn) {
           text-transform: none;
           font-size: 20px;
           line-height: normal;
@@ -311,6 +311,11 @@
       .btn--stroke, .social {
         @include transform(translateY(0));
         opacity: 1;
+      }
+
+      .fixed & {
+        top: 60px;
+        height: calc(100% - 60px) !important;
       }
     }
   }
@@ -520,6 +525,10 @@
     &.collapse.in {
       height: 100% !important;
       height: calc(100% - 50px) !important;
+
+      .fixed & {
+        height: calc(100% - 50px) !important;
+      }
     }
   }
 

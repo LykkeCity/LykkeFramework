@@ -1,145 +1,145 @@
 header {
-    padding: 22px 0;
+  padding: 22px 0;
 }
 
 .nav {
-    margin-right: -15px;
-    padding: 3px 0;
+  margin-right: -15px;
+  padding: 3px 0;
+
+  > li {
+    float: left;
+    position: relative;
+
+    > a:not(.btn) {
+      background: transparent;
+      color: rgba($secondary, 1);
+
+      &:hover {
+        background: transparent;
+        color: rgba($secondary, .6);
+      }
+    }
+
+    &.active {
+      > a:not(.btn) {
+        color: $primary;
+      }
+    }
+  }
+
+  &--header {
+    display: inline-block;
+    vertical-align: top;
+
+    >li>a:not(.btn) {
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      font-weight: $fw-semi;
+      font-size: 14px;
+      white-space: normal;
+    }
+  }
+
+  &--footer {
+    margin-right: 0;
+    padding: 0;
+    font-size: 16px;
 
     > li {
-        float: left;
-        position: relative;
+      display: block;
+      padding-left: 0;
+      padding-right: 0;
+      float: none;
 
-        > a {
-            background: transparent;
-            color: rgba($secondary, 1);
-
-            &:hover {
-              background: transparent;
-              color: rgba($secondary, .6);
-            }
-        }
-
-        &.active {
-            > a {
-                color: $primary;
-            }
-        }
-    }
-
-    &--header {
+      > a {
+        padding: 5px 0;
         display: inline-block;
-        vertical-align: top;
+        color: rgba($secondary, .8);
 
-        >li>a {
-            text-transform: uppercase;
-            letter-spacing: 0.07em;
-            font-weight: $fw-semi;
-            font-size: 14px;
-            white-space: normal;
+        &:hover {
+          color: rgba($secondary, 1);
         }
+      }
     }
 
-    &--footer {
-        margin-right: 0;
+    .nav__title {
+      text-transform: uppercase;
+      font-size: 16px;
+      font-weight: $fw-semi;
+      color: #333337;
+      padding: 7px 0 18px;
+      letter-spacing: .1em;
+
+      > a {
+        color: #333337;
         padding: 0;
-        font-size: 16px;
-
-        > li {
-            display: block;
-            padding-left: 0;
-            padding-right: 0;
-            float: none;
-
-            > a {
-                padding: 5px 0;
-                display: inline-block;
-                color: rgba($secondary, .8);
-
-                &:hover {
-                    color: rgba($secondary, 1);
-                }
-            }
+        &:hover {
+          color: rgba($secondary, 1);
         }
-
-        .nav__title {
-            text-transform: uppercase;
-            font-size: 16px;
-            font-weight: $fw-semi;
-            color: #333337;
-            padding: 7px 0 18px;
-            letter-spacing: .1em;
-
-            > a {
-                color: #333337;
-                padding: 0;
-                &:hover {
-                    color: rgba($secondary, 1);
-                }
-            }
-        }
+      }
     }
+  }
 }
 
 .app-link {
-    display: inline-block;
-    margin-top: 10px;
+  display: inline-block;
+  margin-top: 10px;
 }
 
 
 .header {
-    position: fixed;
-    background: #fff;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 20;
-    white-space: nowrap;
+  position: fixed;
+  background: #fff;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  white-space: nowrap;
 
-    &__text {
-        font-size: 22px;
-        font-family: $ff;
-        color: rgba($secondary, .6);
-        margin-left: 18px;
-        vertical-align: middle;
-        display: inline-block;
-        letter-spacing: -0.01em;
-        cursor: default;
-    }
+  &__text {
+    font-size: 22px;
+    font-family: $ff;
+    color: rgba($secondary, .6);
+    margin-left: 18px;
+    vertical-align: middle;
+    display: inline-block;
+    letter-spacing: -0.01em;
+    cursor: default;
+  }
 
-    &__title {
-      font-weight: normal;
-      font-size: 30px;
-      color: #333333;
-      letter-spacing: -0.5px;
-      vertical-align: middle;
-      display: inline-block;
-      line-height: 30px;
-      position: relative;
-      top: 4px;
-    }
+  &__title {
+    font-weight: normal;
+    font-size: 30px;
+    color: #333333;
+    letter-spacing: -0.5px;
+    vertical-align: middle;
+    display: inline-block;
+    line-height: 30px;
+    position: relative;
+    top: 4px;
+  }
 
-    .row {
-        position: static;
-        >div {
-            position: static;
-        }
+  .row {
+    position: static;
+    >div {
+      position: static;
     }
+  }
 
-    .btn--stroke {
-        margin-left: 38px;
-        position: absolute;
-        right: 15px;
-        top: 50%;
-        margin-top: -20px;
-    }
-    
-    .page_nav__title {
-        margin: 0;
-        float: none;
-        line-height: 40px;
-        font-size: 30px;
-    }
+  .btn--stroke {
+    margin-left: 38px;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    margin-top: -20px;
+  }
+
+  .page_nav__title {
+    margin: 0;
+    float: none;
+    line-height: 40px;
+    font-size: 30px;
+  }
 
   &.fixed {
     .header__title {
@@ -155,62 +155,62 @@ header {
 }
 
 .block-hidden {
-    visibility: visible;
-    opacity: 1;
-    @include transition(visibility .3s ease, opacity .3s ease);
+  visibility: visible;
+  opacity: 1;
+  @include transition(visibility .3s ease, opacity .3s ease);
 }
 
 .block-visible {
-    visibility: hidden;
-    opacity: 0;
-    @include transition(all .3s ease);
+  visibility: hidden;
+  opacity: 0;
+  @include transition(all .3s ease);
 }
 
 
 .header {
-    .container {
-        position: relative;
-    }
+  .container {
+    position: relative;
+  }
 
-    .block-visible {
-        position: absolute;
-        right: 15px;
-        top: 50%;
-        margin-top: -23px;
-    }
+  .block-visible {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    margin-top: -23px;
+  }
 }
 
 @media all and (min-width: 767px) {
-    .nav-up, .fp-viewing-1, .fp-viewing-2, .fp-viewing-3 {
-        .block-hidden {
-            visibility: hidden;
-            opacity: 0;
-        }
-
-        .block-visible {
-            visibility: visible;
-            opacity: 1;
-        }
+  .nav-up, .fp-viewing-1, .fp-viewing-2, .fp-viewing-3 {
+    .block-hidden {
+      visibility: hidden;
+      opacity: 0;
     }
 
-    .nav-down, .fp-viewing-0, .fp-viewing-reserve {
-        .block-hidden {
-            visibility: visible;
-            opacity: 1;
-        }
-
-        .block-visible {
-            visibility: hidden;
-            opacity: 0;
-        }
+    .block-visible {
+      visibility: visible;
+      opacity: 1;
     }
+  }
+
+  .nav-down, .fp-viewing-0, .fp-viewing-reserve {
+    .block-hidden {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .block-visible {
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
 }
 
 .fp-viewing-4, .fp-viewing-5, .fp-viewing-reserve {
-    .block-visible, .page_nav .btn {
-        visibility: hidden;
-        opacity:0;
-    }
+  .block-visible, .page_nav .btn {
+    visibility: hidden;
+    opacity:0;
+  }
 }
 
 .header--new {
@@ -249,14 +249,22 @@ header {
 
     > li {
       > a {
+        display: inline-block;
+      }
+
+      > a:not(.btn) {
         text-transform: none;
         font-weight: 600;
         font-size: 20px;
         letter-spacing: normal;
+
+        &:hover {
+          color: #AB00FF;
+        }
       }
 
       &:hover {
-        > a {
+        > a.dropdown__control {
           color: #AB00FF;
         }
       }
@@ -320,11 +328,6 @@ header {
       padding-bottom: 3px;
     }
 
-    .nav>li>a {
-      padding-top: 3px;
-      padding-bottom: 3px;
-    }
-
     .page_nav__title {
       color: #fff;
     }
@@ -334,12 +337,12 @@ header {
       padding-bottom: 4px;
 
       > li {
-        > a {
+        > a:not(.btn) {
           color: #fff;
           opacity: 0.8;
         }
 
-        &.active a, &:hover a {
+        &.active a:not(.btn), &:hover a:not(.btn) {
           opacity: 1;
           color: #fff;
         }
@@ -363,6 +366,13 @@ header {
 
       img {
         display: none;
+      }
+    }
+
+    @media all and (min-width: $screen-tablet + 1) {
+      .nav>li>a:not(.btn) {
+        padding-top: 3px;
+        padding-bottom: 3px;
       }
     }
   }

@@ -65,7 +65,7 @@
   border-bottom-color: $border;
   margin-right: 0;
 
-  > li > a {
+  > li > a:not(.btn) {
     border: 0;
     border-bottom: 2px solid transparent;
     font-size: 18px;
@@ -78,7 +78,7 @@
     margin-right: -15px !important;
     width: auto;
 
-    > li > a {
+    > li > a:not(.btn) {
       font-size: 14px;
     }
   }
