@@ -151,6 +151,7 @@
 }
 
 .new-project-button {
+  color: #fff !important;
   background: $primary;
 
   @include rem(font-size, 40px);
@@ -160,6 +161,20 @@
     background: #9217e2 !important;
   }
 
+  span {
+    color: #fff;
+    letter-spacing: 0;
+    text-transform: none;
+    font-weight: $fw-semi;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    top: -2px;
+
+    @include rem(font-size, 18px);
+    @include rem(margin-right, 12px);
+  }
+
   &.btn-sm {
     width: 30px;
     height: 30px;
@@ -167,6 +182,10 @@
     padding: 6px;
     min-width: 0;
     line-height: 20px;
+  }
+
+  &.with_text {
+    font-size: 34px;
   }
 
   .nav & {

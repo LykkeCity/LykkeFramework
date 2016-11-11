@@ -177,6 +177,7 @@
 
       @include rem(font-size, 16px);
       @include rem(margin-bottom, 4px);
+      @include rem(max-height, 70px);
     }
 
     &__info {
@@ -230,6 +231,10 @@
 
       .card__header, .card__footer {
         position: relative;
+      }
+
+      .card__title {
+        max-height: none;
       }
 
       .card__sum {

@@ -30,7 +30,7 @@
   }
 
   &:hover {
-    background: transparent;
+    background: transparent !important;
     .icon-bar {
       background-color: rgba($secondary, .6);
     }
