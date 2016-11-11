@@ -1,7 +1,7 @@
 .card {
   &__header {
     @include clearfix;
-    @include rem(margin-bottom, 16px);
+    @include rem(margin-bottom, 13px);
   }
 
   &__title {
@@ -10,6 +10,7 @@
 
     @include rem(padding-right, 20px);
     @include rem(font-size, 22px);
+    @include rem(line-height, 35px);
 
     a {
       color: $text;
@@ -25,6 +26,7 @@
     color: #8C94A0;
 
     @include rem(padding, 13px 0);
+    @include rem(margin, 0 -4px);
 
     .action_link {
       display: inline-block;
@@ -34,7 +36,7 @@
       outline: none !important;
       color: rgba($secondary, .6);
 
-      @include rem(padding, 1px);
+      @include rem(padding, 4px);
       @include rem(font-size, 16px);
 
       &:hover {
@@ -83,25 +85,29 @@
     .label, .votes, .users_stack {
       vertical-align: middle;
 
-      @include rem(margin-bottom, 15px);
+      @include rem(margin-bottom, 13px);
     }
   }
 
   &__text {
     margin-bottom: 0;
+    overflow: hidden;
 
     @include rem(line-height, 30px);
+    @include rem(max-height, 120px);
   }
 
   &__sum {
+    margin-bottom: 0;
     font-weight: $fw-light;
     color: $text;
 
     @include rem(font-size, 24px);
+    @include rem(line-height, 30px);
   }
 
   &__breadcrumbs {
-    @include rem(margin-bottom, 15px);
+    @include rem(margin-bottom, 20px);
 
     .user_badge__img {
       @include rem(margin-right, 10px);
@@ -118,6 +124,7 @@
     .breadcrumb_elem {
       letter-spacing: 0;
       color: rgba($secondary, .8);
+      letter-spacing: .03em;
 
       @include rem(font-size, 15px);
       @include rem(line-height, 24px);
@@ -158,7 +165,7 @@
     &__img {
       @include rem(width, 30px);
       @include rem(height, 30px);
-      @include rem(margin-right, 14px);
+      @include rem(margin-right, 5px);
 
       img {
         max-width: 100%;
@@ -185,21 +192,11 @@
       overflow: hidden;
       position: relative;
 
-      @include rem(height, 290px);
-
-      &:after {
-        content: '';
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 100%;
-        height: 9px;
-        box-shadow: 0 -8px 15px 4px #fff;
-      }
+      @include rem(height, 356px);
     }
 
     .card__inner {
-      border-bottom: 1px solid $border-alt;
+      border-bottom: 1px solid #EBEDEF;
 
       @include rem(padding-bottom, 70px);
     }
@@ -210,7 +207,7 @@
       left: 0;
       right: 0;
 
-      @include rem(padding, 0 0 10px);
+      @include rem(padding, 0 0 15px);
       @include clearfix;
     }
   }

@@ -26,3 +26,7 @@ $theme-colors: (
 .text-red   { color: $red; }
 .text-green { color: $green; }
 .text-muted { color: rgba($secondary, .6);  }
+
+.middot {
+  @include rem(margin, 0 10px)
+}

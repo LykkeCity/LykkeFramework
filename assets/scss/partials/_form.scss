@@ -29,7 +29,7 @@ textarea.form-control {
 }
 
 .form-group {
-  margin-bottom: 20px;
+  @include rem(margin-bottom, 20px);
 }
 
 .reserve_form {
@@ -283,11 +283,12 @@ label.error {
   &__value {
     width: auto;
     height: auto;
-    font-size: 16px;
     color: $secondary;
     cursor: pointer;
-    padding: 14px 40px 14px 0;
-    
+
+    @include rem(padding, 14px 40px 14px 0);
+    @include rem(font-size, 16px);
+
     span {
       overflow: hidden;
       text-overflow: ellipsis;
@@ -296,18 +297,19 @@ label.error {
 
   &__label {
     margin: 0;
-    padding: 14px 10px 14px 20px;
-    font-size: 16px;
-    width: 10px;
+
+    @include rem(width, 10px);
+    @include rem(font-size, 16px);
+    @include rem(padding, 14px 10px 14px 20px);
   }
 
   &__elem {
+    background: transparent;
+    position: absolute;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    background: transparent;
     font-size: 0;
-    position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
@@ -316,7 +318,7 @@ label.error {
     cursor: pointer;
 
     option {
-      font-size: 16px;
+      @include rem(font-size, 16px);
     }
   }
 
@@ -324,11 +326,12 @@ label.error {
     font-family: 'icon';
     content: "\e90f";
     position: absolute;
-    font-size: 10px;
-    right: 15px;
     top: 50%;
-    margin-top: -4px;
     color: rgba($secondary, .6);
+
+    @include rem(font-size, 10px);
+    @include rem(right, 15px);
+    @include rem(margin-top, -4px);
   }
 }
 

@@ -24,6 +24,37 @@
     display: block;
     color: rgba($secondary, .6) !important;
 
-    @include rem(padding, 4px 15px)
+    @include rem(padding, 3px 15px)
+  }
+}
+
+.tag {
+  &--filter {
+    font-weight: $fw-semi;
+    color: #fff;
+    letter-spacing: 0;
+    background: #B2B8BF;
+    border-radius: 100px;
+    display: inline-block;
+    position: relative;
+    top: 1px;
+
+    @include rem(font-size, 16px);
+    @include rem(padding, 10px 24px);
+    @include rem(margin, 7px 20px);
+
+    .btn--delete {
+      height: auto;
+      color: rgba(#fff, .6);
+
+      @include rem(padding, 8px);
+      @include rem(line-height, 10px);
+      @include rem(font-size, 24px);
+      @include rem(margin, -8px -19px -8px -4px);
+
+      &:hover {
+        color: #fff;
+      }
+    }
   }
 }

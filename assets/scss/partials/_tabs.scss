@@ -1,11 +1,10 @@
 .tabs_stack {
-  margin-bottom: 30px;
+  @include rem(margin-bottom, 30px);
 }
 
 .tab_item {
   display: inline-block;
   vertical-align: top;
-  font-size: 15px;
   font-weight: $fw-semi;
   border-radius: 100px;
   color: rgba($secondary, .6);
@@ -13,13 +12,10 @@
   letter-spacing: .07em;
   font-family: $ff;
   border: 1px solid transparent;
-  margin-bottom: 10px;
 
+  @include rem(font-size, 15px);
+  @include rem(margin-bottom, 10px);
   @include transition(all .3s ease);
-
-  &:hover {
-    border-color: $primary;
-  }
 
   &:focus {
     text-decoration: none;
@@ -27,12 +23,13 @@
   }
 
   &__link {
-    padding: 7px 22px;
     display: block;
     color: rgba($secondary, .6);
 
+    @include rem(padding, 7px 22px);
+
     &:hover {
-      color: $primary;
+      color: rgba($secondary, 1);
     }
 
     &:focus {

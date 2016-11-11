@@ -9,39 +9,13 @@
   overflow: hidden;
   display: inline-block;
   @include border-radius(100px);
-  @include transition($all);
+  @include transition(background .3s ease, color .3s ease, border .3s ease, transform .3s ease);
   @include box-shadow-none(none!important);
-
-  &:after {
-    content: '';
-    position: absolute;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s;
-    width: 0%;
-    height: 200%;
-    background: rgba(255,255,255,0.15);
-    z-index: 1;
-    right: 0;
-    top: 0;
-    margin: -5px 0 0 -5px;
-    -webkit-transform-origin: 0 0;
-    -webkit-transform: rotate(-20deg);
-    -moz-transform-origin: 0 0;
-    -moz-transform: rotate(-20deg);
-    -ms-transform-origin: 0 0;
-    -ms-transform: rotate(-20deg);
-    transform-origin: 0 0;
-    transform: rotate(-20deg);
-  }
 
   &:not([disabled]) {
     &:hover {
       color: #fff;
-
-      &:after {
-        width: 40%;
-      }
+      background: #9217e2;
     }
 
     &:focus, &:active {
@@ -127,19 +101,24 @@
       display: none;
     }
   }
+
+  &--delete {
+    background: transparent !important;
+  }
 }
 
 .btn-circle,
 .btn--circle {
   border-radius: 100px;
-  height: 50px;
-  min-width: 50px;
-  padding: 10px 15px;
   text-align: center;
-  font-size: 18px;
-  line-height: 24px;
   text-transform: uppercase;
-  font-weight: $fw-semi;
+  font-weight: $fw-regular;
+
+  @include rem(height, 50px);
+  @include rem(min-width, 50px);
+  @include rem(padding, 10px 15px);
+  @include rem(font-size, 18px);
+  @include rem(line-height, 24px);
 
   &:after {
     display: none;
@@ -172,9 +151,10 @@
 }
 
 .new-project-button {
-  font-size: 40px;
-  line-height: 34px;
   background: $primary;
+
+  @include rem(font-size, 40px);
+  @include rem(line-height, 34px);
 
   &:hover, &:focus {
     background: #9217e2 !important;

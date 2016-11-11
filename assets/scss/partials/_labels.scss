@@ -31,9 +31,11 @@
   &--text {
     background: transparent;
     font-weight: $fw-semi;
-    letter-spacing: 0.04em;
+    letter-spacing: .01em;
 
     @include rem(font-size, 15px);
+    @include rem(padding-left, 4px);
+    @include rem(padding-right, 4px);
 
     &.label {
       @include text-color-mod;

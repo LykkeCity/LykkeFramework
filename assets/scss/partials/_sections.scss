@@ -220,8 +220,9 @@
 .section_header {
   border-bottom: 1px solid #EBEDEF;
 
-  @include rem(padding-bottom, 10px);
-  @include rem(margin-bottom, 35px);
+  @include rem(padding-top, 6px);
+  @include rem(padding-bottom, 13px);
+  @include rem(margin-bottom, 38px);
 
   &__link {
     font-weight: $fw-semi;

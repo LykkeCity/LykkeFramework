@@ -234,6 +234,20 @@
     margin-bottom: 30px;
   }
 
+  &__header {
+    @include clearfix;
+    @include rem(margin-bottom, 30px);
+
+    h2, h1, h3 {
+      margin-bottom: 0;
+    }
+
+    .tabs_stack {
+      margin-bottom: 0;
+      @include rem(margin-top, 10px);
+    }
+  }
+
   &__actions {
     margin-top: -7px;
   }
@@ -283,7 +297,7 @@
   }
 
   .section--padding {
-    padding: 40px 0;
+    @include rem(padding, 40px 0)
   }
 
   .page_nav {
