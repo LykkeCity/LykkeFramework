@@ -1,13 +1,14 @@
 .asset_link {
-  margin: 40px 0;
   @include clearfix;
+  @include rem(margin, 40px 0);
 
   &__icon {
-    margin-right: 15px;
     float: left;
 
+    @include rem(margin-right, 15px);
+
     .icon {
-      font-size: 58px;
+      @include rem(font-size, 58px);
     }
   }
 
@@ -16,33 +17,36 @@
   }
 
   &__title {
-    color: #333;
+    color: $text;
     font-weight: $fw-semi;
-    font-size: 18px;
-    line-height: 30px;
-    margin-bottom: 2px;
+
+    @include rem(font-size, 18px);
+    @include rem(line-height, 30px);
+    @include rem(margin-bottom, 2px);
 
     a {
-      color: #333 !important;
+      color: $text !important;
     }
   }
 
   &__desc {
     display: inline-block;
     vertical-align: top;
-    font-size: 16px;
-    color: rgba(#3F4D60, .6);
-    letter-spacing: 0px;
-    line-height: 24px;
+    color: rgba($secondary, .6);
+    letter-spacing: 0;
+
+    @include rem(font-size, 16px);
+    @include rem(line-height, 24px);
   }
 
   &__link {
-    font-size: 16px;
     letter-spacing: 0px;
-    line-height: 24px;
     display: inline-block;
     vertical-align: top;
-    margin-left: 15px;
+
+    @include rem(font-size, 16px);
+    @include rem(line-height, 24px);
+    @include rem(margin-left, 15px);
   }
 }
 

@@ -543,7 +543,7 @@ label.error { display: none !important; }
 
 .input-group-addon { position: absolute; right: 0px; color: rgba(63, 77, 96, 0.6); cursor: pointer; top: 4px; padding: 10px; }
 
-.btn { color: #fff; font-weight: 600; font-size: 18px; padding: 13px 28px 12px; border: 0; background: #ab00ff; position: relative; overflow: hidden; display: inline-block; -webkit-border-radius: 100px; -moz-border-radius: 100px; -ms-border-radius: 100px; -o-border-radius: 100px; border-radius: 100px; -webkit-transition: background 0.3s ease, color 0.3s ease, border 0.3s ease, transform 0.3s ease; -moz-transition: background 0.3s ease, color 0.3s ease, border 0.3s ease, transform 0.3s ease; -ms-transition: background 0.3s ease, color 0.3s ease, border 0.3s ease, transform 0.3s ease; -o-transition: background 0.3s ease, color 0.3s ease, border 0.3s ease, transform 0.3s ease; transition: background 0.3s ease, color 0.3s ease, border 0.3s ease, transform 0.3s ease; -webkit-box-shadow: none !important; -moz-box-shadow: none !important; -ms-box-shadow: none !important; -o-box-shadow: none !important; box-shadow: none !important; }
+.btn { border: 0; color: #fff; font-weight: 600; background: #ab00ff; position: relative; overflow: hidden; display: inline-block; -webkit-border-radius: 100px; -moz-border-radius: 100px; -ms-border-radius: 100px; -o-border-radius: 100px; border-radius: 100px; -webkit-transition: background 0.3s ease, color 0.3s ease, border 0.3s ease, transform 0.3s ease; -moz-transition: background 0.3s ease, color 0.3s ease, border 0.3s ease, transform 0.3s ease; -ms-transition: background 0.3s ease, color 0.3s ease, border 0.3s ease, transform 0.3s ease; -o-transition: background 0.3s ease, color 0.3s ease, border 0.3s ease, transform 0.3s ease; transition: background 0.3s ease, color 0.3s ease, border 0.3s ease, transform 0.3s ease; -webkit-box-shadow: none !important; -moz-box-shadow: none !important; -ms-box-shadow: none !important; -o-box-shadow: none !important; box-shadow: none !important; font-size: 18px; font-size: 1.125rem; padding: 13px 28px 12px; padding: 0.8125rem 1.75rem 0.75rem; }
 
 .btn:not([disabled]):hover { color: #fff; background: #9217e2; }
 
@@ -1950,23 +1950,23 @@ hr.full { margin-left: 0; margin-right: 0; width: 100%; }
 
 .list--text_previews span { color: rgba(63, 77, 96, 0.6); letter-spacing: 0; font-size: 16px; font-size: 1rem; line-height: 24px; line-height: 1.5rem; }
 
-.asset_link { margin: 40px 0; }
+.asset_link { margin: 40px 0; margin: 2.5rem 0; }
 
 .asset_link:after, .asset_link:before { content: ""; display: table; clear: both; }
 
-.asset_link__icon { margin-right: 15px; float: left; }
+.asset_link__icon { float: left; margin-right: 15px; margin-right: 0.9375rem; }
 
-.asset_link__icon .icon { font-size: 58px; }
+.asset_link__icon .icon { font-size: 58px; font-size: 3.625rem; }
 
 .asset_link__info { overflow: hidden; }
 
-.asset_link__title { color: #333; font-weight: 600; font-size: 18px; line-height: 30px; margin-bottom: 2px; }
+.asset_link__title { color: #333333; font-weight: 600; font-size: 18px; font-size: 1.125rem; line-height: 30px; line-height: 1.875rem; margin-bottom: 2px; margin-bottom: 0.125rem; }
 
-.asset_link__title a { color: #333 !important; }
+.asset_link__title a { color: #333333 !important; }
 
-.asset_link__desc { display: inline-block; vertical-align: top; font-size: 16px; color: rgba(63, 77, 96, 0.6); letter-spacing: 0px; line-height: 24px; }
+.asset_link__desc { display: inline-block; vertical-align: top; color: rgba(63, 77, 96, 0.6); letter-spacing: 0; font-size: 16px; font-size: 1rem; line-height: 24px; line-height: 1.5rem; }
 
-.asset_link__link { font-size: 16px; letter-spacing: 0px; line-height: 24px; display: inline-block; vertical-align: top; margin-left: 15px; }
+.asset_link__link { letter-spacing: 0px; display: inline-block; vertical-align: top; font-size: 16px; font-size: 1rem; line-height: 24px; line-height: 1.5rem; margin-left: 15px; margin-left: 0.9375rem; }
 
 .icon_with_title { text-align: center; font-size: 16px; color: rgba(63, 77, 96, 0.8); letter-spacing: 0; line-height: 24px; }
 
@@ -2552,13 +2552,13 @@ hr.full { margin-left: 0; margin-right: 0; width: 100%; }
 
 .page .container--extend { width: 1200px; }
 
-.page .nav-tabs { padding-left: 0 !important; margin-bottom: 44px !important; }
+.page .nav-tabs { padding-left: 0 !important; margin-bottom: 44px !important; margin-bottom: 2.75rem !important; }
 
 .page .nav-tabs sup { color: #ab00ff; }
 
 .page .nav-tabs > li { margin-bottom: 0 !important; }
 
-.page .nav-tabs > li > a { font-size: 18px; color: #3F4D60; letter-spacing: 0px; color: rgba(63, 77, 96, 0.6) !important; margin-right: 0; }
+.page .nav-tabs > li > a { font-size: 18px; letter-spacing: 0; color: rgba(63, 77, 96, 0.6) !important; margin-right: 0; font-size: 18px; font-size: 1.125rem; }
 
 .page .nav-tabs > li > a:hover { color: #3f4d60 !important; }
 

@@ -323,7 +323,8 @@
 
   .nav-tabs {
     padding-left: 0 !important;
-    margin-bottom: 44px !important;
+
+    @include rem(margin-bottom, 44px !important);
 
     sup {
       color: $primary;
@@ -334,19 +335,20 @@
 
       > a {
         font-size: 18px;
-        color: #3F4D60;
-        letter-spacing: 0px;
-        color: rgba(#3F4D60, .6) !important;
+        letter-spacing: 0;
+        color: rgba($secondary, .6) !important;
         margin-right: 0;
 
+        @include rem(font-size, 18px);
+
         &:hover {
-          color: rgba(#3F4D60, 1) !important;
+          color: rgba($secondary, 1) !important;
         }
       }
 
       &.active {
         > a {
-          color: rgba(#3F4D60, 1) !important;
+          color: rgba($secondary, 1) !important;
         }
       }
     }

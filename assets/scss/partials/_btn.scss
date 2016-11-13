@@ -1,9 +1,7 @@
 .btn {
+  border: 0;
   color: #fff;
   font-weight: $fw-semi;
-  font-size: 18px;
-  padding: 13px 28px 12px;
-  border: 0;
   background: $primary;
   position: relative;
   overflow: hidden;
@@ -11,6 +9,9 @@
   @include border-radius(100px);
   @include transition(background .3s ease, color .3s ease, border .3s ease, transform .3s ease);
   @include box-shadow-none(none!important);
+
+  @include rem(font-size, 18px);
+  @include rem(padding, 13px 28px 12px);
 
   &:not([disabled]) {
     &:hover {
