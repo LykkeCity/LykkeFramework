@@ -1,19 +1,16 @@
 .user_badge {
-  margin-bottom: 25px;
   white-space: normal;
 
+  @include rem(margin-bottom, 25px);
   @include clearfix;
 
-  .label {
-    border-radius: 3px;
-  }
-
   &__img {
-    width: 70px;
-    height: 70px;
     float: left;
     border-radius: 100px;
-    margin-right: 20px;
+
+    @include rem(width, 60px);
+    @include rem(height, 60px);
+    @include rem(margin-right, 18px);
 
     img {
       border-radius: 100px;
@@ -23,20 +20,22 @@
 
   &__info, &__message {
     overflow: hidden;
-    padding-top: 6px;
 
     a {
       color: inherit;
     }
   }
 
+  &__message {
+    @include rem(padding-top, 6px);
+  }
+
   &__title {
-    font-size: 18px;
-    color: #333333;
-    letter-spacing: 1.79px;
-    line-height: 32px;
+    color: $text;
     font-weight: $fw-semi;
-    text-transform: uppercase;
+
+    @include rem(font-size, 18px);
+    @include rem(line-height, 32px);
 
     a {
       color: inherit;
@@ -48,11 +47,11 @@
   }
 
   &__desc {
-    font-size: 16px;
-    color: #3F4D60;
     letter-spacing: 0;
-    line-height: 24px;
-    color: rgba(#3F4D60, .6);
+    color: rgba($secondary, .6);
+
+    @include rem(font-size, 16px);
+    @include rem(line-height, 24px);
 
     a {
       color: rgba($secondary, .8);
@@ -67,56 +66,60 @@
     margin-bottom: 0;
 
     .user_badge__img {
-      width: 30px;
-      height: 30px;
-      margin-right: 17px;
+      @include rem(width, 30px);
+      @include rem(height, 30px);
+      @include rem(margin-right, 17px);
     }
 
     .user_badge__info, .user_badge__message {
-      padding-top: 4px;
+      @include rem(padding-top, 4px);
     }
   }
 }
 
 .users_stack {
   position: relative;
-  padding-right: 15px;
+
+  @include rem(padding-right, 15px);
 
   &__item {
-    //float: left;
-    margin-right: -15px;
     float: right;
     position: relative;
+
+    @include rem(margin-right, -15px);
 
     img {
       border-radius: 30px;
       border: 2px solid #fff;
-      width: 34px;
-      height: 34px;
+
+      @include rem(width, 34px);
+      @include rem(height, 34px);
     }
 
     .winner_label {
       position: relative;
-      margin-left: -18px;
-      margin-bottom: -26px;
-      margin-right: 20px;
       z-index:2;
+
+      @include rem(margin-left, -18px);
+      @include rem(margin-bottom, -26px);
+      @include rem(margin-right, 20px);
     }
   }
 
   &__count {
-    position: absolute;
-    left: 2px;
-    top: 2px;
-    width: 30px;
-    height: 30px;
-    border-radius: 30px;
-    font-size: 15px;
+    z-index:10;
     color: #fff;
+    position: absolute;
+    border-radius: 30px;
     text-align: center;
     white-space: nowrap;
-    line-height: 28px;
-    z-index:10;
     background: rgba($secondary, .35);
+
+    @include rem(left, 2px);
+    @include rem(top, 2px);
+    @include rem(width, 30px);
+    @include rem(height, 30px);
+    @include rem(font-size, 15px);
+    @include rem(line-height, 28px);
   }
 }

@@ -14,7 +14,7 @@
   @include rem(font-size, 13px);
   @include rem(line-height, 13px);
   @include rem(margin, 0 4px);
-  @include bg-color-mod;
+  @include color-modifier(background);
 
   &:hover {
     color: #fff;
@@ -39,7 +39,7 @@
     @include rem(padding-right, 4px);
 
     &.label {
-      @include text-color-mod;
+      @include color-modifier(color);
     }
   }
 
@@ -53,7 +53,7 @@
     @include rem(border-radius, 20px);
 
     &.label {
-      @include text-color-mod;
+      @include color-modifier(color);
     }
   }
 }

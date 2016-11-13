@@ -104,7 +104,7 @@ gulp.task('dev-server', ['dev'], function () {
   connect.server({
     root: 'public',
     livereload: true,
-    port: 9004
+    port: 9104
   });
 
   console.log('Dev on http://localhost:9001. Press ctrl+c to stop it.');
@@ -114,7 +114,7 @@ gulp.task('prod-server', ['prod'], function () {
   connect.server({
     root: 'dist',
     livereload: false,
-    port: 9005
+    port: 9105
   });
 
   console.log('Prod on http://localhost:9002. Press ctrl+c to stop it.');

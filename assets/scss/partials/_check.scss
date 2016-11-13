@@ -1,0 +1,35 @@
+.check {
+  position: relative;
+  color: #fff;
+  text-align: center;
+  border-radius: 100px;
+
+  @include rem(width, 20px);
+  @include rem(height, 20px);
+  @include color-modifier(background);
+
+  &:before {
+    font-family: 'icon' !important;
+    text-align: center;
+    content: "\e931";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    @include rem(font-size, 8px);
+    @include rem(line-height, 22px);
+  }
+
+  &--inprogress {
+    background: #CFD2D7;
+
+    @include rem(margin, 8px 6px);
+    @include rem(width, 8px);
+    @include rem(height, 8px);
+
+    &:before {
+      content: "none";
+    }
+  }
+}

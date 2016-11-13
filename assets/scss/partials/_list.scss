@@ -110,30 +110,71 @@
 }
 
 .list {
+  &__icon {
+    @include rem(width, 40px);
+    float: left;
+
+    .icon {
+      @include rem(font-size, 30px);
+      color: $secondary;
+    }
+  }
+  
+  &__content {
+    overflow: hidden;
+  }
+
   &--info {
     list-style: none !important;
     padding: 0 !important;
-    margin-bottom: 35px !important;
+
+    @include rem(margin-bottom, 42px !important);
 
     .list__item {
-      font-size: 16px;
-      color: #3F4D60;
-      letter-spacing: 0px;
-      line-height: 18px;
-      margin-bottom: 13px !important;
+      color: $secondary;
+      letter-spacing: 0;
+
+      @include rem(font-size, 16px);
+      @include rem(line-height, 18px);
+      @include rem(margin-bottom, 30px);
       @include clearfix;
 
+      .title {
+        font-weight: $fw-semi;
+
+        @include rem(margin-bottom, 8px);
+      }
+
       .text-muted {
-        margin-right: 10px;
         display: inline-block;
         vertical-align: baseline;
-        width: 70px;
         float: left;
+
+        @include rem(width, 70px);
+        @include rem(margin-right, 10px);
+      }
+
+      a {
+        color: $secondary;
+      }
+
+      p {
+        margin-bottom: 0;
+        color: rgba($secondary, .6);
+
+        @include rem(font-size, 16px);
+        @include rem(line-height, 18px);
       }
 
       span {
         overflow: hidden;
         display: block;
+      }
+
+      &._current {
+        p {
+          color: $secondary;
+        }
       }
     }
   }
@@ -143,28 +184,37 @@
     padding-left: 0 !important;
 
     .list__item {
-      margin-bottom: 24px !important;
+      @include rem(margin-bottom, 35px);
+    }
+
+    .list__icon {
+      @include rem(width, 50px);
     }
 
     a {
       display: inline-block;
 
-      &:hover p {
-        color: #0da7fc;
+      &:hover {
+        p {
+          color: rgba($secondary, .6);
+        }
       }
     }
 
     p {
-      margin-bottom: 0 !important;
+      color: $text;
 
+      @include rem(line-height, 24px);
+      @include rem(margin-bottom, 6px);
       @include transition(color .2s ease);
     }
 
     span {
-      font-size: 16px;
-      color: rgba(#3F4D60, .6);
-      letter-spacing: 0px;
-      line-height: 24px;
+      color: rgba($secondary, .6);
+      letter-spacing: 0;
+
+      @include rem(font-size, 16px);
+      @include rem(line-height, 24px);
     }
   }
 }

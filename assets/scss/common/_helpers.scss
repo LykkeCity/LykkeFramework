@@ -7,18 +7,25 @@ $theme-colors: (
   'gray': $grey
 );
 
-@mixin bg-color-mod {
+@mixin color-modifier($properties...) {
   @each $name, $value in $theme-colors {
     &--#{$name} {
-      background-color: #{$value};
+      @each $property in $properties {
+        #{$property}: #{$value};
+      }
     }
   }
 }
 
-@mixin text-color-mod {
+@mixin color-modifier-progress($property, $opacity, $inner-elem, $inner-elem-property) {
   @each $name, $value in $theme-colors {
     &--#{$name} {
-      color: #{$value};
+      #{$property}: #{$value};
+      background: rgba($value, $opacity);
+
+      .#{$inner-elem} {
+        #{$inner-elem-property}: #{$value};
+      }
     }
   }
 }
@@ -29,4 +36,8 @@ $theme-colors: (
 
 .middot {
   @include rem(margin, 0 10px)
+}
+
+.text {
+  @include color-modifier(color)
 }
