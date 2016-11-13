@@ -59,7 +59,7 @@ p { font-weight: normal; font-style: normal; font-stretch: normal; line-height: 
 
 p + h3, p + h4, p + h2 { margin-top: 45px; margin-top: 2.8125rem; }
 
-hr { width: 80%; border-top: 2px solid #DFE1E5; max-width: 770px; max-width: 48.125rem; margin: 45px auto; margin: 2.8125rem auto; }
+hr { width: 80%; border-top: 2px solid #EBEDEF; max-width: 770px; max-width: 48.125rem; margin: 45px auto; margin: 2.8125rem auto; }
 
 blockquote { font-weight: normal; font-style: normal; font-stretch: normal; line-height: 1.64; color: #3F4D60; font-size: 22px; font-size: 1.375rem; }
 
@@ -134,11 +134,7 @@ figcaption { font-size: 16px; font-size: 1rem; }
 
 .icon--edit:before { content: "\e909"; }
 
-.icon--finance .path1:before { content: "\e90b"; }
-
-.icon--finance .path2:before { content: "\e90c"; margin-left: -1em; }
-
-.icon--finance .path3:before { content: "\e90d"; margin-left: -1em; }
+.icon--finance:before { content: "\e936"; }
 
 .icon--follow:before { content: "\e911"; }
 
@@ -202,7 +198,7 @@ figcaption { font-size: 16px; font-size: 1rem; }
 
 .icon--chevron-thin-down:before { content: "\e92b"; }
 
-.icon--calendar2:before { content: "\e90a"; }
+.icon--calendar:before { content: "\e90a"; }
 
 .icon--telegram:before { content: "\e92d"; }
 
@@ -570,6 +566,8 @@ label.error { display: none !important; }
 .btn--green:after { display: none; }
 
 .btn--delete { background: transparent !important; }
+
+.btn.btn-sm { padding: 8px 22px; padding: 0.5rem 1.375rem; font-size: 16px; font-size: 1rem; }
 
 .btn-circle, .btn--circle { border-radius: 100px; text-align: center; text-transform: uppercase; font-weight: 400; height: 50px; height: 3.125rem; min-width: 50px; min-width: 3.125rem; padding: 10px 15px; padding: 0.625rem 0.9375rem; font-size: 18px; font-size: 1.125rem; line-height: 24px; line-height: 1.5rem; }
 
@@ -1969,7 +1967,7 @@ hr.full { margin-left: 0; margin-right: 0; width: 100%; }
 
 .back_link .icon, .edit_page_link .icon { font-size: 16px; margin-right: 3px; }
 
-.label { position: relative; top: -1px; color: #fff; background: #3F4D60; font-weight: 600; display: inline-block; vertical-align: baseline; text-transform: uppercase; border-radius: 3px; letter-spacing: 0.07em; padding: 6px 10px 5px; font-size: 13px; font-size: 0.8125rem; margin: 0 4px; margin: 0 0.25rem; }
+.label { position: relative; top: -1px; color: #fff; background: #3F4D60; font-weight: 600; display: inline-block; vertical-align: baseline; text-transform: uppercase; border-radius: 3px; letter-spacing: 0.07em; padding: 6px 10px 5px; font-size: 13px; font-size: 0.8125rem; line-height: 13px; line-height: 0.8125rem; margin: 0 4px; margin: 0 0.25rem; }
 
 .label--primary { background-color: #ab00ff; }
 
@@ -2204,6 +2202,10 @@ hr.full { margin-left: 0; margin-right: 0; width: 100%; }
 .card__actions .action_link { display: inline-block; vertical-align: middle; border: 0; background: transparent; outline: none !important; color: rgba(63, 77, 96, 0.6); padding: 4px; padding: 0.25rem; font-size: 16px; font-size: 1rem; }
 
 .card__actions .action_link:hover { color: #3F4D60; }
+
+.card__actions .action_link:hover img { opacity: 1; }
+
+.card__actions .action_link img { opacity: .6; position: relative; top: -2px; top: -0.125rem; margin-right: 8px; margin-right: 0.5rem; -webkit-transition: opacity 0.2s ease; -moz-transition: opacity 0.2s ease; -ms-transition: opacity 0.2s ease; -o-transition: opacity 0.2s ease; transition: opacity 0.2s ease; }
 
 .card__actions .action_link .icon { font-size: 16px; font-size: 1rem; }
 

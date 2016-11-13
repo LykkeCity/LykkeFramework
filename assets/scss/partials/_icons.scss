@@ -65,16 +65,8 @@
 .icon--edit:before {
   content: "\e909";
 }
-.icon--finance .path1:before {
-  content: "\e90b";
-}
-.icon--finance .path2:before {
-  content: "\e90c";
-  margin-left: -1em;
-}
-.icon--finance .path3:before {
-  content: "\e90d";
-  margin-left: -1em;
+.icon--finance:before {
+  content: "\e936";
 }
 .icon--follow:before {
   content: "\e911";
@@ -181,7 +173,7 @@
 .icon--chevron-thin-down:before {
   content: "\e92b";
 }
-.icon--calendar2:before {
+.icon--calendar:before {
   content: "\e90a";
 }
 .icon--telegram:before {

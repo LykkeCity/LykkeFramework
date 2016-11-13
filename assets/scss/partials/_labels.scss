@@ -12,6 +12,7 @@
   padding: 6px 10px 5px;
 
   @include rem(font-size, 13px);
+  @include rem(line-height, 13px);
   @include rem(margin, 0 4px);
   @include bg-color-mod;
 

@@ -41,6 +41,19 @@
 
       &:hover {
         color: $secondary;
+
+        img {
+          opacity: 1;
+        }
+      }
+
+      img {
+        opacity: .6;
+        position: relative;
+
+        @include rem(top, -2px);
+        @include rem(margin-right, 8px);
+        @include transition(opacity .2s ease);
       }
 
       .icon {

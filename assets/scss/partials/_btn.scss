@@ -105,6 +105,11 @@
   &--delete {
     background: transparent !important;
   }
+
+  &.btn-sm {
+    @include rem(padding, 8px 22px);
+    @include rem(font-size, 16px);
+  }
 }
 
 .btn-circle,
