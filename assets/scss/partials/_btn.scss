@@ -62,10 +62,11 @@
   &--default {
     border: 1px solid #e1e1e1;
     background: transparent;
-    font-size: 16px;
-    color: #3F4D60 !important;
+    color: $secondary !important;
     font-weight: normal;
-    padding: 13px 21px;
+
+    @include rem(font-size, 16px);
+    @include rem(padding, 13px 21px);
 
     &:after {
       display: none;
@@ -74,7 +75,7 @@
     &:hover {
       /* BG: */
       border-color: #B3B7BA;
-      color: #3F4D60 !important;
+      color: $secondary !important;
       background: transparent !important;
       @include transform(none !important);
     }

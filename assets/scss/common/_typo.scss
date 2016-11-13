@@ -151,21 +151,23 @@ figcaption {
 
 .text {
   p, ul, ol {
-    font-size: 18px;
     font-weight: normal;
     font-style: normal;
     font-stretch: normal;
     line-height: 1.67;
-    color: #3f4d60;
-    margin-bottom: 15px;
+    color: $secondary;
+
+    @include rem(font-size, 18px);
+    @include rem(margin-bottom, 15px);
 
     + h3, + h4, + h2 {
-      margin-top: 45px;
+      @include rem(margin-top, 45px);
     }
   }
 
   ul {
-    list-style-position: outside; list-style-type: disc;
+    list-style-position: outside;
+    list-style-type: disc;
   }
 
   table {
@@ -176,22 +178,31 @@ figcaption {
     font-weight: normal;
     font-style: normal;
     font-stretch: normal;
-    margin-bottom: 20px; margin-top: 20px; padding-left: 25px; color: rgba(63, 77, 96, 0.8);
-    font-size: 18px;
-    line-height: 30px;
+    color: rgba(63, 77, 96, 0.8);
     list-style: none;
 
-    li {color: #3f4d60; margin-bottom: 15px;
+    @include rem(font-size, 18px);
+    @include rem(line-height, 30px);
+    @include rem(padding-left, 25px);
+    @include rem(margin-top, 20px);
+    @include rem(margin-bottom, 20px);
+
+
+    li {
+      color: $secondary;
       position: relative;
 
+      @include rem(margin-bottom, 15px);
+
       &:before {
-        color: #AB00FF;
+        color: $primary;
         content: "\2022";
-        font-size: 28px;
         position: absolute;
         right: 100%;
-        margin-right: 11px;
         top: -2px;
+
+        @include rem(font-size, 28px);
+        @include rem(margin-right, 11px);
       }
     }
 
@@ -202,34 +213,20 @@ figcaption {
     }
 
     + h3, + h4, + h2 {
-      margin-top: 45px;
+      @include rem(margin-top, 45px);
     }
   }
 
   ol {
     color: rgba(63, 77, 96, 0.8);
-    padding-left: 24px;
+    @include rem(padding-left, 24px);
 
     li {
-      margin-bottom: 10px;
+      @include rem(margin-bottom, 10px);
     }
 
     + h3, + h4, + h2 {
-      margin-top: 45px;
-    }
-  }
-
-  @media (max-width: 640px)  {
-
-    p, ul, ul li, ol, ol li, b, strong {
-      font-size: 16px;
-      line-height: 26px;
-    }
-
-    ul, ol {
-      li {
-        margin-bottom: 5px;
-      }
+      @include rem(margin-top, 45px);
     }
   }
 }

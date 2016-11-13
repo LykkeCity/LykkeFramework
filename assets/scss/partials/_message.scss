@@ -1,16 +1,19 @@
 .message_card {
-  padding: 15px 20px;
-  margin-bottom: 20px;
+  @include rem(padding, 15px 20px);
+  @include rem(margin-bottom, 20px);
 
   .user_badge__title {
     text-transform: none;
     letter-spacing: 0;
-    line-height: 22px;
+
+    @include rem(line-height, 22px);
   }
 
   &__reply {
     margin-top: 20px;
     color: $secondary;
+
+    @include rem(margin-top, 20px);
   }
 
   &__area {
@@ -18,17 +21,18 @@
     background: #fff;
     border-radius: 0;
     padding: 0;
-    font-size: 16px;
     position: relative;
     resize: none;
-    height: 110px;
-    min-height: 108px;
-    margin-top: -4px;
-    max-height: 400px;
     border: 0 !important;
 
+    @include rem(height, 110px);
+    @include rem(min-height, 108px);
+    @include rem(max-height, 400px);
+    @include rem(margin-top, -4px);
+    @include rem(font-size, 16px);
     @include transition(all .3s ease);
-    @include transform(translate(0, -18px))
+    @include transform(translate(0, -18px));
+    @include transform(translate(0, -1.125rem))
   }
 
   &__inner {
@@ -36,9 +40,9 @@
   }
 
   &__message {
-    margin-top: 4px;
-    font-size: 18px;
-    line-height: 30px;
+    @include rem(margin-top, 4px);
+    @include rem(font-size, 18px);
+    @include rem(line-height, 30px);
 
     p {
       margin-bottom: 0;
@@ -46,14 +50,15 @@
   }
 
   &__date {
-    color: rgba(#3F4D60, .6);
+    color: rgba($secondary, .6);
     font-weight: normal;
-    font-size: 16px;
+
+    @include rem(font-size, 16px);
   }
 
   .btn {
-    margin-top: 15px;
-    padding: 7px 21px;
+    @include rem(margin-top, 15px);
+    @include rem(padding, 7px 21px);
   }
 
   &--form {
@@ -70,9 +75,7 @@
     }
 
     .message_card__inner {
-      height: 29px;
-      //overflow: hidden;
-
+      @include rem(height, 29px);
       @include transition(all .3s ease);
     }
     
@@ -83,7 +86,7 @@
       }
 
       .form-control {
-        margin-top: 10px;
+        @include rem(margin-top, 10px);
       }
 
       .form-control, .user_badge__title {
@@ -91,30 +94,31 @@
       }
 
       .message_card__inner {
-        height: 142px;
-        padding-top: 2px;
+        @include rem(height, 142px);
+        @include rem(padding-top, 2px);
       }
     }
   }
 
   &--accent {
-    padding-top: 20px;
-    padding-bottom: 20px;
     border-radius: 3px;
     background: rgba(#EAEDEF, .4);
+
+    @include rem(padding-top, 20px);
+    @include rem(padding-bottom, 20px);
   }
 }
 
 .message_actions {
-  margin-top: 30px;
+  @include rem(margin-top, 30px);
 }
 
 .messages_list {
   .user_badge__message {
-    padding-top: 2px;
+    @include rem(padding-top, 2px);
   }
 
   .btn-block, + .btn-block {
-    margin: 30px 0;
+    @include rem(margin, 30px 0);
   }
 }

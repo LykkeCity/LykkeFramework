@@ -188,29 +188,33 @@
   .tab-pane {
     ul {
       list-style: none;
-      li {color: #3f4d60; margin-bottom: 15px;
+      li {
+        color: $secondary;
         position: relative;
 
+        @include rem(margin-bottom, 15px);
+
         &:before {
-          color: #AB00FF;
+          color: $primary;
           content: "\2022";
-          font-size: 28px;
           position: absolute;
           right: 100%;
-          margin-right: 11px;
           top: -2px;
+
+          @include rem(font-size, 28px);
+          @include rem(margin-right, 11px);
         }
       }
-      .li {color: #3f4d60;}
+      .li {color: $secondary;}
 
       + h3, + h4, + h2 {
-        margin-top: 45px;
+        @include rem(margin-top, 45px);
       }
     }
   }
 
   &__title, h1.page__title, h2.page__title {
-    margin-bottom: 17px;
+    @include rem(margin-bottom, 17px);
 
     span {
       display: inline;

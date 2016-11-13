@@ -2,15 +2,16 @@
   &--results {
     background: #F7F8F9;
     border-radius: 3px;
-    padding: 20px 22px;
-    margin-bottom: 40px;
+
+    @include rem(padding, 20px 22px);
+    @include rem(margin-bottom, 40px);
 
     p:last-of-type, h4 {
       margin-bottom: 0;
     }
 
     img {
-      margin-left: 20px;
+      @include rem(margin-left, 20px);
     }
 
     .table-responsive {
@@ -19,15 +20,16 @@
     }
 
     .prize__value {
-      font-size: 28px;
-      margin-bottom: 5px;
+      @include rem(font-size, 28px);
+      @include rem(margin-bottom, 5px);
     }
 
     .table {
       margin-bottom: 0;
       padding-bottom: 0;
       color: $secondary;
-      font-size: 18px;
+
+      @include rem(font-size, 18px);
 
       tr {
         &:hover td {
@@ -40,6 +42,8 @@
           text-align: center;
           padding: 5px;
           cursor: auto;
+
+          @include rem(padding, 5px);
         }
       }
     }
