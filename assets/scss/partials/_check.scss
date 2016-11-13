@@ -3,6 +3,8 @@
   color: #fff;
   text-align: center;
   border-radius: 100px;
+  display: inline-block;
+  vertical-align: middle;
 
   @include rem(width, 20px);
   @include rem(height, 20px);

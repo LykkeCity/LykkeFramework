@@ -68,7 +68,7 @@
     .user_badge__img {
       @include rem(width, 30px);
       @include rem(height, 30px);
-      @include rem(margin-right, 17px);
+      @include rem(margin-right, 12px);
     }
 
     .user_badge__info, .user_badge__message {

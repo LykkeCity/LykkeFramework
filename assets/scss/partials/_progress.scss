@@ -36,7 +36,7 @@
     list-style: none;
     margin-bottom: 0;
 
-    @include rem(padding, 4px 0 0);
+    @include rem(padding, 5px 0 0);
 
     li {
       font-weight: $fw-semi;

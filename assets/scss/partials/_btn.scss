@@ -74,6 +74,7 @@
       /* BG: */
       border-color: #B3B7BA;
       color: #3F4D60 !important;
+      background: transparent !important;
       @include transform(none !important);
     }
   }
@@ -244,21 +245,5 @@
       border-radius: 0 50px 50px 0;
       padding: 7px 18px;
     }
-  }
-}
-
-.circle_voting_btn {
-  color: $primary;
-  border: 2px solid $primary;
-  border-radius: 100px;
-  background: #fff;
-  width: 40px;
-  height: 40px;
-  text-align: center;
-  font-weight: $fw-semi;
-
-  &.active {
-    background: $primary;
-    color: #fff;
   }
 }
