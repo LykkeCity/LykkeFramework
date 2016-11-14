@@ -1,0 +1,110 @@
+.asset_link {
+  @include clearfix;
+  @include rem(margin, 40px 0);
+
+  &__icon {
+    float: left;
+
+    @include rem(margin-right, 15px);
+
+    .icon {
+      @include rem(font-size, 58px);
+    }
+  }
+
+  &__info {
+    overflow: hidden;
+  }
+
+  &__title {
+    color: $text;
+    font-weight: $fw-semi;
+
+    @include rem(font-size, 18px);
+    @include rem(line-height, 30px);
+    @include rem(margin-bottom, 2px);
+
+    a {
+      color: $text !important;
+
+      &:hover {
+        color: rgba($secondary, .6) !important;
+      }
+    }
+  }
+
+  &__desc {
+    display: inline-block;
+    vertical-align: top;
+    color: rgba($secondary, .6);
+    letter-spacing: 0;
+
+    @include rem(font-size, 16px);
+    @include rem(line-height, 24px);
+  }
+
+  &__link {
+    letter-spacing: 0px;
+    display: inline-block;
+    vertical-align: top;
+
+    @include rem(font-size, 16px);
+    @include rem(line-height, 24px);
+    @include rem(margin-left, 15px);
+  }
+}
+
+.assets_list {
+  list-style: none;
+  padding: 0 !important;
+  margin-bottom: 0 !important;
+  width: 100%;
+  font-size: 0 !important;
+
+  a {
+    text-decoration: none;
+
+  }
+
+  &__item {
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    padding: 0 10px;
+    width: 12.5%;
+    font-size: 18px;
+
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 6px;
+    }
+
+    @media all and (max-width: 767px) {
+      width: 20%;
+    }
+
+    @media all and (max-width: 540px) {
+      width: 25%;
+      padding: 0;
+    }
+  }
+}
+
+.asset_icon {
+  background: $gray;
+  border-radius: 3px;
+  letter-spacing: 2px;
+  font-weight: $fw-semi;
+  color: #fff;
+  text-align: center;
+  cursor: default;
+
+  @include rem(width, 60px);
+  @include rem(height, 60px);
+  @include rem(font-size, 16px);
+  @include rem(line-height, 60px);
+
+  @include color-modifier(background);
+}

@@ -22,47 +22,6 @@
   }
 }
 
-.assets_list {
-  list-style: none;
-  padding: 0 !important;
-  margin-bottom: 0 !important;
-  width: 100%;
-  font-size: 0 !important;
-
-  a {
-    text-decoration: none;
-
-    &:hover span {
-      text-decoration: underline;
-    }
-  }
-
-  &__item {
-    display: inline-block;
-    vertical-align: top;
-    text-align: center;
-    padding: 0 10px;
-    width: 12.5%;
-    font-size: 18px;
-
-    img {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      margin-bottom: 6px;
-    }
-
-    @media all and (max-width: 767px) {
-      width: 20%;
-    }
-
-    @media all and (max-width: 540px) {
-      width: 25%;
-      padding: 0;
-    }
-  }
-}
-
 .news_list {
   &__item {
     padding: 35px 0 25px;

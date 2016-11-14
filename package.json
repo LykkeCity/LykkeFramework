@@ -1,6 +1,6 @@
 {
   "name": "LykkeFramework",
-  "version": "0.0.17",
+  "version": "0.0.18",
   "description": "Framework for Lykke projects",
   "keywords": "Lykke",
   "license": "MIT",
@@ -24,7 +24,6 @@
     "normalize.css": "4.2.0"
   },
   "dependencies": {
-    "fullpage.js": "2.8.1",
     "jquery": "1.12.4"
   }
 }
