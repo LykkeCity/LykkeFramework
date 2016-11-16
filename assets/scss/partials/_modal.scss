@@ -70,18 +70,22 @@
   }
 
   .close {
-    float: right;
-    font-size: 21px;
-    font-weight: 700;
-    line-height: 1;
+    top: 8px;
+    right: 4px;
+    position: absolute;
+    font-size: 40px;
+    line-height: 20px;
+    font-weight: $fw-thin;
     color: #000;
-    filter: alpha(opacity=20);
-    opacity: .2;
     -webkit-appearance: none;
     padding: 0;
     cursor: pointer;
     background: 0 0;
     border: 0;
+
+    @media all and (min-width: $screen-mobile) {
+      display: none;
+    }
   }
 
   &__dialog {
@@ -106,7 +110,7 @@
   &__header {
     border-bottom: none;
 
-    @include rem(padding, 40px 40px 30px);
+    @include rem(padding, 40px 40px 0);
 
     .close {
       margin-top: -2px;
@@ -121,19 +125,33 @@
   &__body {
     position: relative;
 
-    @include rem(padding, 0 40px 40px);
+    @include rem(padding, 30px 40px 40px);
 
-    p {
+    p, ul, ol {
       margin-bottom: 0;
 
-      + p {
+      + p, + ul, + ol {
         @include rem(margin-top, 15px);
+      }
+    }
+
+    ol, ul {
+      li {
+        margin-bottom: 0;
+
+        + li {
+          @include rem(margin-top, 10px);
+        }
       }
     }
   }
 
   &__footer {
     @include rem(padding, 0 40px 40px);
+
+    .btn--flat {
+      @include rem(margin-bottom, -22px);
+    }
   }
 
   &--message {

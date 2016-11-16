@@ -3,6 +3,7 @@
   border-radius: 100px;
   margin-left: auto;
   margin-right: auto;
+  text-align: center;
 
   @include rem(width, 64px);
   @include rem(height, 64px);
@@ -15,14 +16,15 @@
     top: -1px;
     vertical-align: middle;
 
-    @include rem(font-size, 24px);
+    @include rem(font-size, 28px);
+    @include rem(line-height, 64px);
   }
 
   &--success {
     background: $green;
 
     &:before {
-
+      content: "\e90b";
     }
   }
 }

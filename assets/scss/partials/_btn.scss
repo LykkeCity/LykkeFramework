@@ -55,6 +55,11 @@
     }
   }
 
+  &--flat {
+    background: transparent !important;
+    color: $primary;
+  }
+
   &--go {
     margin: 60px 0 40px;
   }
