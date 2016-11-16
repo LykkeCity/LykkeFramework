@@ -1,0 +1,160 @@
+.fade {
+  opacity:0;
+
+  @include transition(opacity .15s linear);
+
+  &.in {
+    opacity: 1;
+  }
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1040;
+  background-color: #CFD2D7;
+
+  &.fade {
+    opacity: 0;
+  }
+
+  &.in {
+    opacity: .5;
+  }
+}
+
+.modal-open {
+  overflow: hidden;
+
+  article, header, footer {
+    -webkit-filter: blur(5px);
+    filter: blur(5px);
+  }
+
+  > .btn {
+    opacity: 0;
+  }
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  display: none;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
+
+  &.fade {
+    .modal__dialog {
+      @include transition(transform .3s ease-out);
+      @include transform(translate3d(0, 25%, 0) scale(.8));
+    }
+  }
+
+  &.in {
+    .modal__dialog {
+      @include transform(translate3d(0, 0, 0) scale(1));
+    }
+  }
+
+  .modal-open & {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .close {
+    float: right;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    filter: alpha(opacity=20);
+    opacity: .2;
+    -webkit-appearance: none;
+    padding: 0;
+    cursor: pointer;
+    background: 0 0;
+    border: 0;
+  }
+
+  &__dialog {
+    position: relative;
+    pointer-events: auto;
+
+    @include rem(margin, 30px auto);
+  }
+
+  &__content {
+    position: relative;
+    background-color: #fff;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 0;
+    outline: 0;
+    box-shadow: none;
+
+    @include rem(border-radius, 8px);
+  }
+
+  &__header {
+    border-bottom: none;
+
+    @include rem(padding, 40px 40px 30px);
+
+    .close {
+      margin-top: -2px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    line-height: 1.4;
+  }
+
+  &__body {
+    position: relative;
+
+    @include rem(padding, 0 40px 40px);
+
+    p {
+      margin-bottom: 0;
+
+      + p {
+        @include rem(margin-top, 15px);
+      }
+    }
+  }
+
+  &__footer {
+    @include rem(padding, 0 40px 40px);
+  }
+
+  &--message {
+    .modal__dialog {
+      @include rem(width, 370px);
+    }
+  }
+}
+
+.modal_valign {
+  display: table;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+
+  &__row {
+    display: table-row;
+  }
+
+  &__cell {
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
