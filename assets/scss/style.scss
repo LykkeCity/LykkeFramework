@@ -1,3 +1,7 @@
+@import "../../node_modules/compass-mixins/lib/compass/functions";
+@import "../../node_modules/compass-mixins/lib/compass/utilities";
+@import "../../node_modules/compass-mixins/lib/compass/css3";
+
 // necessary for all pages
 @import 'common/fonts';
 @import 'common/variables';
@@ -43,7 +47,7 @@
 @import 'partials/voting';
 @import 'partials/banner';
 @import 'partials/steps';
-//@import 'partials/calendar';
+@import 'partials/calendar';
 @import 'partials/modificators';
 @import 'partials/spinner';
 @import 'partials/check';

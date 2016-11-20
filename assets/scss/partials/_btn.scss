@@ -8,7 +8,7 @@
   display: inline-block;
   @include border-radius(100px);
   @include transition(background .3s ease, color .3s ease, border .3s ease, transform .3s ease);
-  @include box-shadow-none(none!important);
+  @include box-shadow(none!important);
 
   @include rem(font-size, 18px);
   @include rem(padding, 13px 28px 12px);

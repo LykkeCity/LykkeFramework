@@ -3,7 +3,7 @@
   background: #e8e9ea;
   color: $text;
   border: 0;
-  @include box-shadow-none(none!important);
+  @include box-shadow(none!important);
   @include rem(font-size, 18px);
   @include rem(height, 50px);
   @include rem(padding-left, 20px);
