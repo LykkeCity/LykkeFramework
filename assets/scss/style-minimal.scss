@@ -1,0 +1,24 @@
+// necessary for all pages
+@import 'common/fonts';
+@import 'common/variables';
+@import 'common/mixins';
+@import 'common/general';
+@import 'common/typo';
+@import 'common/helpers';
+
+// necessary for header/footer
+@import 'partials/icons';
+@import 'partials/footer';
+@import 'partials/header';
+@import 'partials/form';
+@import 'partials/btn';
+@import 'partials/social';
+@import 'partials/dropdown';
+@import 'partials/nav';
+
+// necessary for all pages
+@import 'pages/content';
+@import 'pages/page';
+
+// necessary for all pages
+@import 'responsive';

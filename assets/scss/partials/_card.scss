@@ -28,7 +28,8 @@
     @include rem(padding, 13px 0);
     @include rem(margin, 0 -4px);
 
-    a.action_link {
+    a.action_link,
+    button.action_link {
       &:hover {
         color: $secondary;
 
