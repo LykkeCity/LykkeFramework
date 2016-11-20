@@ -57,7 +57,7 @@
 
   &--flat {
     background: transparent !important;
-    color: $primary;
+    color: $primary !important;
   }
 
   &--go {
@@ -78,7 +78,6 @@
     }
 
     &:hover {
-      /* BG: */
       border-color: #B3B7BA;
       color: $secondary !important;
       background: transparent !important;

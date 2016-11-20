@@ -1,6 +1,6 @@
 {
   "name": "LykkeFramework",
-  "version": "0.0.21",
+  "version": "0.0.22",
   "description": "Framework for Lykke projects",
   "keywords": "Lykke",
   "license": "MIT",
@@ -20,8 +20,7 @@
     "gulp-rev": "6.0.1",
     "gulp-sass": "2.1.1",
     "gulp-uglify": "1.5.1",
-    "gulp-usemin": "0.3.16",
-    "normalize.css": "4.2.0"
+    "gulp-usemin": "0.3.16"
   },
   "dependencies": {
     "jquery": "1.12.4"
