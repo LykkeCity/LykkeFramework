@@ -1,6 +1,12 @@
 .form-control.datetimepicker {
   letter-spacing: .02em;
+
+  + .input-group-addon {
+    color: rgba($secondary, .6) !important;
+  }
 }
+
+
 
 .bootstrap-datetimepicker-widget {
   background: #fff;

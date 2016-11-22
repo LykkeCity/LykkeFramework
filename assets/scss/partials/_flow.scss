@@ -34,6 +34,10 @@
     letter-spacing: 0;
 
     @include rem(margin-bottom, 3px);
+
+    span {
+      @include rem(margin-left, 3px);
+    }
   }
 
   &__text {
@@ -62,6 +66,19 @@
 
   .switcher {
     @include rem(margin-left, 8px);
+  }
+
+  .action_link {
+    padding: 0;
+    color: $secondary;
+
+    &:hover {
+      color: rgba($secondary, .8);
+    }
+  }
+
+  .middot {
+    color: #8C94A0;
   }
   
   @media all and (max-width: $screen-mobile-old) {

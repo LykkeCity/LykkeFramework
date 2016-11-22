@@ -31,7 +31,6 @@
   @include rem(margin-right, 6px);
 }
 
-
 .icon--prize .path1:before {
   content: "\e900";
   color: rgb(255, 174, 44);
@@ -267,6 +266,12 @@
 .icon--lykke:before {
   content: "\e941";
   font-size: 110%;
+}
+.icon--close:before {
+  content: "\e942";
+}
+.icon--cancel_round:before {
+  content: "\e943";
 }
 
 

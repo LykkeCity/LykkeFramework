@@ -28,6 +28,12 @@
     }
   }
 
+  &[disabled] {
+    background: #EBEDEF !important;
+    color: rgba($secondary, .3) !important;
+    opacity: 1;
+  }
+
   &--gradient {
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ff9100+0,ff0029+50,ab00ff+100 */
     background: $primary !important; /* Old browsers */

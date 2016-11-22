@@ -21,7 +21,7 @@
     border-color: $border;
   }
 
-  &[disabled], &.disabled,
+  &[disabled]:not(.select__elem), &.disabled,
   &.form-control--disabled {
     background: #F5F6F7;
     border-color: #CFD2D7;
@@ -323,6 +323,10 @@ label.error {
     option {
       @include rem(font-size, 16px);
     }
+
+    &[disabled] {
+      background: transparent;
+    }
   }
 
   &:after {
@@ -335,6 +339,14 @@ label.error {
     @include rem(font-size, 10px);
     @include rem(right, 15px);
     @include rem(margin-top, -4px);
+  }
+
+  &.disabled {
+    .select__value {
+      background: #F5F6F7;
+      border-color: #CFD2D7;
+      color: rgba(63, 77, 96, 0.6);
+    }
   }
 }
 

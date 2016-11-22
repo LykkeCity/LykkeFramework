@@ -1,0 +1,56 @@
+.alert {
+  color: #fff;
+
+  @include clearfix;
+  @include rem(padding, 15px);
+  @include rem(font-size, 15px);
+  @include rem(margin-bottom, 50px);
+  @include color-modifier(background);
+
+  a {
+    color: #fff;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  &__icon {
+    @include rem(width, 35px);
+  }
+
+  &__contact {
+    @include rem(padding-left, 20px);
+    @include rem(width, 102px);
+  }
+
+  .icon--fail {
+    @include rem(margin-right, 12px);
+  }
+
+  .icon--envelope {
+    position: relative;
+    top: -2px;
+  }
+
+  @media all and (max-width: $screen-mobile) {
+    &__icon {
+      display: none;
+    }
+  }
+
+  @media all and (max-width: $screen-landscape) {
+    &__text {
+      overflow: hidden;
+      float: none !important;
+    }
+
+    a.pull-right {
+      clear: both;
+      text-align: right;
+
+      @include rem(margin-top, 10px);
+      @include clearfix;
+    }
+  }
+}
