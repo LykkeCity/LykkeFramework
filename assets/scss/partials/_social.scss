@@ -33,6 +33,10 @@
   &--footer_alt, &--header {
     padding: 5px 0;
 
+    .icon {
+      margin-right: 0;
+    }
+
     > li {
       display: inline-block;
       vertical-align: middle;

@@ -437,6 +437,7 @@ label.error {
   color: rgba($secondary, .6);
 
   @include rem(top, 4px);
+  @include rem(right, 4px);
   @include rem(padding, 10px);
 
   .icon {

@@ -265,8 +265,4 @@ button.action_link {
 .wallet_address {
   word-break: break-all;
   word-wrap: break-word;
-
-  @media all and (max-width: $screen-mobile-old) {
-    font-size: 88%;
-  }
 }
