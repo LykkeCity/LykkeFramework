@@ -1,27 +1,36 @@
-.form-control {
+.form-control:not(.select__elem) {
   text-align: left;
-  background: #e8e9ea;
-  color: $text;
-  border: 0;
+  background: #fff;
+  color: $secondary;
+  border: 1px solid $border;
+  border-radius: 4px;
+
   @include box-shadow(none!important);
-  @include rem(font-size, 18px);
   @include rem(height, 50px);
-  @include rem(padding-left, 20px);
-  @include rem(padding-right, 20px);
+  @include rem(padding, 10px 16px);
+  @include rem(font-size, 16px);
   @include placeholder {
-    color: rgba(#3f4d60, .5);
+    color: rgba($secondary, .5);
   }
 
   &.error {
     background: rgba(#ff0029, .1);
   }
+
+  &[disabled], &.disabled,
+  &.form-control--disabled {
+    background: #F5F6F7;
+    border-color: #CFD2D7;
+    color: rgba($secondary, .6);
+  }
 }
 
 textarea.form-control {
   resize: none;
-  height: 120px;
+  min-height: 140px;
   border: 1px solid $border;
   background: #fff;
+  max-width: 100%;
 
   &:focus {
     border-color: $border;
@@ -185,18 +194,8 @@ label.error {
 
   &--default {
     .form-group {
-      @include rem(margin-bottom, 28px);
-
       ~ .form_title {
         @include rem(margin-top, 22px);
-      }
-    }
-
-    .control-label {
-      @include rem(margin-bottom, 12px);
-
-      + .text-muted {
-        @include rem(padding-top, 5px);
       }
     }
 
@@ -205,22 +204,8 @@ label.error {
       @include rem(margin-bottom, 30px);
     }
 
-    .form-control:not(.select__elem) {
-      background: #fff;
-      border: 1px solid #e1e1e1;
-
-      @include rem(padding, 10px 16px);
-      @include rem(font-size, 16px);
-    }
-
     .select__value {
       @include rem(padding-left, 20px);
-    }
-
-    textarea.form-control {
-      height: auto;
-      resize: auto;
-      max-width: 100%;
     }
 
     .prize__value {
@@ -267,8 +252,14 @@ label.error {
 }
 
 .control-label {
-  color: rgba($secondary, .6);
+  color: rgba($secondary, .8);
   font-weight: normal;
+
+  @include rem(margin-bottom, 12px);
+
+  + .text-muted {
+    @include rem(padding-top, 5px);
+  }
 
   sup {
     text-transform: uppercase;

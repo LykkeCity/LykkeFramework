@@ -236,6 +236,36 @@
 .icon--edit_alt:before {
   content: "\e939";
 }
+.icon--trash:before {
+  content: "\e93c";
+}
+.icon--cal:before {
+  content: "\e93a";
+}
+.icon--cancel:before {
+  content: "\e93b";
+}
+.icon--in_process:before {
+  content: "\e93d";
+}
+.icon--fail .path1:before {
+  content: "\e93e";
+  color: rgb(255, 255, 255);
+}
+.icon--fail .path2:before {
+  content: "\e93f";
+  margin-left: -1em;
+  color: rgb(255, 174, 44);
+}
+.icon--fail .path3:before {
+  content: "\e940";
+  margin-left: -1em;
+  color: rgb(255, 174, 44);
+}
+.icon--lykke:before {
+  content: "\e941";
+}
+
 
 .store_icon {
   background-position: center;

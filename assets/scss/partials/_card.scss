@@ -27,43 +27,6 @@
 
     @include rem(padding, 13px 0);
     @include rem(margin, 0 -4px);
-
-    a.action_link,
-    button.action_link {
-      &:hover {
-        color: $secondary;
-
-        img {
-          opacity: 1;
-        }
-      }
-    }
-
-    .action_link {
-      display: inline-block;
-      vertical-align: middle;
-      border: 0;
-      background: transparent;
-      outline: none !important;
-      color: rgba($secondary, .6);
-
-      @include transition(color .2s ease);
-      @include rem(padding, 4px);
-      @include rem(font-size, 16px);
-
-      img {
-        opacity: .6;
-        position: relative;
-
-        @include rem(top, -2px);
-        @include rem(margin-right, 8px);
-        @include transition(opacity .2s ease);
-      }
-
-      .icon {
-        @include rem(font-size, 16px);
-      }
-    }
   }
 
   &__inner {

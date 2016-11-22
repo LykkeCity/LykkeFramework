@@ -37,6 +37,23 @@
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff9100', endColorstr='#ab00ff',GradientType=1 )!important; /* IE6-9 */
   }
 
+  &--icon {
+    color: #8C94A0;
+    background: transparent !important;
+
+    @include rem(padding, 4px);
+
+    &:hover, &:active {
+      color: $secondary;
+    }
+
+    .icon {
+      margin-right: 0;
+
+      @include rem(font-size, 20px);
+    }
+  }
+
   &--stroke {
     background: transparent;
     border: 2px solid $primary;

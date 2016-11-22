@@ -201,3 +201,64 @@ hr.full {
     @include rem(width, 370px);
   }
 }
+
+a.action_link,
+button.action_link {
+  &:hover {
+    color: $secondary;
+
+    img {
+      opacity: 1;
+    }
+  }
+}
+
+.action_link {
+  display: inline-block;
+  vertical-align: middle;
+  border: 0;
+  background: transparent;
+  outline: none !important;
+  color: rgba($secondary, .6);
+
+  @include transition(color .2s ease);
+  @include rem(padding, 4px);
+  @include rem(font-size, 16px);
+
+  img {
+    opacity: .6;
+    position: relative;
+
+    @include rem(top, -2px);
+    @include rem(margin-right, 8px);
+    @include transition(opacity .2s ease);
+  }
+
+  .icon {
+    @include rem(font-size, 16px);
+  }
+}
+
+
+.action_text {
+  display: inline-block;
+  vertical-align: middle;
+  border: 0;
+  background: transparent;
+  outline: none !important;
+  color: #8C94A0;
+
+  @include rem(font-size, 16px);
+
+  .icon {
+    @include rem(font-size, 16px);
+  }
+
+  .card__actions & {
+    @include rem(padding, 4px);
+  }
+
+  &.text-muted {
+    color: rgba($secondary, .8);
+  }
+}

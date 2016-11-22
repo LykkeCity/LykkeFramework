@@ -52,6 +52,28 @@
     @include rem(line-height, 24px);
     @include rem(margin-left, 15px);
   }
+  
+  &__action {
+    float: right;
+  }
+
+  &--alt {
+    .asset_icon {
+      @include rem(line-height, 32px);
+      @include rem(height, 31px);
+    }
+
+    .asset_link__title,
+    .asset_link__desc {
+      display: inline-block;
+      vertical-align: middle;
+      margin-bottom: 0;
+    }
+
+    .asset_link__desc {
+      @include rem(margin-left, 8px);
+    }
+  }
 }
 
 .assets_list {
@@ -107,4 +129,22 @@
   @include rem(line-height, 60px);
 
   @include color-modifier(background);
+}
+
+.asset_link_list {
+  @include rem(margin, 40px 0);
+}
+
+.whatever_list, 
+.asset_link_list {
+  .asset_link {
+    margin: 0;
+    border-bottom: 1px solid #EBEDEF;
+
+    @include rem(padding, 20px 0);
+    
+    &__action {
+      float: right;
+    }
+  }
 }

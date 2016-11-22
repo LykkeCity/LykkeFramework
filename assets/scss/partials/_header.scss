@@ -146,6 +146,10 @@ header {
       display: none;
     }
   }
+  
+  &--static {
+    position: absolute;
+  }
 
   @media all and (max-width: $screen-mobile-old) {
     .header__title {
