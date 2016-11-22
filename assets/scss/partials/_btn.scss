@@ -44,7 +44,7 @@
     @include rem(padding, 4px);
 
     &:hover, &:active {
-      color: $secondary;
+      color: $secondary !important;
     }
 
     .icon {

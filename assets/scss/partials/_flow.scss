@@ -1,3 +1,67 @@
 .flow {
+  @include rem(margin-bottom, 28px);
 
+  &__item {
+    @include rem(padding, 25px 0 0);
+  }
+
+  &__icon {
+    float: left;
+    background-color: #CFD2D7;
+    color: #fff;
+    border-radius: 100px;
+    text-align: center;
+
+    @include rem(width, 40px);
+    @include rem(height, 40px);
+    @include rem(margin-right, 30px);
+    @include color-modifier(background-color);
+
+    + .flow__content {
+      @include rem(margin-left, 70px);
+    }
+
+    .icon {
+      margin-right: 0;
+      position: relative;
+      left: 1px;
+      @include rem(font-size, 20px);
+      @include rem(line-height, 40px);
+    }
+  }
+
+  &__title {
+    text-transform: none;
+    letter-spacing: 0;
+
+    @include rem(margin-bottom, 3px);
+  }
+
+  &__text {
+    letter-spacing: 0;
+    color: rgba($secondary, .8);
+    overflow: hidden;
+
+    @include rem(padding-right, 30px);
+    @include rem(font-size, 16px);
+    @include rem(line-height, 24px);
+    @include rem(margin-bottom, 20px);
+  }
+
+  &__actions {
+    float: right;
+
+    @include rem(width, 172px);
+    @include rem(margin-top, -12px);
+  }
+
+  &__content {
+    border-bottom: 1px solid #EBEDEF;
+
+    @include rem(padding-bottom, 20px);
+  }
+
+  .switcher {
+    @include rem(margin-left, 8px);
+  }
 }

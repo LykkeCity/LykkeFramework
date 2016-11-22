@@ -4,6 +4,7 @@
 
   &__icon {
     float: left;
+    text-transform: uppercase;
 
     @include rem(margin-right, 15px);
 
@@ -61,6 +62,10 @@
     .asset_icon {
       @include rem(line-height, 32px);
       @include rem(height, 31px);
+    }
+
+    .asset_link__info {
+      padding-top: 1px;
     }
 
     .asset_link__title,
@@ -133,10 +138,7 @@
 
 .asset_link_list {
   @include rem(margin, 40px 0);
-}
 
-.whatever_list, 
-.asset_link_list {
   .asset_link {
     margin: 0;
     border-bottom: 1px solid #EBEDEF;
@@ -146,5 +148,20 @@
     &__action {
       float: right;
     }
+  }
+}
+
+.whatever_list {
+  @include rem(margin, 40px 0);
+
+  &__item {
+    margin: 0;
+    border-bottom: 1px solid #EBEDEF;
+
+    @include rem(padding, 20px 0);
+  }
+
+  &__action {
+    float: right;
   }
 }
