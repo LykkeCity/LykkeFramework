@@ -75,6 +75,16 @@
       margin-bottom: 0;
     }
 
+    .asset_link__title {
+      overflow: hidden;
+      display: inline-block;
+      white-space: nowrap;
+      vertical-align: middle;
+      text-overflow: ellipsis;
+
+      @include rem(max-width, 200px);
+    }
+
     .asset_link__desc {
       @include rem(margin-left, 8px);
     }
@@ -149,6 +159,10 @@
       float: right;
     }
   }
+
+  &:empty {
+    display: none;
+  }
 }
 
 .whatever_list {
@@ -163,5 +177,9 @@
 
   &__action {
     float: right;
+  }
+
+  &:empty {
+    display: none;
   }
 }

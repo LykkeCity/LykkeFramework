@@ -1,12 +1,28 @@
+.form-control.datetimepicker {
+  letter-spacing: .02em;
+}
+
 .bootstrap-datetimepicker-widget {
   background: #fff;
-  padding: 10px 16px;
-  font-size: 16px;
-  border: 1px solid #e1e1e1;
   border-radius: 3px;
   overflow: hidden;
   position: absolute;
-  z-index:100;
+  z-index:10;
+  box-shadow: 0 8px 40px 0 rgba(63, 77, 96, 0.4), 0 5px 5px 0 rgba(63, 77, 96, 0.05);
+
+  @include rem(padding, 10px 16px);
+  @include rem(font-size, 16px);
+
+  &.dropdown-menu {
+    @include rem(padding, 10px 16px);
+    @include rem(font-size, 16px);
+    @include rem(margin, 10px 0);
+    @include rem(width, 376px);
+  }
+
+ [class^="icon--"], [class*=" icon--"] {
+   color: #8c94a0;
+ }
 
   .fade {
     opacity: 0;
@@ -48,13 +64,23 @@
   table {
     th {
       font-weight: $fw-semi;
+      color: $primary;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+
+      &.picker-switch {
+        color: $text;
+      }
     }
 
     td, th {
-      padding: 10px;
+
+      @include rem(padding, 10px);
     }
 
     td {
+      text-shadow: none !important;
+
       &.active, &.active:hover {
         background: $primary;
         color: #fff;
@@ -62,6 +88,29 @@
 
       &.old, &.new {
         color: rgba($secondary, .35);
+      }
+
+      &.day {
+        @include rem(width, 48px);
+        @include rem(height, 40px);
+        @include rem(line-height, 20px);
+      }
+
+      &.today {
+        &:before {
+          border-bottom-color: $primary;
+        }
+      }
+
+      &.active.today:before {
+        border-bottom-color: #fff;
+      }
+
+      &.day:hover,
+      &.hour:hover,
+      &.minute:hover,
+      &.second:hover {
+        background: rgba($secondary, .1);
       }
     }
   }
@@ -75,7 +124,7 @@
   }
 
   .timepicker-hour, .timepicker-minute, .timepicker-second {
-    font-weight: 600;
+    font-weight: $fw-semi;
     font-size: 1.3em;
   }
 
@@ -85,11 +134,23 @@
   }
 
   .btn {
-    padding: 4px;
     background: #fff;
     border-radius: 4px;
     height: auto;
     color: $secondary;
+
+    @include rem(padding, 4px);
+
+    &:hover {
+      color: $secondary;
+      background: transparent;
+    }
+  }
+}
+
+.input-group.date {
+  .input-group-addon {
+    @include transition(color .2s ease);
 
     &:hover {
       color: $secondary;

@@ -134,7 +134,7 @@ label.error {
 }
 
 .form {
-  font-size: 16px;
+  @include rem(font-size, 16px);
 
   &--search {
     @include clearfix;
@@ -260,6 +260,7 @@ label.error {
   font-weight: normal;
 
   @include rem(margin-bottom, 12px);
+  @include rem(font-size, 16px);
 
   + .text-muted {
     @include rem(padding-top, 5px);
@@ -338,10 +339,11 @@ label.error {
 }
 
 .form_title {
-  font-size: 16px;
-  padding: 11px 0;
   border-bottom: 1px solid #DFE1E5;
-  margin-bottom: 25px;
+
+  @include rem(font-size, 16px);
+  @include rem(padding, 11px 0);
+  @include rem(margin-bottom, 25px);
 }
 
 .fileupload {
@@ -395,7 +397,8 @@ label.error {
     &:checked {
       + .switcher__control:after {
         background: $primary;
-        left: 15px;
+
+        @include rem(left, 15px);
       }
     }
   }
@@ -415,10 +418,10 @@ label.error {
       content: '';
       position: absolute;
       background: #cfd2d7;
-      left: 4px;
-      top: 4px;
       border-radius: 40px;
 
+      @include rem(left, 4px);
+      @include rem(top, 4px);
       @include rem(width, 14px);
       @include rem(height, 14px);
       @include transition(all .2s ease);
@@ -428,4 +431,15 @@ label.error {
 
 .form_fieldset {
   @include rem(margin-bottom, 50px);
+}
+
+.input-group-addon {
+  color: rgba($secondary, .6);
+
+  @include rem(top, 4px);
+  @include rem(padding, 10px);
+
+  .icon {
+    margin-right: 0;
+  }
 }
