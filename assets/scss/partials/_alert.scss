@@ -33,6 +33,29 @@
     top: -2px;
   }
 
+  &--message {
+    border-radius: 3px;
+    background-color: #f5f6f7;
+    border: solid 1px #cfd2d7;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    color: #8c94a0;
+    text-align: center;
+
+    @include rem(font-size, 16px);
+    @include rem(padding, 27px);
+
+    a {
+      color: $secondary;
+
+      &:hover {
+        color: rgba($secondary, 0.8);
+      }
+    }
+  }
+
   @media all and (max-width: $screen-mobile) {
     &__icon {
       display: none;

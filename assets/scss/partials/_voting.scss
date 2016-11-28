@@ -1,5 +1,7 @@
 .voting_group {
-  margin-bottom: 25px;
+  white-space: nowrap;
+
+  @include rem(margin-bottom, 25px);
 
   .btn--circle {
     color: #fff;
@@ -18,23 +20,25 @@
     }
 
     + .btn--circle {
-      margin-left: 10px;
+      @include rem(margin-left, 10px);
     }
 
     &.active {
       color: #fff;
       z-index:2;
-      padding-left: 30px;
-      padding-right: 30px;
+
+      @include rem(padding-left, 30px);
+      @include rem(padding-right, 30px);
 
       span {
-        margin-left: 12px;
-        width: 35px;
+        @include rem(margin-left, 12px);
+        @include rem(width, 35px);
       }
 
       + .btn--circle {
-        margin-left: -67px;
         margin-right: 0;
+
+        @include rem(margin-left, -67px);
       }
 
       &:before {
@@ -52,9 +56,9 @@
         opacity: 0;
         visibility: hidden;
         z-index:3;
-        padding: 13px 16px;
         text-align: center;
 
+        @include rem(padding, 13px 16px);
         @include transition(all .3s ease);
       }
 
@@ -73,8 +77,8 @@
       visibility: hidden;
 
       + .btn--circle {
-        margin-left: -56px;
-        margin-right: -11px;
+        @include rem(margin-left, -56px);
+        @include rem(margin-right, -11px);
       }
     }
   }
@@ -84,30 +88,34 @@
     vertical-align: middle;
     text-transform: uppercase;
     font-weight: $fw-semi;
-    margin-left: 20px;
+
+    @include rem(margin-left, 20px);
   }
 
   &__status {
     font-weight: normal;
-    font-size: 16px;
     text-transform: none;
     display: none;
+
+    @include rem(font-size, 16px);
   }
 
   &__count {
     display: inline-block;
     vertical-align: middle;
-    margin-left: 6px;
     position: relative;
     top: -1px;
 
+    @include rem(margin-left, 6px);
+
     span {
       font-weight: $fw-semi;
-      width: 28px;
       display: inline-block;
       vertical-align: middle;
       position: relative;
       top: -1px;
+
+      @include rem(width, 28px);
     }
   }
 
@@ -127,20 +135,21 @@
 
 
 .status_bar {
-  width: 65px;
-  height: 4px;
-  border-radius: 10px;
   display: inline-block;
   vertical-align: middle;
   position: relative;
   background: rgba($secondary, .15);
 
+  @include rem(width, 65px);
+  @include rem(height, 4px);
+  @include rem(border-radius, 10px);
+
   &__line {
     position: absolute;
     width: 0;
     height: 100%;
-    border-radius: 10px;
 
+    @include rem(border-radius, 10px);
     @include transition(all .3s ease .1s);
 
     &--green {

@@ -10,10 +10,7 @@
   }
 
   &__reply {
-    margin-top: 20px;
     color: $secondary;
-
-    @include rem(margin-top, 20px);
   }
 
   &__area {
@@ -46,6 +43,13 @@
 
     p {
       margin-bottom: 0;
+    }
+
+    .card__actions {
+      @include rem(margin-top, 4px);
+      @include rem(padding, 6px 0);
+
+      border-bottom: 1px solid #EBEDEF;
     }
   }
 
