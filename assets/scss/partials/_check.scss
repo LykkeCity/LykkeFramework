@@ -6,8 +6,8 @@
   display: inline-block;
   vertical-align: middle;
 
-  @include rem(width, 20px);
-  @include rem(height, 20px);
+  @include rem(width, 24px);
+  @include rem(height, 24px);
   @include color-modifier(background);
 
   &:before {
@@ -20,7 +20,7 @@
     right: 0;
 
     @include rem(font-size, 8px);
-    @include rem(line-height, 22px);
+    @include rem(line-height, 26px);
   }
 
   &--inprogress {

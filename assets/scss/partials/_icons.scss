@@ -121,7 +121,7 @@
   content: "\e91e";
 }
 .icon--vote_list:before {
-  content: "\e91f";
+  content: "\e946";
 }
 .icon--xls_file .path1:before {
   content: "\e920";
@@ -173,9 +173,6 @@
 }
 .icon--chevron-thin-down:before {
   content: "\e92b";
-}
-.icon--calendar:before {
-  content: "\e90a";
 }
 .icon--telegram:before {
   content: "\e92d";
@@ -241,13 +238,16 @@
   content: "\e93c";
 }
 .icon--cal:before {
-  content: "\e93a";
+  content: "\e948";
 }
 .icon--cancel:before {
   content: "\e93b";
 }
 .icon--in_process:before {
   content: "\e93d";
+}
+.icon--in_process_simple:before {
+  content: "\e947";
 }
 .icon--fail .path1:before {
   content: "\e93e";

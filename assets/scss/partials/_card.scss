@@ -65,7 +65,7 @@
     .label, .votes, .users_stack {
       vertical-align: middle;
 
-      @include rem(margin-bottom, 13px);
+      @include rem(margin-bottom, 15px);
     }
   }
 
