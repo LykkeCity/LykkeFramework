@@ -116,6 +116,7 @@
   display: block;
   float: none;
   padding: 0;
+  background: $white;
 
   @include rem(width, 387px);
   @include rem(margin-left, -193px);
@@ -125,6 +126,11 @@
   &--sm {
     @include rem(width, 296px);
     @include rem(margin-left, -148px);
+  }
+
+  &--tiny {
+    @include rem(width, 120px);
+    @include rem(margin-left, -60px);
   }
 
   &:after, &:before {
@@ -169,13 +175,17 @@
     visibility: visible;
   }
 
-  &--show, &.show, .show & {
+  &--show, &.show, .show &, .open &, &.open {
     opacity: 1;
     visibility: visible;
   }
 
   .form-group:last-child {
     margin-bottom: 0;
+  }
+
+  ol, ul {
+    @extend %disable-list-style;
   }
 
   .divider {
@@ -205,5 +215,29 @@
   }
 }
 
-.dropdown-toggle {
+.dropdown-list {
+  @extend %disable-list-style;
+
+  text-align: left;
+  color: $secondary;
+  letter-spacing: 0;
+
+  @include rem(font-size, 16px);
+
+  li {
+    border-bottom: 1px solid $gray-25;
+    margin-bottom: 0;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+
+    a {
+      @include rem(padding, 6px 20px);
+
+      &:hover {
+        background: $gray-5;
+      }
+    }
+  }
 }
