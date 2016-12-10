@@ -21,7 +21,7 @@ $border-alt: #EBEDEF;
 $border-radius: 4px;
 
 $box-shadow-value: 0 8px 40px 0;
-$box-shadow-popup: $box-shadow-value rgba(63, 77, 96, 0.3);
+$box-shadow-popup: 0 5px 5px 0 rgba(63,77,96,0.05), 0 8px 50px 0 rgba(63,77,96,0.40);
 $box-shadow-modal: $box-shadow-value rgba(140,147,160,0.60);
 
 $ff: "Proxima Nova", "Segoe UI",Roboto,"Droid Sans","Helvetica Neue",Arial,sans-serif;
