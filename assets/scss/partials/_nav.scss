@@ -69,19 +69,16 @@
   > li > a:not(.btn) {
     border: 0;
     border-bottom: 2px solid transparent;
-    font-size: 18px;
     color: rgba($secondary, .6);
-    padding: 11px 20px;
     font-weight: $fw-semi;
+
+    @include rem(font-size, 18px);
+    @include rem(padding, 11px 20px);
   }
 
   @media all and (max-width: 539px) {
     margin-right: -15px !important;
     width: auto;
-
-    > li > a:not(.btn) {
-      font-size: 14px;
-    }
   }
 }
 

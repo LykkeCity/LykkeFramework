@@ -219,6 +219,7 @@
     border-bottom: 1px solid $gray-25;
     margin-bottom: 0 !important;
     color: $secondary;
+    line-height: normal;
 
     &:before {
       display: none;
@@ -235,6 +236,7 @@
     > a {
       display: block;
       color: inherit;
+      line-height: normal;
 
       @include rem(padding, 15px 20px);
 
