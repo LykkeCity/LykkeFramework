@@ -116,6 +116,7 @@
   float: none;
   padding: 0;
   background: $white;
+  z-index: 20;
 
   @include rem(width, 387px);
   @include rem(margin-left, -193px);
@@ -225,6 +226,10 @@
 
     &:last-child {
       border-bottom: 0;
+    }
+
+    &.active > a {
+      background: $gray-5;
     }
 
     > a {
