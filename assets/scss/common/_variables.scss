@@ -5,15 +5,24 @@ $green: #13B72A;
 $red: #FF3E2E;
 $yellow: #FFAE2C;
 
+$white: #fff;
 $light: #f8f7ef;
 $text: #333333;
 $dark: #272723;
 $gray: #909c9e;
 $gray-light: #b2b8bf;
+$gray-25: #CFD2D7;
+$gray-5: #F5F6F7;
 $gray-dark: #8c94a0;
 $grey: rgba($secondary, .35);
 $border: #e1e1e1;
 $border-alt: #EBEDEF;
+
+$border-radius: 4px;
+
+$box-shadow-value: 0 8px 40px 0;
+$box-shadow-popup: $box-shadow-value rgba(63, 77, 96, 0.3);
+$box-shadow-modal: $box-shadow-value rgba(140,147,160,0.60);
 
 $ff: "Proxima Nova", "Segoe UI",Roboto,"Droid Sans","Helvetica Neue",Arial,sans-serif;
 
@@ -25,7 +34,8 @@ $fw-regular:    400;
 $fw-light:      300;
 $fw-thin:       200;
 
-$all: all .3s ease;
+$transition-default: .3s ease;
+$all: all $transition-default;
 
 $main-font-size: 24px;
 

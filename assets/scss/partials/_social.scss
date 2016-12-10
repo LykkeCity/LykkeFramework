@@ -1,7 +1,9 @@
 .social {
   &__item {
-    margin-right: 40px;
     text-decoration: none !important;
+
+    @include rem(margin-right, 40px);
+
     &:last-child {
       margin-right: 0;
     }
@@ -12,9 +14,10 @@
 
   &--footer {
     > li > a {
-      padding: 5px 0;
       display: inline-block;
       color: rgba($secondary, .8);
+
+      @include rem(padding, 5px 0);
 
       &:hover {
         color: rgba($secondary, 1);
@@ -24,14 +27,16 @@
 
   &--header {
     position: absolute;
-    bottom: 20px;
     left: 0;
     right: 0;
     white-space: normal;
+
+    @include rem(padding, 0 30px);
+    @include rem(bottom, 20px);
   }
 
   &--footer_alt, &--header {
-    padding: 5px 0;
+    @include rem(padding, 5px 0);
 
     .icon {
       margin-right: 0;
@@ -40,8 +45,9 @@
     > li {
       display: inline-block;
       vertical-align: middle;
-      margin-left: 28px;
-      font-size: 20px;
+
+      @include rem(font-size, 20px);
+      @include rem(margin-left, 28px);
 
       &:first-child {
         margin-left: 0;
@@ -51,8 +57,9 @@
         color: $secondary;
         display: inline-block;
         vertical-align: middle;
-        padding: 8px;
         opacity: .6;
+
+        @include rem(padding, 8px);
 
         &:hover {
           color: rgba($secondary, 1);

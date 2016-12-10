@@ -200,6 +200,7 @@
           position: absolute;
           right: 100%;
           top: -2px;
+          line-height: normal;
 
           @include rem(font-size, 28px);
           @include rem(margin-right, 11px);
@@ -268,12 +269,14 @@
   &__footer {
     .social--footer_alt {
       margin-bottom: 0;
-      padding: 12px 0;
+
+      @include rem(padding, 12px 0);
     }
 
     .footer__bottom {
-      padding: 17px 0;
       background: rgba(#eaedef, .4);
+
+      @include rem(padding, 17px 0);
     }
   }
 
@@ -391,6 +394,12 @@
 
       &__item {
         max-width: 215px;
+      }
+    }
+
+    &__footer {
+      .social--footer_alt {
+        @include rem(padding, 12px 30px)
       }
     }
 

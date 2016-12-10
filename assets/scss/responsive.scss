@@ -1,12 +1,4 @@
 @media (max-width: 539px) {
-  .section--padding {
-    padding: 45px 0 45px;
-  }
-
-  .grid {
-    padding: 0;
-  }
-
   header {
     text-align: center;
 
@@ -212,7 +204,6 @@
 
   .navbar-collapse {
     padding: 0;
-    display: block;
     position: fixed;
     top: 84px;
     background: #fff;
@@ -224,6 +215,7 @@
     visibility: hidden;
     overflow: hidden;
     height: 0 !important;
+    z-index: 110;
     @include transition(all 0.40s ease 100ms);
 
     .btn--stroke {

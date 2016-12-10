@@ -26,12 +26,15 @@
   &--inprogress {
     background: #CFD2D7;
 
-    @include rem(margin, 8px 6px);
-    @include rem(width, 8px);
-    @include rem(height, 8px);
-
     &:before {
-      content: "none";
+      content: "";
+      display: none;
+    }
+  }
+
+  &--current, ._current & {
+    &:before {
+      content: "\e947";
     }
   }
 }
