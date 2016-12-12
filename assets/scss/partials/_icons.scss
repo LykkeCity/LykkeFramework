@@ -273,7 +273,15 @@
 .icon--cancel_round:before {
   content: "\e943";
 }
-
+.icon--prev_transaction:before {
+  content: "\e90a";
+}
+.icon--arrow_right_big:before {
+  content: "\e93a";
+}
+.icon--vote_list:before {
+  content: "\e946";
+}
 
 .store_icon {
   background-position: center;
