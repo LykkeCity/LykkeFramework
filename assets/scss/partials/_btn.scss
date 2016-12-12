@@ -46,6 +46,7 @@
   &--icon {
     color: #8C94A0;
     background: transparent !important;
+    line-height: normal;
 
     @include rem(padding, 4px);
 
