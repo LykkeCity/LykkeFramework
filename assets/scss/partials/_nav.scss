@@ -9,9 +9,9 @@
     .icon-bar {
       position: relative;
       background-color: rgba($secondary, .6);
-      left: -2px;
+      left: 2px;
 
-      @include transform-origin(93%);
+      @include transform-origin(10% 50%);
 
       &:first-child {
         @include rotate(45deg)

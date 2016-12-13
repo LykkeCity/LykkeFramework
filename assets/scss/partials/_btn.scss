@@ -47,10 +47,11 @@
     color: #8C94A0;
     background: transparent !important;
     line-height: normal;
+    border-radius: 0;
 
     @include rem(padding, 4px);
 
-    &:hover, &:active {
+    &:hover, &:active, &:focus {
       color: $secondary !important;
     }
 
