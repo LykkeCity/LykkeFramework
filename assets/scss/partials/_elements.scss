@@ -92,13 +92,20 @@
 }
 
 .image-container {
-  margin: 80px -100px;
+  @include rem(margin, 80px 0);
 
-  img + .text-center {
-    margin-top: 40px;
-    margin-bottom: 0;
-    padding-left: 100px;
-    padding-right: 100px;
+  .image {
+    @include rem(margin, 0 -100px);
+
+    + figure {
+      margin-bottom: 0;
+
+      @include rem(margin-top, 40px);
+    }
+  }
+
+  img {
+    max-width: 100%;
   }
 }
 

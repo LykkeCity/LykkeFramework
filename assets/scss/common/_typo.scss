@@ -211,10 +211,10 @@ figcaption {
       }
     }
 
-    .li {color: rgba(63, 77, 96, 0.8);}
+    .li {color: $secondary;}
 
     a:not(.btn) {
-      color: #0da7fc;
+      color: $blue;
     }
 
     + h3, + h4, + h2 {
