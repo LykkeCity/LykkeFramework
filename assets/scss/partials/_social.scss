@@ -136,29 +136,3 @@
     }
   }
 }
-
-.apps {
-  font-size: 0;
-  text-align: center;
-
-  .apps_apple, .apps_google {
-    display: inline-block;
-    vertical-align: middle;
-
-    a {
-      display: block;
-
-      &:hover {
-        @include scale(1.01);
-      }
-    }
-  }
-
-  .apps_apple {
-    margin-right: 20px;
-  }
-
-  .landing--intro & {
-    margin: 70px 0 100px;
-  }
-}
