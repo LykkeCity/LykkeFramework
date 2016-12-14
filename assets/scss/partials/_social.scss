@@ -70,42 +70,6 @@
   }
 }
 
-.icon_img {
-  display: inline-block;
-  vertical-align: middle;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  color: rgba(#3f4d60, .6);
-
-  &--in {
-    background-image: url('../img/linkedin-icn.svg');
-    width: 24px;
-    height: 24px;
-  }
-
-  &--fb {
-    background-image: url('../img/fb.svg');
-    width: 10.4px;
-    height: 20px;
-  }
-  &--tw {
-    background-image: url('../img/twitter.svg');
-    width: 20px;
-    height: 16.3px;
-  }
-  &--yt {
-    background-image: url('../img/youtube.svg');
-    width: 22px;
-    height: 16px;
-  }
-  &--inst {
-    background-image: url('../img/insta.svg');
-    width: 24px;
-    height: 24px;
-  }
-}
-
 .sharing {
   margin-bottom: 44px;
 
