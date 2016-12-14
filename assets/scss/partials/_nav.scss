@@ -11,7 +11,7 @@
       background-color: rgba($secondary, .6);
       left: 2px;
 
-      @include transform-origin(10% 50%);
+      @include transform-origin(10%);
 
       &:first-child {
         @include rotate(45deg)

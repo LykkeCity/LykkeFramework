@@ -279,11 +279,22 @@
 .icon--arrow_right_big:before {
   content: "\e93a";
 }
+.icon--arrow_left_big:before {
+  content: "\e93a";
+  display: block;
+  @include rotate(180deg);
+}
 .icon--vote_list:before {
   content: "\e946";
 }
 .icon--copy:before {
   content: "\e91f";
+}
+.icon--polygon:before {
+  content: "\e944";
+}
+.icon--polygon_fill:before {
+  content: "\e945";
 }
 
 .store_icon {
