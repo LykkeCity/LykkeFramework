@@ -87,3 +87,65 @@
   border-bottom: 2px solid $primary;
   color: $primary;
 }
+
+.tab-pane {
+  ul {
+    list-style: none;
+    li {
+      color: $secondary;
+      position: relative;
+
+      @include rem(margin-bottom, 15px);
+
+      &:before {
+        color: $primary;
+        content: "\2022";
+        position: absolute;
+        right: 100%;
+        top: -2px;
+        line-height: normal;
+
+        @include rem(font-size, 28px);
+        @include rem(margin-right, 11px);
+      }
+    }
+    .li {color: $secondary;}
+
+    + h3, + h4, + h2 {
+      @include rem(margin-top, 45px);
+    }
+  }
+}
+
+.nav-tabs {
+  padding-left: 0 !important;
+
+  @include rem(margin-bottom, 44px !important);
+
+  sup {
+    color: $primary;
+  }
+
+  > li {
+    margin-bottom: 0 !important;
+
+    > a {
+      font-size: 18px;
+      letter-spacing: 0;
+      color: rgba($secondary, .6) !important;
+      margin-right: 0;
+
+      @include rem(font-size, 18px);
+
+      &:hover {
+        color: rgba($secondary, 1) !important;
+      }
+    }
+
+    &.active {
+      > a {
+        color: rgba($secondary, 1) !important;
+      }
+    }
+  }
+}

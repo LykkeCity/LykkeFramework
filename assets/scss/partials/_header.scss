@@ -217,7 +217,7 @@ header {
   }
 }
 
-.header--new {
+.header {
   @include transition(all .3s ease);
 
   .btn {
@@ -411,7 +411,7 @@ header {
   }
 }
 
-.header--new.fixed a.btn.btn-red, .header--new.fixed a.btn.btn-red:hover {
+.header.fixed a.btn.btn-red, .header.fixed a.btn.btn-red:hover {
   background-color: #ffffff;
   color: #ab00ff;
   margin-top: -2px;

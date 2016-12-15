@@ -97,7 +97,7 @@
   .image {
     @include rem(margin, 0 -100px);
 
-    + figure {
+    + figcaption {
       margin-bottom: 0;
 
       @include rem(margin-top, 40px);

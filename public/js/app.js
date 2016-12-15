@@ -1,270 +1,122 @@
-(function ($) {
+// CODE ========================
 
-  function checkSection (index, nextIndex) {
-    switch (nextIndex) {
-      case 2:
-        sections.eq(1).addClass('adv_promo_section--animated');
-        break;
+var wH = $(window).height(),
+  wW = $(window).width(),
+  ua = navigator.userAgent,
+  touchendOrClick = (ua.match(/iPad|iPhone|iPad/i)) ? "touchend" : "click",
 
-      case 3:
-        clearTimeout(animatedTimeout);
-        sections.eq(2).addClass('adv_promo_section--animated');
-        break;
+  deviceAgent = navigator.userAgent.toLowerCase(),
+  isMobile = deviceAgent.match(/(iphone|ipod|ipad)/);
 
-      case 4:
-        initVarietyCarousel();
-        break;
+FastClick.attach(document.body);
 
-      case 6:
-        sections.eq(5).addClass('adv_promo_section--animated');
-        initTimeCarousel();
-        break;
-    }
-
-    if (index === 3) {
-      animatedTimeout = setTimeout(function () {
-        sections.eq(2).removeClass('adv_promo_section--animated');
-      }, 1000);
-    }
-
-    if (index === 4) {
-      stopVarietyCarousel();
-    }
-  }
-
-  function onLeave (index, nextIndex, direction) {
-    if (direction === 'down' && nextIndex === sectionsCount) {
-      scrollDownButton.addClass('adv_promo_arrow_down--hide');
-    } else {
-      scrollDownButton.removeClass('adv_promo_arrow_down--hide');
-    }
-
-    if (isSafari) {
-      $.fn.fullpage.setAllowScrolling(false);
-
-      setTimeout(function () {
-        checkSection(index, nextIndex);
-
-        setTimeout(function () {
-          $.fn.fullpage.setAllowScrolling(true);
-        }, 1000);
-      }, 100);
-    } else {
-      checkSection(index, nextIndex);
-    }
-  }
-
-  function initTimeCarousel () {
-    if (timeSliderInited) {
-      return;
-    }
-
-    timeSliderInited = true;
-
-    timeTimeout = setTimeout(
-      switchTimeCarouselSlide,
-      timeSliderInterval
-    );
-  }
-
-  function switchTimeCarouselSlide (useCurrent) {
-    var slide;
-
-    clearTimeout(timeTimeout);
-
-    if (!useCurrent) {
-      timeCurrent = (timeCurrent < timeSliderCount - 1) ? timeCurrent + 1 : 0;
-    }
-
-    slide = timeButtons.eq(timeCurrent);
-
-    if (slide && slide.length) {
-      setTimeSlide(timeCurrent);
-      timeTimeout = setTimeout(
-        switchTimeCarouselSlide,
-        timeSliderInterval
-      );
-    }
-  }
-
-  function setTimeSlide (slideIndex) {
-    var button = timeButtons.eq(slideIndex);
-    var block = timeBlocks.eq(slideIndex);
-
-    timeBlocks.removeClass('active');
-    block.addClass('active');
-
-    timeButtons.removeClass('adv_promo_bullet--active');
-    button.addClass('adv_promo_bullet--active');
-  }
-
-  function timeButtonsClick () {
-    var button = $(this);
-    var slideIndex = timeButtons.index(button);
-
-    clearTimeout(timeTimeout);
-
-    timeCurrent = slideIndex;
-
-    switchTimeCarouselSlide(true);
-  }
-
-  function timeButtonNextClick () {
-    clearTimeout(timeTimeout);
-
-    timeCurrent = (timeCurrent < timeSliderCount - 1) ? timeCurrent + 1 : 0;
-
-    switchTimeCarouselSlide(true);
-  }
-
-  function timeButtonPrevClick () {
-    clearTimeout(timeTimeout);
-
-    timeCurrent = (timeCurrent > 0) ? timeCurrent - 1 : (timeSliderCount - 1);
-
-    switchTimeCarouselSlide(true);
-  }
-
-  function initVarietyCarousel () {
-    if (varietySliderInited) {
-      return;
-    }
-
-    varietySliderInited = true;
-
-    varietyTimeout = setTimeout(
-      switchVarietyCarouselSlide,
-      varietySliderInterval
-    );
-  }
-
-  function stopVarietyCarousel () {
-    clearTimeout(varietyTimeout);
-    varietySliderInited = false;
-  }
-
-  function switchVarietyCarouselSlide () {
-    var slide;
-
-    clearTimeout(varietyTimeout);
-
-    varietyCurrent = (varietyCurrent < varietySliderCount - 1) ? varietyCurrent + 1 : 0;
-    slide = varietyButtons.eq(varietyCurrent);
-
-    if (slide && slide.length) {
-      setVarietySlide(varietyCurrent);
-      varietyTimeout = setTimeout(
-        switchVarietyCarouselSlide,
-        varietySliderInterval
-      );
-    }
-  }
-
-  function setVarietySlide (slideIndex) {
-    var mobileSliderOffset = varietySliderMobileHeight * slideIndex * -1;
-    var desktopSliderOffset = varietySliderDesktopHeight * slideIndex * -1;
-    var button = varietyButtons.eq(slideIndex);
-
-    varietyButtons.closest('.adv_promo_nav__item').removeClass('adv_promo_nav__item--active');
-    button.closest('.adv_promo_nav__item').addClass('adv_promo_nav__item--active');
-
-    varietySliderMobile.css({
-      '-webkit-transform': 'translate3d(0, ' + mobileSliderOffset + 'px, 0)',
-      '-moz-transform': 'translate3d(0, ' + mobileSliderOffset + 'px, 0)',
-      '-ms-transform': 'translate3d(0, ' + mobileSliderOffset + 'px, 0)',
-      'transform': 'translate3d(0, ' + mobileSliderOffset + 'px, 0)'
-    });
-
-    varietySliderDesktop.css({
-      '-webkit-transform': 'translate3d(0, ' + desktopSliderOffset + 'px, 0)',
-      '-moz-transform': 'translate3d(0, ' + desktopSliderOffset + 'px, 0)',
-      '-ms-transform': 'translate3d(0, ' + desktopSliderOffset + 'px, 0)',
-      'transform': 'translate3d(0, ' + desktopSliderOffset + 'px, 0)'
-    });
-  }
-
-  function varietyButtonsClick () {
-    var button = $(this);
-    var slideIndex = varietyButtons.index(button);
-
-    clearTimeout(varietyTimeout);
-
-    setVarietySlide(slideIndex);
-
-    varietyCurrent = slideIndex;
-
-    varietyTimeout = setTimeout(
-      switchVarietyCarouselSlide,
-      (varietySliderInterval * 4)
-    );
-  }
-
-  function calcCarietySliderImgHeight () {
-    varietySliderMobileHeight = varietySliderMobile.find('img')
-      .first()
-      .height();
-
-    varietySliderDesktopHeight = varietySliderDesktop
-      .find('img')
-      .first()
-      .outerHeight();
-  }
-
-  function scrollDownButtonClick () {
-    $.fn.fullpage.moveSectionDown();
-  }
-
-  var isSafari = (navigator.userAgent.indexOf('Safari') !== -1 && navigator.userAgent.indexOf('Chrome') === -1) ? true : false;
-
-  var fullpageConf = {
-    css3: true,
-    sectionSelector: '._adv_promo_section',
-    responsiveWidth: 1100,
-    onLeave: onLeave,
-    afterResize: function () {
-      calcCarietySliderImgHeight();
-    }
-  };
-
-  var main = $('._adv_promo');
-
-  var sections = main.find('._adv_promo_section');
-  var sectionsCount = sections.length;
-  var scrollDownButton = $('._adv_promo_down');
-
-  var varietyButtons = main.find('._adv_promo_variety_button');
-  var varietySliderMobile = main.find('._adv_promo_variety_slider_mobile');
-  var varietySliderDesktop = main.find('._adv_promo_variety_slider_desktop');
-  var varietySliderMobileHeight;
-  var varietySliderDesktopHeight;
-  var varietySliderInited = false;
-  var varietySliderInterval = 4000;
-  var varietySliderCount = varietyButtons.length;
-  var varietyTimeout;
-  var varietyCurrent = 0;
-
-  var timeBlocks = main.find('._adv_promo_time_block');
-  var timeButtons = main.find('._adv_promo_time_button');
-  var timeButtonPrev = main.find('._adv_promo_time_prev');
-  var timeButtonNext = main.find('._adv_promo_time_next');
-  var timeSliderInited = false;
-  var timeSliderInterval = 10000;
-  var timeSliderCount = 4;
-  var timeTimeout;
-  var timeCurrent = 0;
-
-  var animatedTimeout;
-
-  $(function () {
-    main.fullpage(fullpageConf);
-
-    calcCarietySliderImgHeight();
-
-    scrollDownButton.on('click', scrollDownButtonClick);
-    varietyButtons.on('click', varietyButtonsClick);
-    timeButtons.on('click', timeButtonsClick);
-    timeButtonPrev.on('click', timeButtonPrevClick);
-    timeButtonNext.on('click', timeButtonNextClick);
+$(window).resize(function() {
+  $('.content').css({
+    paddingTop: $('.header').outerHeight()
   });
 
-})(window.jQuery);
+  $('.new_page').css({
+    paddingBottom: $('footer').outerHeight()
+  })
+}).trigger('resize');
+
+// Tel
+if (!isMobile) {
+  $('body').on('click', 'a[href^="tel:"]', function() {
+    $(this).attr('href',
+      $(this).attr('href').replace(/^tel:/, 'callto:'));
+  });
+}
+
+$(function() {
+
+  $('.scrollToAnchor').on('click', function(e) {
+    e.preventDefault();
+    var target = $(this).attr('href');
+
+    $('html,body').animate({
+      scrollTop: $(target).offset().top - 30
+    }, 1000);
+
+  });
+});
+
+
+$(function() {
+  $('#navbar-collapse')
+    .on('click', function(e) {
+      $('body').toggleClass('menu-collapsed');
+    });
+});
+
+$(function() {
+  //caches a jQuery object containing the header element
+  var header = $(".header:not(.header--static)");
+  $(window).scroll(function() {
+    var scroll = $(window).scrollTop();
+
+    if (scroll >= 10) {
+      header.addClass("fixed");
+    } else {
+      header.removeClass("fixed")
+    }
+  });
+
+  $('.sticky_header').affix({
+    offset: {
+      top: function () {
+        return (this.top = $('.sticky_header_container').offset().top)
+      }
+    }
+  });
+
+  $('.sticky_header').on('affix.bs.affix', function (e) {
+    var height = $(this).outerHeight()
+    $(this).parents('.sticky_header_container').css({
+      height: height + 1
+    });
+  })
+
+});
+
+$('[data-control="select"] ._value').text($(this).siblings('select').val());
+$('[data-control="select"] select').on('change', function() {
+  $(this).siblings('.select__value').find('._value').text(this.value);
+});
+
+$('.action_follow').on('click', function() {
+  $(this).toggleClass('active')
+})
+
+$(window).scroll(function() {
+  if($(window).scrollTop() + $(window).height() > $(document).height() - 100) {
+    $('body').find('#launcher, .btn_feedback').css({
+      bottom: $('.footer').outerHeight()
+    })
+  }
+
+  else {
+    $('body').find('#launcher, .btn_feedback').css({
+      bottom: 0
+    })
+  }
+});
+
+
+// Tabs
+$('._go_to_tab').on('shown.bs.tab', function (e) {
+  var href = $(this).attr('href');
+
+  $('.nav-tabs a[href="'+href+'"]').tab('show') ;
+});
+
+var url = document.location.toString();
+var prefix = '#tab_';
+
+if (url.match('#')) {
+  $('.nav-tabs a[href="#' + url.split(prefix)[1] + '"]').tab('show');
+}
+
+$('.nav-tabs a').on('shown.bs.tab', function (e) {
+  window.location.hash = prefix + e.target.hash.split('#')[1] ;
+})

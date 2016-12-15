@@ -51,7 +51,8 @@
   &__list {
     display: inline-block;
     vertical-align: middle;
-    margin-bottom: 10px;
+
+    @include rem(margin-bottom, 10px);
   }
 
   .btn {
@@ -216,35 +217,6 @@
 }
 
 .page {
-  .tab-pane {
-    ul {
-      list-style: none;
-      li {
-        color: $secondary;
-        position: relative;
-
-        @include rem(margin-bottom, 15px);
-
-        &:before {
-          color: $primary;
-          content: "\2022";
-          position: absolute;
-          right: 100%;
-          top: -2px;
-          line-height: normal;
-
-          @include rem(font-size, 28px);
-          @include rem(margin-right, 11px);
-        }
-      }
-      .li {color: $secondary;}
-
-      + h3, + h4, + h2 {
-        @include rem(margin-top, 45px);
-      }
-    }
-  }
-
   &__title, h1.page__title, h2.page__title {
     @include rem(margin-bottom, 17px);
 
@@ -292,8 +264,10 @@
     list-style: none;
     padding-left: 0;
 
+    @include rem(font-size, 18px);
+
     li {
-      margin-bottom: 15px;
+      @include rem(margin-bottom, 15px);
     }
   }
 
@@ -311,7 +285,8 @@
     }
   }
 
-  &__features, &__features.features {
+  &__features,
+  &__features.features {
     text-align: left;
     background: transparent;
     margin: 40px -14px 0;
@@ -335,7 +310,7 @@
   }
 
   .section--padding {
-    @include rem(padding, 40px 0)
+    @include rem(padding, 70px 0)
   }
 
   .container {
@@ -344,39 +319,6 @@
 
     &--extend {
       width: 1200px
-    }
-  }
-
-  .nav-tabs {
-    padding-left: 0 !important;
-
-    @include rem(margin-bottom, 44px !important);
-
-    sup {
-      color: $primary;
-    }
-
-    > li {
-      margin-bottom: 0 !important;
-
-      > a {
-        font-size: 18px;
-        letter-spacing: 0;
-        color: rgba($secondary, .6) !important;
-        margin-right: 0;
-
-        @include rem(font-size, 18px);
-
-        &:hover {
-          color: rgba($secondary, 1) !important;
-        }
-      }
-
-      &.active {
-        > a {
-          color: rgba($secondary, 1) !important;
-        }
-      }
     }
   }
 
