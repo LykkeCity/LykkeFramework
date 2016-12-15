@@ -183,14 +183,15 @@
   }
 
   &__item {
-    margin: 0 45px 0 0;
     float: none;
     display: inline-block;
     vertical-align: middle;
-    font-size: 18px;
-    line-height: 20px;
-    font-weight: 600;
+    font-weight: $fw-semi;
     color: rgba($secondary, .8);
+
+    @include rem(font-size, 18px);
+    @include rem(line-height, 20px);
+    @include rem(margin, 0 45px 0 0);
 
     &:last-child {
       margin-right: 0;
@@ -199,13 +200,14 @@
     a {
       color: $secondary;
       opacity: 0.6;
-      padding: 10px 0;
       font-weight: normal;
       display: inline-block;
       position: relative;
 
+      @include rem(padding, 10px 0);
+
       &:hover {
-        color: #3f4d60;
+        color: $secondary;
         opacity: 1;
         text-decoration: none;
       }
@@ -231,7 +233,6 @@
 
   &__list {
     margin-bottom: 0;
-    //padding-top: 22px;
   }
 
   .container {
@@ -239,17 +240,9 @@
     max-width: 100%;
   }
 
-  @media (max-width: $screen-tablet) {
-    top: 96px;
-  }
-
   @media (max-width: $screen-landscape) {
     overflow: hidden;
-    height: 52px;
-
-    &__list {
-      white-space: normal !important;
-    }
+    height: 56px;
 
     &__inner {
       padding: 14px !important;
@@ -262,7 +255,7 @@
       width: auto;
       margin: 0 !important;
       white-space: nowrap;
-      padding-right: 15px;
+      padding-right: 20px;
       text-align: center;
       min-width: 100%;
       border-top: 0;
@@ -278,7 +271,6 @@
       display: inline-block;
       vertical-align: top;
       margin-right: 25px;
-      font-size: 12px;
 
       a {
         padding: 4px 0;
