@@ -1,23 +1,26 @@
 .page_title {
   &--sub {
-    font-size: 14px;
     font-weight: $fw-semi;
     color: $primary;
     font-family: $ff;
     letter-spacing: .07em;
     margin: 5px 0 25px;
     text-transform: uppercase;
+
+    @include rem(font-size, 14px);
+    @include rem(margin, 5px 0 25px);
   }
 }
 
 .sub_title {
   text-transform: uppercase;
-  font-size: 18px;
-  font-weight: 600;
+  font-weight: $fw-semi;
   color: #333;
-  margin: 40px 0 10px;
   letter-spacing: .03em;
   position: relative;
+
+  @include rem(font-size, 18px);
+  @include rem(margin, 40px 0 10px);
 
   &:first-child {
     margin-top: 0;
@@ -222,24 +225,15 @@
 
     span {
       display: inline;
-      font-weight: 300;
+      font-weight: $fw-light;
     }
   }
 
   &__subtitle, h3.page__subtitle {
     text-align: center;
-    color: #b2b8bf;
-    margin-bottom: 68px;
-  }
+    color: $gray-light;
 
-  &__intro, p.page__intro {
-    font-size: 22px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.64;
-    color: #3f4d60;
-    margin-bottom: 30px;
+    @include rem(margin-bottom, 68px);
   }
 
   &__header {
