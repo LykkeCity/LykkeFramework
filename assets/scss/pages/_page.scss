@@ -228,7 +228,7 @@
   }
 
   &__inner {
-    padding: 0 !important;
+    padding: 0;
   }
 
   &__list {
@@ -245,10 +245,11 @@
     height: 56px;
 
     &__inner {
-      padding: 14px !important;
+      padding: 14px;
       overflow: hidden;
       overflow-x: auto;
       height: 70px;
+      white-space: nowrap;
     }
 
     &__list {
@@ -282,9 +283,9 @@
     }
   }
 
-  @media all and (max-width: 640px) {
-    &__list {
-      white-space: nowrap !important;
+  @media all and (max-width: $screen-mobile) {
+    &__inner {
+      padding: 17px 14px;
     }
   }
 }
