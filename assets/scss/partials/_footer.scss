@@ -5,16 +5,26 @@ footer {
 }
 
 .footer {
-  .new_page & {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    z-index:10;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index:10;
+
+  .social--footer_alt {
+    margin-bottom: 0;
+
+    @include rem(padding, 12px 0);
+  }
+
+  .footer__bottom {
+    background: rgba(#eaedef, .4);
+
+    @include rem(padding, 17px 0);
   }
 
   &__top {
-    padding: 48px 0;
+    @include rem(padding, 48px 0);
 
     .row {
       font-size: 0;
@@ -28,19 +38,61 @@ footer {
   }
 
   &__bottom {
-    padding: 24px 0;
     background: #f7f8f9;
 
+    @include rem(padding, 24px 0);
   }
 
   &__copy {
     color: rgba($secondary, .80);
-    padding: 18px 0;
-    font-weight: 400;
+    font-weight: normal;
     line-height: 1.67;
+
+    @include rem(padding, 18px 0);
 
     a {
       color: rgba($secondary, .80);
+    }
+  }
+
+  @media (max-width: $screen-landscape) {
+    &__top {
+      .row>div {
+        margin-bottom: 25px;
+      }
+    }
+
+    &__bottom {
+      text-align: center;
+    }
+
+    .social--footer_alt {
+      @include rem(padding, 12px 30px);
+    }
+  }
+
+  @media (max-width: $screen-tablet) {
+    .text-center {
+      text-align: left !important;
+    }
+  }
+
+  @media (max-width: $screen-mobile) {
+    .col-xs-6 {
+      width: 100% !important;
+      float: none !important;
+      text-align: center !important;
+    }
+
+    &__copy {
+      font-size: 12px;
+      margin-bottom: 0;
+      padding: 0;
+    }
+
+    &__top .row > div {
+      width: 100%;
+      text-align: center;
     }
   }
 }
