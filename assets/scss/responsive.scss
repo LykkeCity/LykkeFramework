@@ -301,19 +301,6 @@
     margin-left: 14px;
   }
 
-  .page_nav__item.active a:after {
-    bottom: 0px;
-    border-bottom-width: 1px;
-  }
-
-  .page_nav__item {
-    margin-top: 0;
-    float: none;
-    display: inline-block;
-    vertical-align: top;
-
-  }
-
   .grid {
     margin-left: 0px;
     margin-right: 0px;
@@ -359,43 +346,11 @@
   .dropdown__container {
     display: none;
   }
-  .page_nav {
-    &__inner {
-      padding: 14px!important;
-    }
-
-    &__title {
-      @include transition(all .2s);
-    }
-    .page_nav__title {
-      display: none !important;
-    }
-
-    &__list {
-      width: auto;
-      @include clearfix;
-      margin: 0 !important;
-      white-space: nowrap;
-      padding-right: 15px;
-      text-align: center;
-      min-width: 100%;
-    }
-  }
-
-  .menu-collapsed .page_nav__title {
-    opacity: 0;
-    visibility: hidden;
-  }
 }
 
 @media (max-width: 640px) {
   .header {
     padding: 10px 0;
-
-    .page_nav__title {
-      font-size: 20px;
-      line-height: 30px;
-    }
   }
 
   .header__logo {
@@ -414,27 +369,8 @@
     }
   }
 
-  .page_nav, .navbar-collapse {
+  .navbar-collapse {
     top: 50px;
-  }
-
-  .page_nav {
-    overflow: hidden;
-    height: 52px;
-
-    &__inner {
-      overflow: hidden;
-      overflow-x: auto;
-      height: 70px;
-    }
-
-    &__item {
-      font-size: 12px;
-
-      a {
-        padding: 4px 0;
-      }
-    }
   }
 
   .navbar-collapse {
@@ -490,9 +426,4 @@
       }
     }
   }
-
-  .page_nav__title {
-    margin-left: 45px !important;
-  }
-
 }

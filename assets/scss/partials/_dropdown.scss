@@ -83,23 +83,6 @@
 	}
 }
 
-.page_nav {
-	@include transition(all .4s);
-	position: fixed;
-	top: 84px;
-	left: 0;
-	width: 100%;
-	z-index:19;
-	background: rgb(247, 248, 249) !important;
-}
-
-.nav-up {
-	.page_nav {
-		@include transform(translate(0, -200%));
-	}
-}
-
-
 .dropdown {
   position: relative;
 }
