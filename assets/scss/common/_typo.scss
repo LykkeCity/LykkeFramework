@@ -110,26 +110,33 @@ hr {
 }
 
 blockquote {
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 1.64;
+  font-weight: $fw-semi;
   color: $secondary;
+  border-left: 2px solid $primary;
 
   @include rem(font-size, 22px);
+  @include rem(line-height, 40px);
+  @include rem(margin, 50px 0);
+  @include rem(padding, 0 20px);
+
+  cite {
+    font-weight: $fw-semi;
+    color: $gray-light;
+    letter-spacing: 0;
+    display: block;
+
+    @include rem(font-size, 22px);
+    @include rem(line-height, 40px);
+  }
 }
 
-cite, figcaption {
+figcaption {
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
   line-height: 1.82;
   color: rgba($secondary, .6);
 
-  @include rem(font-size, 18px);
-}
-
-figcaption {
   @include rem(font-size, 16px);
 }
 
@@ -143,13 +150,17 @@ figcaption {
   font-style: normal;
   font-stretch: normal;
   line-height: 1.64;
-  color: #3f4d60;
+  color: $secondary;
 
   @include rem(font-size, 22px);
-  @include rem(margin-bottom, 30px);
+  @include rem(margin-bottom, 48px);
 }
 
 .text {
+  .lead {
+    @extend .lead;
+  }
+
   p, ul, ol {
     font-weight: normal;
     font-style: normal;

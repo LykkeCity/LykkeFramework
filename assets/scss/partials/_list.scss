@@ -1,4 +1,4 @@
-.list-inline{
+.list-inline {
   padding: 0 !important;
 
   li {
@@ -23,52 +23,6 @@
   }
 }
 
-.news_list {
-  &__item {
-    padding: 35px 0 25px;
-    border-bottom: 1px solid #ebedef;
-  }
-
-  &__media {
-    margin-bottom: 30px;
-  }
-
-  &__date {
-    font-size: 16px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.5;
-    color: rgba(#3f4d60, .6);
-    margin-bottom: 9px;
-    display: block;
-  }
-
-  &__title, &__title.h3 {
-    color: #333333;
-    margin-bottom: 9px;
-    margin-top: 0;
-    padding-right: 20px;
-
-    a:not(.btn) {
-      color: #333333;
-
-      &:hover {
-        color: #3f4d60;
-      }
-    }
-  }
-
-  &__text, p.news_list__text {
-    font-size: 22px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.64;
-    color: #8c94a0;
-  }
-}
-
 .list {
   &__icon {
     @include rem(width, 40px);
@@ -79,7 +33,7 @@
       color: $secondary;
     }
   }
-  
+
   &__content {
     overflow: hidden;
   }
@@ -175,6 +129,34 @@
 
       @include rem(font-size, 16px);
       @include rem(line-height, 24px);
+    }
+  }
+
+  &--striped {
+    @include rem(margin-top, -7px);
+    @include rem(margin-bottom, 60px);
+
+    .list__item {
+      border-top: 1px solid $border-alt;
+      color: $text;
+
+      @include rem(font-size, 18px);
+      @include rem(line-height, 30px);
+      @include rem(padding, 10px 0);
+
+      &:first-child {
+        border-top: 0;
+      }
+
+      a {
+        color: inherit;
+
+        @include rem(padding, 10px 0);
+
+        &:hover {
+          color: $blue;
+        }
+      }
     }
   }
 }

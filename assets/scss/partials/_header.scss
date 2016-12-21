@@ -1,5 +1,13 @@
 header {
   padding: 22px 0;
+
+  @media (max-width: 539px) {
+    text-align: center;
+  }
+
+  @media (min-width: $screen-landscape + 1) {
+    padding: 22px 0;
+  }
 }
 
 .nav {
@@ -93,7 +101,7 @@ header {
   width: 100%;
   top: 0;
   left: 0;
-  z-index: 20;
+  z-index: 110;
   white-space: nowrap;
 
   &__text {
@@ -128,10 +136,7 @@ header {
 
   .btn--stroke {
     margin-left: 38px;
-    position: absolute;
-    right: 15px;
-    top: 50%;
-    margin-top: -20px;
+    margin-top: 7px;
   }
 
   .page_nav__title {
@@ -145,10 +150,24 @@ header {
     .header__title {
       display: none;
     }
+
+    .btn--stroke {
+      margin-top: 0;
+    }
   }
   
   &--static {
     position: absolute;
+  }
+
+  @media all and (max-width: $screen-landscape) {
+    .btn--stroke {
+      margin-top: 0;
+    }
+
+    .header__text {
+      display: none;
+    }
   }
 
   @media all and (max-width: $screen-mobile-old) {
@@ -395,7 +414,21 @@ header {
     }
   }
 
-  @media (min-width: 768px) {
+  @media all and (max-width: 1100px) {
+    .btn--stroke {
+      margin-left: 20px;
+    }
+  }
+
+  @media all and (max-width: $screen-landscape) {
+    padding: 14px 0;
+
+    .btn--stroke {
+      margin-left: 14px;
+    }
+  }
+
+  @media (min-width: $screen-landscape + 1) {
     padding: 23px 0;
 
     &.nav-up, .nav-up &, &.fixed {
@@ -403,10 +436,40 @@ header {
     }
   }
 
-  @media (max-width: 640px) {
+  @media (max-width: $screen-mobile-old) {
+    padding: 10px 0;
+
     a.btn.btn-red {
       padding: 3px 15px;
       margin-top: 0;
+    }
+
+    .btn--stroke {
+      font-size: 12px;
+      border-width: 1px;
+      padding: 6px 16px;
+    }
+
+    &__logo {
+      display: block;
+      width: 32px;
+      overflow: hidden;
+      line-height: normal !important;
+      top: -2px !important;
+
+      img {
+        height: 30px;
+      }
+
+      .menu-collapsed & {
+        width: 98px;
+      }
+    }
+  }
+
+  @media (min-width: $screen-tablet + 1) {
+    .header__text, .btn--stroke, .nav--header {
+      @include transition(all .2s);
     }
   }
 }

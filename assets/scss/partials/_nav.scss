@@ -53,11 +53,171 @@
 
 .navbar-collapse {
   overflow-x: visible;
-  @include clearfix;
   -webkit-overflow-scrolling: touch;
+
+  @include clearfix;
 
   &.in {
     overflow-y: auto;
+  }
+
+  @media all and (max-width: $screen-tablet) {
+    padding: 0;
+    position: fixed;
+    top: 84px;
+    background: #fff;
+    left: 0;
+    right: 0;
+    border-bottom: 1px solid #fff;
+    border-top: 1px solid #fff;
+    text-align: center;
+    visibility: hidden;
+    overflow: hidden;
+    height: 0 !important;
+    z-index: 110;
+    @include transition(all 0.40s ease 100ms);
+
+    .btn--stroke {
+      margin-left: 0 !important;
+      margin-top: 20px !important;
+      width: 130px;
+      opacity: 0;
+      @include transition(transform 0.45s ease, opacity 0.45s ease-out);
+      @include transform(translateY(-24px));
+      @include transition-delay(700ms)
+    }
+
+    .social {
+      opacity: 0;
+      @include transition(transform 0.45s ease, opacity 0.45s ease-out);
+      @include transform(translateY(-24px));
+      @include transition-delay(700ms)
+    }
+
+    .nav {
+      float: none !important;
+      margin: 0;
+      width: 100%;
+      text-align: center;
+      display: block;
+      visibility: hidden;
+      @include transition(visibitity 0.45s ease);
+
+      >li {
+        float: none;
+        display: block;
+        margin: 0 0 10px;
+        @include transition(all 0.45s ease, opacity 0.45s ease-out);
+        @include transform(translateY(-24px));
+        opacity: 0;
+
+        &:nth-child(1) {
+          @include transition-delay(250ms)
+        }
+        &:nth-child(2) {
+          @include transition-delay(400ms)
+        }
+        &:nth-child(3) {
+          @include transition-delay(550ms)
+        }
+        &:nth-child(4) {
+          @include transition-delay(500ms)
+        }
+        &:nth-child(5) {
+          @include transition-delay(550ms)
+        }
+        &:nth-child(6) {
+          @include transition-delay(600ms)
+        }
+        &:nth-child(7) {
+          @include transition-delay(650ms)
+        }
+
+        &.active {
+          a {
+            color: $secondary !important;
+          }
+        }
+
+        > a:not(.btn) {
+          text-transform: none;
+          font-size: 20px;
+          line-height: normal;
+          letter-spacing: 0;
+          color: rgba($secondary, .6) !important;
+        }
+      }
+    }
+
+    &.collapse.in {
+      padding: 20px 20px 95px;
+      display: block;
+      visibility: visible;
+      top: 68px;
+      height: 100% !important;
+      height: calc(100% - 68px) !important;
+
+      .nav {
+        visibility: visible;
+        > li {
+          @include transform(translateY(0));
+          opacity: 1;
+        }
+      }
+
+      .btn--stroke, .social {
+        @include transform(translateY(0));
+        opacity: 1;
+      }
+
+      .fixed & {
+        top: 60px;
+        height: calc(100% - 60px) !important;
+      }
+    }
+  }
+
+  @media all and (max-width: $screen-mobile-old) {
+    top: 50px !important;
+
+    &.collapse.in {
+      height: 100% !important;
+      height: calc(100% - 50px) !important;
+
+      .fixed & {
+        height: calc(100% - 50px) !important;
+      }
+    }
+  }
+}
+
+@media (max-width: $screen-tablet) {
+  .navbar-toggle {
+    display: block;
+  }
+
+  .collapse {
+    height: 0;
+    overflow: hidden;
+  }
+}
+
+@media (max-width: $screen-mobile-old) {
+  .navbar-toggle {
+    width: 30px;
+    height: 30px;
+    padding-left: 7px !important;
+    padding-right: 7px !important;
+    border-width: 1px;
+
+    .icon-bar {
+      width: 14px;
+      height: 1px;
+
+      + .icon-bar {
+        margin-top: 3px;
+      }
+    }
   }
 }
 
