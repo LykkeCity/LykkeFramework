@@ -94,89 +94,6 @@ header {
   margin-top: 10px;
 }
 
-
-.header {
-  position: fixed;
-  background: #fff;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 110;
-  white-space: nowrap;
-
-  &__text {
-    font-size: 22px;
-    font-family: $ff;
-    color: rgba($secondary, .6);
-    margin-left: 18px;
-    vertical-align: middle;
-    display: inline-block;
-    letter-spacing: -0.01em;
-    cursor: default;
-  }
-
-  &__title {
-    font-weight: normal;
-    font-size: 30px;
-    color: #333333;
-    letter-spacing: -0.5px;
-    vertical-align: middle;
-    display: inline-block;
-    line-height: 30px;
-    position: relative;
-    top: 4px;
-  }
-
-  .row {
-    position: static;
-    >div {
-      position: static;
-    }
-  }
-
-  .btn--stroke {
-    margin-left: 38px;
-    margin-top: 7px;
-  }
-
-  .page_nav__title {
-    margin: 0;
-    float: none;
-    line-height: 40px;
-    font-size: 30px;
-  }
-
-  &.fixed {
-    .header__title {
-      display: none;
-    }
-
-    .btn--stroke {
-      margin-top: 0;
-    }
-  }
-  
-  &--static {
-    position: absolute;
-  }
-
-  @media all and (max-width: $screen-landscape) {
-    .btn--stroke {
-      margin-top: 0;
-    }
-
-    .header__text {
-      display: none;
-    }
-  }
-
-  @media all and (max-width: $screen-mobile-old) {
-    .header__title {
-      display: none;
-    }
-  }
-}
-
 .block-hidden {
   visibility: visible;
   opacity: 1;
@@ -187,20 +104,6 @@ header {
   visibility: hidden;
   opacity: 0;
   @include transition(all .3s ease);
-}
-
-
-.header {
-  .container {
-    position: relative;
-  }
-
-  .block-visible {
-    position: absolute;
-    right: 15px;
-    top: 50%;
-    margin-top: -23px;
-  }
 }
 
 @media all and (min-width: 767px) {
@@ -237,7 +140,68 @@ header {
 }
 
 .header {
+  position: fixed;
+  background: #fff;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 110;
+  white-space: nowrap;
+
   @include transition(all .3s ease);
+
+  .container {
+    position: relative;
+  }
+
+  .block-visible {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    margin-top: -23px;
+  }
+
+  &__text {
+    font-size: 22px;
+    font-family: $ff;
+    color: rgba($secondary, .6);
+    margin-left: 18px;
+    vertical-align: middle;
+    display: inline-block;
+    letter-spacing: -0.01em;
+    cursor: default;
+  }
+
+  &__title {
+    font-weight: normal;
+    font-size: 30px;
+    color: #333333;
+    letter-spacing: -0.5px;
+    vertical-align: middle;
+    display: inline-block;
+    line-height: 30px;
+    position: relative;
+    top: 4px;
+  }
+
+  .row {
+    position: static;
+    >div {
+      position: static;
+    }
+  }
+
+  .btn--stroke {
+    margin-left: 38px;
+    margin-top: 6px;
+  }
+
+  .page_nav__title {
+    margin: 0;
+    float: none;
+    line-height: 40px;
+    font-size: 30px;
+  }
 
   .btn {
     &:after, &:before {
@@ -341,7 +305,7 @@ header {
     }
   }
 
-  &.nav-up, .nav-up &, &.fixed {
+  &.fixed {
     background: #ab00ff;
 
     .btn-link {
@@ -369,6 +333,10 @@ header {
           color: #fff;
         }
       }
+    }
+
+    .header__title {
+      display: none;
     }
 
     .navbar-toggle {
@@ -399,18 +367,29 @@ header {
     }
   }
 
-  a.btn.btn-red {
-    border-radius: 4px;
-    background-color: #ff2900;
-    font-size: 14px;
-    padding: 6px 20px;
-    letter-spacing: 2px;
-    line-height: 24px;
-    color: #ffffff;
-    margin-top: 2px;
+  &--static {
+    position: absolute;
+  }
 
-    &:hover {
-      color: #FFFFFF;
+  @media all and (max-width: $screen-landscape) {
+    padding: 14px 0;
+
+    .btn--stroke {
+      margin-left: 14px;
+    }
+
+    .header__text {
+      display: none;
+    }
+  }
+
+  @media all and (max-width: $screen-mobile-old) {
+    .header__title {
+      display: none;
+    }
+
+    .btn--stroke {
+      margin-top: 2px;
     }
   }
 
@@ -420,19 +399,20 @@ header {
     }
   }
 
-  @media all and (max-width: $screen-landscape) {
-    padding: 14px 0;
-
-    .btn--stroke {
-      margin-left: 14px;
-    }
-  }
-
   @media (min-width: $screen-landscape + 1) {
     padding: 23px 0;
 
-    &.nav-up, .nav-up &, &.fixed {
+    &.fixed {
       padding: 14px 0;
+    }
+  }
+
+  @media (min-width: $screen-mobile-old + 1) {
+    &.fixed {
+      .btn--stroke {
+        margin-top: -4px;
+        margin-bottom: -4px;
+      }
     }
   }
 
@@ -455,7 +435,7 @@ header {
       width: 32px;
       overflow: hidden;
       line-height: normal !important;
-      top: -2px !important;
+      top: 0 !important;
 
       img {
         height: 30px;
