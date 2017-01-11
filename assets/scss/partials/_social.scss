@@ -35,6 +35,19 @@
     @include rem(bottom, 20px);
   }
 
+  &--simple {
+    > li > a {
+      display: inline-block;
+      color: rgba($secondary, .8);
+
+      @include rem(padding, 5px 0);
+
+      &:hover {
+        color: rgba($secondary, 1);
+      }
+    }
+  }
+
   &--footer_alt, &--header {
     @include rem(padding, 5px 0);
 
