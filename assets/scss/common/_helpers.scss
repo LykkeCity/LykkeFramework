@@ -64,6 +64,13 @@ $theme-colors: (
   list-style: none;
   padding: 0;
   margin: 0;
+
+  li {
+    &:after, &:before {
+      content: '';
+      display: none;
+    }
+  }
 }
 
 .fs22 {

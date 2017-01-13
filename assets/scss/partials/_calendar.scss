@@ -26,6 +26,12 @@
     @include rem(width, 376px);
   }
 
+  ul, ol {
+    li {
+      margin-bottom: 0 !important;
+    }
+  }
+
  [class^="icon--"], [class*=" icon--"] {
    color: #8c94a0;
  }
@@ -88,7 +94,7 @@
       text-shadow: none !important;
 
       &.active, &.active:hover {
-        background: $primary;
+        background: $primary !important;
         color: #fff;
       }
 

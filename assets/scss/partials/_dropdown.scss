@@ -88,23 +88,44 @@
 }
 
 .dropdown-menu {
-  position: absolute;
-  left: 50%;
-  top: 100%;
-  box-shadow: $box-shadow-popup;
-  border-radius: $border-radius;
-  opacity: 0;
-  visibility: hidden;
-  display: block;
-  float: none;
-  padding: 0;
-  background: $white;
-  z-index: 20;
+  &:not(.bootstrap-datetimepicker-widget) {
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    box-shadow: $box-shadow-popup;
+    border-radius: $border-radius;
+    opacity: 0;
+    visibility: hidden;
+    display: block;
+    float: none;
+    padding: 0;
+    background: $white;
+    z-index: 20;
 
-  @include rem(width, 387px);
-  @include rem(margin-left, -193px);
-  @include rem(margin-top, 10px);
-  @include transition(opacity $transition-default, visibility $transition-default);
+    @include rem(width, 387px);
+    @include rem(margin-left, -193px);
+    @include rem(margin-top, 10px);
+    @include transition(opacity $transition-default, visibility $transition-default);
+
+    &:after {
+      bottom: 100%;
+      left: 50%;
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+    }
+
+    &:after {
+      border-color: rgba($white, 0);
+      border-bottom-color: $white;
+
+      @include rem(margin-left, -10px);
+      @include rem(border-width, 10px);
+    }
+  }
 
   &--sm {
     @include rem(width, 296px);
@@ -114,25 +135,6 @@
   &--tiny {
     @include rem(width, 120px);
     @include rem(margin-left, -60px);
-  }
-
-  &:after {
-    bottom: 100%;
-    left: 50%;
-    border: solid transparent;
-    content: " ";
-    height: 0;
-    width: 0;
-    position: absolute;
-    pointer-events: none;
-  }
-
-  &:after {
-    border-color: rgba($white, 0);
-    border-bottom-color: $white;
-
-    @include rem(margin-left, -10px);
-    @include rem(border-width, 10px);
   }
 
   .dropdown__inner {
