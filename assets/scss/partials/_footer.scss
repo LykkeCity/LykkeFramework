@@ -96,3 +96,12 @@ footer {
     }
   }
 }
+
+.footer {
+  @media all and (max-width: $screen-tablet) {
+    .text-left,
+    .text-right {
+      text-align: center !important;
+    }
+  }
+}

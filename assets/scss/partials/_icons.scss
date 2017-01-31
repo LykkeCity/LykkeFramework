@@ -276,6 +276,13 @@
 .icon--prev_transaction:before {
   content: "\e90a";
 }
+.icon--next_transaction {
+  @include rotate(180deg);
+
+  &:before {
+    content: "\e90a";
+  }
+}
 .icon--arrow_right_big:before {
   content: "\e93a";
 }
