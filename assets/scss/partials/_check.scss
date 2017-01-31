@@ -35,6 +35,11 @@
   &--current, ._current & {
     &:before {
       content: "\e947";
+      position: relative;
+      left: 2px;
+      top: -1px;
+
+      @include rem(font-size, 12px);
     }
   }
 }
