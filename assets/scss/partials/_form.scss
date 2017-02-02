@@ -140,32 +140,6 @@ label.error {
     @include clearfix;
   }
 
-  &--share_result {
-    @include rem(margin-bottom, 40px);
-
-    .form-control {
-      text-align: left;
-      background: #fff;
-      border: 1px solid #D3D6DB;
-
-      @include rem(border-radius, 4px);
-      @include rem(padding-left, 20px);
-      @include rem(padding-right, 20px);
-
-      &[disabled] {
-        background: #F4F4F4;
-      }
-    }
-
-    .btn {
-      @include rem(padding, 13px 28px 12px);
-    }
-
-    .icon {
-      @include rem(font-size, 24px);
-    }
-  }
-
   &--message {
     position: relative;
 
