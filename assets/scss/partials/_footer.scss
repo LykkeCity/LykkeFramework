@@ -1,26 +1,17 @@
-footer {
-  background: #fff;
-  font-size: 18px;
-  color: rgba(#3f4d60, .80);
-}
-
 .footer {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
   z-index:10;
+  color: rgba(#3f4d60, .80);
+
+  @include rem(font-size, 18px);
 
   .social--footer_alt {
     margin-bottom: 0;
 
     @include rem(padding, 12px 0);
-  }
-
-  .footer__bottom {
-    background: rgba(#eaedef, .4);
-
-    @include rem(padding, 17px 0);
   }
 
   &__top {
@@ -38,9 +29,9 @@ footer {
   }
 
   &__bottom {
-    background: #f7f8f9;
+    background: #F5F6F7;
 
-    @include rem(padding, 24px 0);
+    @include rem(padding, 17px 0);
   }
 
   &__copy {
