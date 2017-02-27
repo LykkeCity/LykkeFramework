@@ -16,7 +16,7 @@
   &:not([disabled]) {
     &:hover {
       color: #fff;
-      background: #9217e2;
+      background: darken($primary, 4%);
     }
 
     &:focus, &:active {
