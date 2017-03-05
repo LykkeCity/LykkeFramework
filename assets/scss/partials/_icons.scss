@@ -327,11 +327,17 @@
 .icon--notificaton:before {
   content: "\e953";
 }
-.icon--question_icn:before {
+.icon--help_outline:before {
   content: "\e951";
 }
 .icon--save_as_draft:before {
   content: "\e952";
+}
+.icon--add_circle:before {
+  content: "\e954";
+}
+.icon--add:before {
+  content: "\e950";
 }
 
 .store_icon {
