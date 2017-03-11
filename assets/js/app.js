@@ -8,76 +8,6 @@ var wH = $(window).height(),
   deviceAgent = navigator.userAgent.toLowerCase(),
   isMobile = deviceAgent.match(/(iphone|ipod|ipad)/);
 
-FastClick.attach(document.body);
-
-$(window).resize(function() {
-  $('.content').css({
-    paddingTop: $('.header').outerHeight()
-  });
-
-  $('.new_page').css({
-    paddingBottom: $('footer').outerHeight()
-  })
-}).trigger('resize');
-
-// Tel
-if (!isMobile) {
-  $('body').on('click', 'a[href^="tel:"]', function() {
-    $(this).attr('href',
-      $(this).attr('href').replace(/^tel:/, 'callto:'));
-  });
-}
-
-$(function() {
-
-  $('.scrollToAnchor').on('click', function(e) {
-    e.preventDefault();
-    var target = $(this).attr('href');
-
-    $('html,body').animate({
-      scrollTop: $(target).offset().top - 30
-    }, 1000);
-
-  });
-});
-
-
-$(function() {
-  $('#navbar-collapse')
-    .on('click', function(e) {
-      $('body').toggleClass('menu-collapsed');
-    });
-});
-
-$(function() {
-  //caches a jQuery object containing the header element
-  var header = $(".header:not(.header--static)");
-  $(window).scroll(function() {
-    var scroll = $(window).scrollTop();
-
-    if (scroll >= 10) {
-      header.addClass("fixed");
-    } else {
-      header.removeClass("fixed")
-    }
-  });
-
-  $('.sticky_header').affix({
-    offset: {
-      top: function () {
-        return (this.top = $('.sticky_header_container').offset().top)
-      }
-    }
-  });
-
-  $('.sticky_header').on('affix.bs.affix', function (e) {
-    var height = $(this).outerHeight()
-    $(this).parents('.sticky_header_container').css({
-      height: height + 1
-    });
-  })
-
-});
 
 $('[data-control="select"] ._value').text($(this).siblings('select').val());
 $('[data-control="select"] select').on('change', function() {
@@ -119,4 +49,21 @@ if (url.match('#')) {
 
 $('.nav-tabs a').on('shown.bs.tab', function (e) {
   window.location.hash = prefix + e.target.hash.split('#')[1] ;
-})
+});
+
+$('.btn_menu').on('click', function(e) {
+  e.preventDefault();
+  e.stopPropagation();
+
+  $('body').addClass('body--menu_opened');
+  $('.sidebar_menu').addClass('sidebar_menu--open');
+});
+
+$('.sidebar_menu').on('click', function(e) {
+  e.stopPropagation();
+});
+
+$('body, .btn_close_menu, .menu_overlay').on('click', function() {
+  $('body').removeClass('body--menu_opened');
+  $('.sidebar_menu').removeClass('sidebar_menu--open');
+});

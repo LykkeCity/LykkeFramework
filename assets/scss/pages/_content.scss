@@ -1,8 +1,6 @@
 .content {
   overflow: hidden;
 
-  @include rem(padding-top, 84px);
-
   &__left {
     .h2, h2 {
       @include rem(margin-bottom, 25px);

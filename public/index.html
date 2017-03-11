@@ -26,43 +26,217 @@
 </head>
 <body>
 
-  <section class="section section--padding">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-8 automargin">
-          <h1 class="page__title">UI Kit <span>Typerface</span></h1>
+  <aside class="menu_overlay"></aside>
 
-          <br>
-          <br>
-
-          <h1>H1 Blockchains and Smart Contracts</h1>
-
-          <h2>H2 Lykke Coins Issuance Update</h2>
-
-          <h3>H3 Colored Coin Extension</h3>
-
-          <h4>H4 Personal information</h4>
-
-          <h5>H5 Yelena Mechenkova</h5>
-
-          <p class="lead">
-            On April, 1 Lykke was honored to host a seminar Blockchains and Smart Contracts by Nick Szabo who is considered to be one of the pioneers of Bitcoin.
-          </p>
-
-          <p>In principle, it would be possible to further simplify the trading client, by only letting it communicate with the exchange and not connecting to the distributed ledger. This slightly reduces the risk of attacks, as there is one less communication channel to the outside. But it the trader would have to rely completely on the data it gets from the exchange and would not be able to independently verify transactions any more.</p>
-
-          <blockquote>
-            <p>“The current system where every user is a network node is not the intended configuration for large scale. That would be like every Usenet user runs their own NNTP server. The design supports letting users just be users.”</p>
-            <cite>— Satoshi Nakamoto, July 2010</cite>
-          </blockquote>
-
-          <figure>
-            <figcaption>Figure 1: Software Architecture Basics</figcaption>
-          </figure>
+  <aside class="sidebar_menu">
+    <div class="sidebar_menu__inner">
+      <div class="sidebar_menu__header">
+        <button class="btn btn--icon btn_close_menu">
+          <i class="icon icon--close"></i>
+        </button>
+        <div class="header_logo">
+          <a href="/">
+            <img class="header_logo__img" src="img/lykke_new.svg" height="40" alt="lykke_logo">
+          </a>
         </div>
       </div>
+
+      <div class="sidebar_menu__body">
+        <ul class="main_projects_list">
+          <li class="main_projects_list__item">
+            <a href="" class="main_projects_list__link">
+              <div class="main_projects_list__img">
+                <img src="img/lykke_wallet_logo.svg" alt="lykke_wallet_logo" width="50">
+              </div>
+              <div class="main_projects_list__content">
+                <div class="main_projects_list__title">Lykke<span>Wallet</span></div>
+                <div class="main_projects_list__text">
+                  Trade FX and Digital Assets
+                </div>
+              </div>
+            </a>
+          </li>
+
+          <li class="main_projects_list__item">
+            <a href="https://streams.lykke.com/" target="_blank" class="main_projects_list__link">
+              <div class="main_projects_list__img">
+                <img src="img/streams_logo.svg" alt="streams_logo" width="50">
+              </div>
+              <div class="main_projects_list__content">
+                <div class="main_projects_list__title">Streams</div>
+                <div class="main_projects_list__text">
+                  Competition platform. Is helping the great ideas to meet the bright minds
+                </div>
+              </div>
+            </a>
+          </li>
+
+          <li class="main_projects_list__item">
+            <a href="https://blockchainexplorer.lykke.com/" target="_blank" class="main_projects_list__link">
+              <div class="main_projects_list__img">
+                <img src="img/bl_explorer_logo.svg" alt="bl_explorer_logo" width="50">
+              </div>
+              <div class="main_projects_list__content">
+                <div class="main_projects_list__title">Blockchain<span>Explorer</span></div>
+                <div class="main_projects_list__text">
+                  Explore the Blockchain. Search transaction, assets, addresses or blocks
+                </div>
+              </div>
+            </a>
+          </li>
+
+          <li class="main_projects_list__item">
+            <a href="" target="_blank" class="main_projects_list__link">
+              <div class="main_projects_list__img">
+                <img src="img/issuer_portal_logo.svg" alt="issuer_portal_logo" width="50">
+              </div>
+              <div class="main_projects_list__content">
+                <div class="main_projects_list__title">Issuer<span>Portal</span></div>
+                <div class="main_projects_list__text">
+                  Create and manage your digital assets
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+
+      <div class="sidebar_menu__footer">
+        <ul class="social">
+          <li><a href="https://www.facebook.com/groups/542506412568917/" target="_blank" class="social__item"><i class="icon icon--fb_simple"></i><span> Facebook</span></a></li>
+          <li><a href="https://twitter.com/LykkeCity" target="_blank" class="social__item"><i class="icon icon--tw"></i><span> Twitter</span></a></li>
+          <li><a href="http://instagram.com/lykkecity" target="_blank" class="social__item"><i class="icon icon--instagram"></i><span> Instagram</span></a></li>
+          <li><a href="https://www.youtube.com/channel/UCmMYipGdKMF0kzfaE-PXsNQ" target="_blank" class="social__item"><i class="icon icon--youtube"></i><span> Youtube</span></a></li>
+          <li><a href="https://www.linkedin.com/company/lykke-ag" target="_blank" class="social__item"><i class="icon icon--linkedin-icn"></i><span> Linkedin</span></a></li>
+          <li><a href="https://www.reddit.com/r/lykke/" target="_blank" class="social__item"><i class="icon icon--reddit"></i><span> Reddit</span></a></li>
+          <li><a href="https://t.co/TmjMYnQD7T" target="_blank" class="social__item"><i class="icon icon--telegram"></i><span> Telegram</span></a></li>
+        </ul>
+      </div>
     </div>
-  </section>
+  </aside>
+
+  <div class="header_container">
+    <header class="header">
+      <div class="container">
+        <div class="header__menu_button">
+          <button class="btn btn_menu btn--icon" type="button">
+            <span></span>
+          </button>
+        </div>
+        <div class="header__logo header_logo">
+          <a href="/">
+            <img class="header_logo__img" src="img/streams_logo.png" height="36" alt="lykke_logo">
+            <div class="header_logo__title">Streams</div>
+          </a>
+        </div>
+        <div class="header__actions header_actions pull-right">
+          <div class="header_actions__login header_login pull-right">
+
+            <div class="header_user dropdown__control">
+              <a href="/Home/SignIn">
+                <div class="header_login__title">Sign in</div>
+
+                <!--<div class="header_user__img">
+                  <img src="img/user_default.svg" width="40" alt="user_image">
+                </div>
+
+                <div class="header_login__title">Leroy</div>-->
+              </a>
+            </div>
+
+            <div class="dropdown__container">
+              <ul class="dropdown__nav">
+                <li><a href="/Home/LogOut">Sign Out</a></li>
+              </ul>
+            </div>
+
+          </div>
+          <div class="header_actions__search">
+            <button class="btn btn--icon" type="button">
+              <i class="icon icon--search"></i>
+            </button>
+          </div>
+          <div class="header_actions__notifications">
+            <button class="btn btn--icon" type="button">
+              <i class="icon icon--notificaton"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <nav class="header_nav">
+    <div class="header_nav__inner">
+      <div class="container">
+        <a type="button" class="btn btn_create_project pull-right"><i class="icon icon--add"></i></a>
+
+        <ul class="header_nav__list nav_list">
+          <li class="nav_list__item"><a href="">Exchange</a></li>
+          <li class="nav_list__item"><a href="">Community</a></li>
+          <li class="nav_list__item nav_list__item--active"><a href="">Company</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <nav class="site_nav">
+    <div class="site_nav__inner">
+      <div class="container">
+        <button type="button" class="btn btn-sm pull-right">Register</button>
+
+        <ul class="header_nav__list nav_list nav_list--alt">
+          <li class="nav_list__item"><a href="">Leadership</a></li>
+          <li class="nav_list__item"><a href="">Technology</a></li>
+          <li class="nav_list__item"><a href="">Contacts</a></li>
+          <li class="nav_list__item"><a href="">News</a></li>
+          <li class="nav_list__item"><a href="">Invest</a></li>
+          <li class="nav_list__item nav_list__item--active"><a href="">Affiliates</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <article class="content">
+    <section class="section section--padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-8 automargin">
+            <h1 class="page__title">UI Kit <span>Typerface</span></h1>
+
+            <br>
+            <br>
+
+            <h1>H1 Blockchains and Smart Contracts</h1>
+
+            <h2>H2 Lykke Coins Issuance Update</h2>
+
+            <h3>H3 Colored Coin Extension</h3>
+
+            <h4>H4 Personal information</h4>
+
+            <h5>H5 Yelena Mechenkova</h5>
+
+            <p class="lead">
+              On April, 1 Lykke was honored to host a seminar Blockchains and Smart Contracts by Nick Szabo who is considered to be one of the pioneers of Bitcoin.
+            </p>
+
+            <p>In principle, it would be possible to further simplify the trading client, by only letting it communicate with the exchange and not connecting to the distributed ledger. This slightly reduces the risk of attacks, as there is one less communication channel to the outside. But it the trader would have to rely completely on the data it gets from the exchange and would not be able to independently verify transactions any more.</p>
+
+            <blockquote>
+              <p>“The current system where every user is a network node is not the intended configuration for large scale. That would be like every Usenet user runs their own NNTP server. The design supports letting users just be users.”</p>
+              <cite>— Satoshi Nakamoto, July 2010</cite>
+            </blockquote>
+
+            <figure>
+              <figcaption>Figure 1: Software Architecture Basics</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+  </article>
 
   <!--<script src="js/vendor/bootstrap.min.js"></script>
   <script src="js/vendor/fastclick.min.js"></script>
@@ -72,7 +246,6 @@
   <script src="js/functions.js"></script>-->
   <!-- build:js js/scripts.js -->
   <script src="js/vendor/jquery.min.js"></script>
-  <script src="js/vendor/jquery.fullPage.js"></script>
   <script src="js/app.js"></script>
   <!-- endbuild -->
 

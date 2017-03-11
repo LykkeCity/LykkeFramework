@@ -5,11 +5,18 @@
   &__icon {
     float: left;
     text-transform: uppercase;
+    text-align: center;
 
-    @include rem(margin-right, 15px);
+    @include rem(margin-right, 20px);
+    @include rem(width, 60px);
 
     .icon {
       @include rem(font-size, 58px);
+    }
+
+    img {
+      @include rem(width, 40px);
+      @include rem(margin, -5px 0);
     }
   }
 
@@ -100,7 +107,6 @@
 
   a {
     text-decoration: none;
-
   }
 
   &__item {
@@ -154,6 +160,10 @@
     border-bottom: 1px solid #EBEDEF;
 
     @include rem(padding, 20px 0);
+
+    &:first-child {
+      border-top: 1px solid #EBEDEF;
+    }
     
     &__action {
       float: right;
