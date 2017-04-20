@@ -29,36 +29,50 @@ h5, .h5,
 h6, .h6 {margin-top: 0; font-weight: normal; font-family: $ff}
 
 h5, .h5 {
-  font-weight: 600;
+  font-weight: $fw-semi;
   font-style: normal;
   font-stretch: normal;
   line-height: 1.67;
-  color: #333333;
+  color: $text;
 
   @include rem(font-size, 18px);
 }
 
 h4, .h4 {
-  font-weight: 600;
+  font-weight: $fw-semi;
   font-style: normal;
   font-stretch: normal;
+  color: $text;
+  letter-spacing: 0;
+  text-transform: none;
+  line-height: 1.67;
+
+  @include rem(font-size, 18px);
+
+
+
+  @include rem(font-size, 21px);
+}
+
+
+h4.h4_uppercase, .h4.h4_uppercase {
   line-height: 1.78;
   letter-spacing: 1.8px;
-  color: #333333;
   text-transform: uppercase;
 
   @include rem(font-size, 18px);
 }
 
+
 h3, .h3 {
-  font-weight: 600;
+  font-weight: $fw-semi;
   font-style: normal;
   font-stretch: normal;
   line-height: 1.43;
-  color: #333333;
+  color: $text;
 
   @include rem(font-size, 28px);
-  @include rem(margin-bottom, 18px);
+  @include rem(margin-bottom, 30px);
 }
 
 h2, .h2 {
@@ -69,6 +83,7 @@ h2, .h2 {
   color: #333333;
 
   @include rem(font-size, 40px);
+  @include rem(margin-bottom, 30px);
 }
 
 h1, .h1 {
@@ -79,7 +94,7 @@ h1, .h1 {
   color: $text;
 
   @include rem(font-size, 50px);
-  @include rem(margin-bottom, 20px);
+  @include rem(margin-bottom, 30px);
 }
 
 b, strong {
@@ -112,21 +127,36 @@ hr {
 blockquote {
   font-weight: $fw-semi;
   color: $secondary;
-  border-left: 2px solid $primary;
+  line-height: 1.9;
+  text-align: center;
+  border: 0;
+  padding: 0;
 
-  @include rem(font-size, 22px);
-  @include rem(line-height, 40px);
-  @include rem(margin, 50px 0);
+  @include rem(font-size, 21px);
+  @include rem(margin, 50px auto);
   @include rem(padding, 0 20px);
+  @include rem(max-width, 530px);
+
+  p {
+    font-weight: $fw-semi;
+    color: $secondary;
+    line-height: 1.9;
+
+    @include rem(font-size, 21px);
+  }
 
   cite {
     font-weight: $fw-semi;
-    color: $gray-light;
-    letter-spacing: 0;
+    color: #8c94a0;
     display: block;
+    text-align: center;
+    font-size: 21px;
+    font-style: normal;
+    line-height: 1.9;
+    letter-spacing: normal;
 
     @include rem(font-size, 22px);
-    @include rem(line-height, 40px);
+    @include rem(margin-top, 15px);
   }
 }
 
@@ -164,7 +194,6 @@ figcaption {
   p, ul, ol {
     font-weight: normal;
     font-style: normal;
-    font-stretch: normal;
     line-height: 1.67;
     color: $secondary;
 

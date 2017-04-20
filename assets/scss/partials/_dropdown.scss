@@ -47,6 +47,7 @@
 		@include transition(all .3s ease);
 		@include transform(translate(0,-10px) scale(.9));
 		@include opacity(0);
+
 		padding-top: 10px;
 		pointer-events: none;
 		position: absolute;
@@ -236,7 +237,7 @@
   visibility: hidden;
   margin-left: -87px;
 
-  &:hover {
+  &:hover, &:focus {
     opacity: 1 !important;
     visibility: visible !important;
     pointer-events: all;

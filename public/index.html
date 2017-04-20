@@ -44,7 +44,7 @@
       <div class="sidebar_menu__body">
         <ul class="main_projects_list">
           <li class="main_projects_list__item">
-            <a href="" class="main_projects_list__link">
+            <a href="https://www.lykke.com/" target="_blank" class="main_projects_list__link">
               <div class="main_projects_list__img">
                 <img src="img/lykke_wallet_logo.svg" alt="lykke_wallet_logo" width="50">
               </div>
@@ -131,6 +131,11 @@
           </a>
         </div>
         <div class="header__actions header_actions pull-right">
+          <div class="header_actions__logout visible-xs pull-right">
+            <a href="/Home/LogOut" class="btn btn--icon btn_logout">
+              <i class="icon icon--exit"></i>
+            </a>
+          </div>
           <div class="header_actions__login header_login pull-right">
 
             <div class="header_user dropdown__control">
@@ -153,14 +158,37 @@
 
           </div>
           <div class="header_actions__search">
-            <button class="btn btn--icon" type="button">
+            <button class="btn btn--icon btn_open_search" type="button">
               <i class="icon icon--search"></i>
             </button>
           </div>
+          <!--
           <div class="header_actions__notifications">
             <button class="btn btn--icon" type="button">
               <i class="icon icon--notificaton"></i>
             </button>
+          </div>
+          -->
+
+        </div>
+      </div>
+
+      <div class="header_search">
+        <div class="container">
+          <div class="header_search__inner">
+            <div class="header_search__buttons">
+              <button type="button" class="btn btn-sm btn--flat hidden-xs btn_close_header">Cancel</button>
+              <button type="button" class="btn btn-sm btn--primary hidden-xs">Search</button>
+              <button type="button" class="btn btn--icon visible-xs btn_close_header">
+                <i class="icon icon--cancel_round"></i>
+              </button>
+            </div>
+            <div class="header_search__field">
+              <button class="header_search__btn btn btn--icon" type="button">
+                <i class="icon icon--search"></i>
+              </button>
+              <input type="text" class="form-control" placeholder="Search block, address, transaction…">
+            </div>
           </div>
         </div>
       </div>
@@ -170,13 +198,14 @@
   <nav class="header_nav">
     <div class="header_nav__inner">
       <div class="container">
-        <a type="button" class="btn btn_create_project pull-right"><i class="icon icon--add"></i></a>
-
         <ul class="header_nav__list nav_list">
+          <li class="nav_list__item visible-xs-inline-block"><a href=""><i class="icon icon--add"></i>Create project</a></li>
           <li class="nav_list__item"><a href="">Exchange</a></li>
           <li class="nav_list__item"><a href="">Community</a></li>
           <li class="nav_list__item nav_list__item--active"><a href="">Company</a></li>
         </ul>
+        <a type="button" class="btn btn_create_project pull-right hidden-xs"><i class="icon icon--add"></i></a>
+
       </div>
     </div>
   </nav>
@@ -214,7 +243,8 @@
 
             <h3>H3 Colored Coin Extension</h3>
 
-            <h4>H4 Personal information</h4>
+            <h4 class="h4_uppercase">H4 Uppercase</h4>
+            <h4>H4 Normal </h4>
 
             <h5>H5 Yelena Mechenkova</h5>
 
@@ -237,6 +267,33 @@
       </div>
     </section>
   </article>
+
+  <footer class="footer">
+    <div class="footer__bottom">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-md-6 text-left">
+            <div class="footer__copy">&copy; Lykke 2017. All rights reserved</div>
+          </div>
+          <div class="col-xs-12 col-md-6 text-right pull-right">
+            <div class="clearfix">
+              <ul class="social social--footer_alt">
+                <li><a href="https://www.facebook.com/groups/542506412568917/" target="_blank" class="social__item"><i class="icon icon--fb_simple"></i></a></li>
+                <li><a href="https://twitter.com/LykkeCity" target="_blank" class="social__item"><i class="icon icon--tw"></i></a></li>
+                <li><a href="http://instagram.com/lykkecity" target="_blank" class="social__item"><i class="icon icon--instagram"></i></a></li>
+                <li><a href="https://www.youtube.com/channel/UCmMYipGdKMF0kzfaE-PXsNQ" target="_blank" class="social__item"><i class="icon icon--youtube"></i></a></li>
+                <li><a href="https://www.linkedin.com/company/lykke-ag" target="_blank" class="social__item"><i class="icon icon--linkedin-icn"></i></a></li>
+                <li><a href="https://www.reddit.com/r/lykke/" target="_blank" class="social__item"><i class="icon icon--reddit"></i></a></li>
+                <li><a href="https://telegram.me/joinchat/AEGiqkF-_dNaHMwQbRSnAg" target="_blank" class="social__item"><i class="icon icon--telegram"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+
 
   <!--<script src="js/vendor/bootstrap.min.js"></script>
   <script src="js/vendor/fastclick.min.js"></script>

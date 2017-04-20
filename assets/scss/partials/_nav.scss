@@ -309,3 +309,16 @@
     }
   }
 }
+
+.nav-tabs > li > a:not(.btn) {
+  background: transparent !important;
+}
+
+.nav-tabs sup {
+  font-weight: normal;
+  top: 0;
+  position: static;
+
+  @include rem(margin-left, 3px);
+  @include rem(font-size, 16px)
+}

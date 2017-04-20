@@ -1,5 +1,6 @@
 .alert {
   color: #fff;
+  clear: both;
 
   @include clearfix;
   @include rem(padding, 15px);

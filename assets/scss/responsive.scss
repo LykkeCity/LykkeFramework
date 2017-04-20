@@ -138,10 +138,6 @@
     font-size: 0.45em;
     line-height: 1.5em;
   }
-
-  .dropdown__container {
-    display: none;
-  }
 }
 
 @media (max-width: $screen-landscape) {
@@ -186,7 +182,7 @@
 
 @media (min-width: 1200px) {
   .container {
-    max-width: 1280px;
+    max-width: 1200px;
     width: 100%;
   }
 }

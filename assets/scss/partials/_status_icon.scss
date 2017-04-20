@@ -22,10 +22,20 @@
   }
 
   &--success {
-    background: $green;
+    background-color: $green;
 
     &:before {
       content: "\e90b";
+    }
+  }
+
+  &--warning {
+    background: $yellow url(../img/attention.svg) no-repeat center;
+
+    @include background-size(cover);
+
+    &:before {
+      content: "";
     }
   }
 }

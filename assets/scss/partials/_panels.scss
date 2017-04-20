@@ -1,0 +1,161 @@
+
+.collapse {
+  display: none;
+  overflow: hidden;
+  height: auto;
+}
+.collapse.in {
+  display: block;
+}
+tr.collapse.in {
+  display: table-row;
+}
+tbody.collapse.in {
+  display: table-row-group;
+}
+.collapsing {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+
+  @include transition-property(height, visibility);
+  @include transition-duration(0.35s);
+  @include transition-timing-function(ease);
+}
+.panel {
+  margin-bottom: 20px;
+  background-color: $white;
+
+  @include rem(margin-bottom, 20px);
+}
+.panel_body {
+  letter-spacing: 0;
+
+  @include rem(font-size, 18px);
+  @include rem(line-height, 30px);
+  @include rem(padding, 0 0 12px);
+
+  p, ol, ul {
+    color: $secondary;
+
+    @include rem(font-size, 18px);
+    @include rem(line-height, 30px);
+  }
+}
+.panel_heading {
+  border-bottom: 1px solid transparent;
+  background: #F5F6F7;
+  border-top: 1px solid #EBEDEF;
+  border-bottom: 1px solid #EBEDEF;
+
+  @include transition(all $transition-default);
+
+  a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    @include rem(padding, 12px 0);
+
+    &:after {
+      font-family: 'icon' !important;
+      color: #B2B8BF;
+      content: "\e942";
+      position: absolute;
+      right: 0;
+      top: 50%;
+      margin-top: -13px;
+
+      @include rotate(45deg);
+      @include rem(font-size, 26px);
+      @include transition(transform $transition-default);
+    }
+  }
+
+  &--active {
+    background: $white;
+    border-bottom-color: transparent;
+
+    a:after {
+      @include rotate(0);
+    }
+  }
+}
+
+.panel_title {
+  margin-top: 0;
+  margin-bottom: 0;
+  text-transform: none;
+  letter-spacing: 0;
+  color: $text;
+  margin-bottom: 0 !important;
+
+  @include rem(font-size, 21px);
+  @include rem(line-height, 32px);
+}
+
+.panel_desc {
+  color: rgba($secondary, .8);
+  letter-spacing: 0;
+
+  @include rem(font-size, 16px);
+  @include rem(line-height, 24px);
+}
+
+.panel_title > a,
+.panel_title > small,
+.panel_title > .small,
+.panel_title > small > a,
+.panel_title > .small > a {
+  color: inherit;
+}
+.panel_footer {
+  border-top: 1px solid $border-alt;
+
+  @include rem(padding, 7px 0);
+}
+.panel > .list-group,
+.panel > .panel_collapse > .list-group {
+  margin-bottom: 0;
+}
+.panel > .list-group .list-group-item,
+.panel > .panel_collapse > .list-group .list-group-item {
+  border-width: 1px 0;
+  border-radius: 0;
+}
+.panel > .list-group:first-child .list-group-item:first-child,
+.panel > .panel_collapse > .list-group:first-child .list-group-item:first-child {
+  border-top: 0;
+}
+.panel > .list-group:last-child .list-group-item:last-child,
+.panel > .panel_collapse > .list-group:last-child .list-group-item:last-child {
+  border-bottom: 0;
+}
+.panel_heading + .list-group .list-group-item:first-child {
+  border-top-width: 0;
+}
+.list-group + .panel_footer {
+  border-top-width: 0;
+}
+.panel > .table,
+.panel > .table-responsive > .table,
+.panel > .panel_collapse > .table {
+  margin-bottom: 0;
+}
+.panel > .table-responsive {
+  border: 0;
+  margin-bottom: 0;
+}
+.panel_group {
+  @include rem(margin-bottom, 80px);
+}
+.panel_group .panel {
+  margin-bottom: 0;
+}
+.panel_group .panel + .panel {
+  margin-top: -1px;
+}
+.panel_group .panel_footer {
+  border-top: 0;
+}

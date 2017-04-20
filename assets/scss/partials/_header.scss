@@ -1,5 +1,13 @@
 .header_container {
   @include rem(height, 90px);
+
+  @media all and (max-width: $screen-landscape) {
+    height: 82px;
+  }
+
+  @media all and (max-width: $screen-mobile) {
+    height: 60px;
+  }
 }
 
 .header {
@@ -9,7 +17,7 @@
   right: 0;
   top: 0;
   z-index: 110;
-  border-bottom: 1px solid $gray-5;
+  border-bottom: 1px solid #EBEDEF;
 
   @include rem(padding, 25px 0);
 
@@ -35,9 +43,16 @@
   }
 
   @media all and (max-width: $screen-mobile) {
+    padding: 12px 0;
+
+    &__menu_button {
+      margin-top: 2px;
+    }
+
     &__logo {
       overflow: hidden;
       width: 40px;
+      margin-top: 1px;
 
       img {
         height: 30px;
@@ -118,6 +133,9 @@
 
 .header_nav {
   background: $gray-5;
+  overflow: hidden;
+
+  @include rem(height, 60px);
 
   .btn {
     @include rem(margin, 10px 0 0);
@@ -127,10 +145,19 @@
     @include rem(margin, 20px 0 0);
   }
 
+  &__inner {
+    overflow: hidden;
+    overflow-x: auto;
+
+    @include rem(height, 80px);
+  }
+
   &__list {
+    float: left;
+
     @extend %disable-list-style;
 
-    @include rem(padding, 20px 0);
+    @include rem(padding, 19px 0 21px);
     @include rem(margin-left, -14px);
   }
 
@@ -144,6 +171,11 @@
       font-weight: $fw-semi;
 
       @include rem(letter-spacing, 2px);
+
+      .icon {
+        margin-top: -5px;
+        margin-bottom: -5px;
+      }
     }
   }
 }
@@ -177,10 +209,20 @@
 }
 
 .site_nav {
-  @include rem(padding, 20px 0);
+  overflow: hidden;
+
+  @include rem(height, 80px);
 
   .container {
     max-width: 1170px + 30px;
+  }
+
+  &__inner  {
+    overflow: hidden;
+    overflow-x: auto;
+
+    @include rem(padding, 20px 0);
+    @include rem(height, 100px);
   }
 
   .nav_list {
@@ -207,11 +249,29 @@
       }
     }
   }
+
+  @media all and (max-width: $screen-landscape) {
+    &__inner {
+      white-space: nowrap;
+    }
+
+    .btn,
+    .nav_list {
+      float: none !important;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .btn {
+      margin-right: 15px;
+    }
+  }
 }
 
 .header_actions {
   &__search,
-  &__notifications {
+  &__notifications,
+  &__logout {
     float: left;
     position: relative;
 
@@ -222,6 +282,10 @@
     }
   }
 
+  &__logout {
+    @include rem(margin-right, -10px);
+  }
+
   &__login {
     position: relative;
 
@@ -229,15 +293,16 @@
     @include rem(margin-left, 15px);
 
     .header_user {
-      .header_login__title {
+      .header_user__img + .header_login__title {
         color: $text;
       }
     }
 
     a {
       display: block;
-      color: $primary;
+      color: $text;
 
+      @include clearfix;
       @include rem(padding, 3px 10px);
 
       &:hover {
@@ -246,19 +311,24 @@
     }
   }
 
-  @media all and (max-width: $screen-mobile) {
-    &__login {
-      float: left !important;
+  @media all and (max-width: $screen-landscape) {
+    .btn--icon .icon {
+      font-size: 20px;
+    }
 
-      a {
-        padding-top: 0;
-        padding-bottom: 0;
+    &__logout {
+      .btn--icon .icon {
+        font-size: 18px;
+        position: relative;
+        top: 1px;
       }
     }
   }
 }
 
 .header_user {
+  @include clearfix;
+
   &__img {
     float: left;
 
@@ -280,9 +350,15 @@
     }
   }
 
-  @media all and (max-width: $screen-mobile) {
+  @media all and (max-width: $screen-landscape) {
     &__img {
-      display: none;
+      margin-top: 0;
+      margin-bottom: 0;
+      margin-right: 0;
+
+      + .header_login__title {
+        display: none;
+      }
     }
   }
 }
@@ -298,6 +374,12 @@
     @include rem(font-size, 18px);
     @include rem(padding, 8px 0);
     @include rem(max-width, 170px);
+  }
+
+  @media all and (max-width: $screen-mobile) {
+    &__title {
+      padding: 9px 0;
+    }
   }
 }
 
@@ -337,8 +419,9 @@
     overflow: hidden;
     overflow-y: visible;
     height: 100%;
+    -webkit-overflow-scrolling: touch;
 
-    @include rem(padding, 115px 28px 230px);
+    @include rem(padding, 115px 30px 230px 28px);
   }
 
   &__header {
@@ -348,6 +431,7 @@
     right: 15px;
     border-bottom: 1px solid $border-alt;
     background: $white;
+    z-index: 10;
 
     @include rem(padding, 25px 0);
     @include rem(margin, 0 28px);
@@ -377,6 +461,8 @@
   }
 
   .social {
+    text-align: left !important;
+
     li {
       float: left;
       width: 50%;
@@ -404,7 +490,10 @@
     @include transform(translate(0, 0));
   }
 
-  @media all and (max-height: 860px), all and (max-width: $screen-mobile) {
+  @media all and (max-height: 860px),
+  all and (max-width: $screen-mobile),
+  screen and (max-device-width: $screen-tablet),
+  screen and (pointer:coarse) {
     .social {
       text-align: center;
 
@@ -413,6 +502,11 @@
         width: auto;
         display: inline-block;
         vertical-align: middle;
+        margin-left: 0px;
+
+        &:first-child {
+          margin-left: 0;
+        }
       }
 
       &__item {
@@ -427,6 +521,9 @@
     }
 
     &__footer {
+      padding-left: 10px;
+      padding-right: 5px;
+
       @include rem(padding-bottom, 20px);
     }
 
@@ -437,8 +534,21 @@
   
   @media all and (max-width: $screen-mobile) {
     width: 100%;
+    display: none;
+
+    @include transform(translate(0, 0));
+
+    &__body {
+      padding-left: 12px;
+      padding-right: 12px;
+      padding-top: 72px;
+    }
 
     &__header {
+      margin: 0 0 0 12px;
+      padding: 15px 0;
+      right: 12px;
+
       .btn {
         display: block;
         position: absolute;
@@ -447,6 +557,8 @@
         margin-top: -14px;
 
         .icon {
+          position: relative;
+          top: 1px;
           font-size: 24px;
         }
       }
@@ -458,6 +570,10 @@
       &__img {
         height: 30px;
       }
+    }
+
+    &--open {
+      display: block;
     }
   }
 }
@@ -515,6 +631,13 @@
     @include rem(line-height, 24px);
   }
 
+  @media all and (max-height: 860px) and (min-width: $screen-tablet + 1) {
+    &__text {
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
+
   @media all and (max-width: $screen-mobile) {
     &__item {
       border-bottom: 1px solid $border-alt;
@@ -537,6 +660,25 @@
       opacity: 1;
     }
   }
+
+  @media all and (max-width: $screen-mobile) {
+    position: fixed;
+  }
+}
+
+.body--search_showed {
+  @media all and (max-width: $screen-mobile) {
+    article, footer, nav.header_nav, .site_nav {
+      -webkit-filter: blur(5px);
+      filter: blur(5px);
+    }
+
+    .menu_overlay {
+      visibility: visible;
+      opacity: 1;
+      z-index: 110;
+    }
+  }
 }
 
 .menu_overlay {
@@ -548,8 +690,83 @@
   height: 100%;
   visibility: hidden;
   opacity: 0;
-  pointer-events: none;
   background: rgba(#CFD2D7, .5);
 
-  @include transition(all $transition-default);
+  @media all and (min-width: $screen-mobile + 1) {
+    @include transition(all $transition-default);
+  }
+}
+
+.header_search {
+  position: absolute;
+  z-index:10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: $white;
+  display: none;
+
+  @include rem(padding, 25px 0);
+
+  .form-control {
+    border: 0;
+    border-radius: 0;
+
+    @include rem(height, 40px);
+    @include rem(padding-left, 35px);
+  }
+  
+  &__btn {
+    position: absolute !important;
+    left: 0;
+    top: 50%;
+
+    @include rem(margin-top, -13px);
+  }
+  
+  &__field {
+    overflow: hidden;
+  }
+  
+  &__buttons {
+    float: right;
+
+    .btn--icon {
+      color: #CFD2D7;
+
+      @include rem(padding, 7px 6px);
+      @include rem(margin-right, -6px);
+    }
+  }
+
+  &__inner {
+    position: relative;
+  }
+
+  .btn--icon {
+    .icon {
+      font-size: 20px;
+    }
+  }
+
+  &--show {
+    display: block;
+  }
+  
+  @media all and (max-width: $screen-mobile) {
+    padding: 15px 0;
+    top: 100%;
+    margin-top: 1px;
+  }
+
+  @media all and (max-width: $screen-landscape) {
+    &__btn {
+      @include rem(margin-top, -16px);
+    }
+
+    .form-control {
+      @include rem(padding-left, 40px);
+    }
+  }
 }

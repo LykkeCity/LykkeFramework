@@ -58,7 +58,9 @@
     }
 
     .social--footer_alt {
-      @include rem(padding, 12px 30px);
+      > li {
+        margin-left: 10px;
+      }
     }
   }
 
