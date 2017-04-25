@@ -1,1 +1,5 @@
-// TODO
+.section {
+  &--padding_bottom {
+    @include rem(padding-bottom, 60px);
+  }
+}

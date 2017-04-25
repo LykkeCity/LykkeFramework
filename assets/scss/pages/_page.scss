@@ -73,12 +73,8 @@
   }
 
   .container {
-    width: 880px + 30px;
+    width: 1200px;
     max-width: 100%;
-
-    &--extend {
-      width: 1200px
-    }
   }
 
   @media (max-width: $screen-tablet)  {

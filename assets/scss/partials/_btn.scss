@@ -23,7 +23,8 @@
       color: #fff;
     }
 
-    &:active {
+    &:active, &.active {
+      background: darken($primary, 4%);
       @include transform(scale(0.98));
     }
   }
@@ -64,9 +65,10 @@
 
   &--stroke {
     background: transparent;
-    border: 2px solid $primary;
+    box-shadow: inset 0 0 0 2px $primary !important;
     color: $primary !important;
-    font-weight: normal;
+    font-weight: $fw-semi;
+
     @include border-radius(200px);
 
     .header & {
@@ -77,6 +79,12 @@
     &:hover {
       background: $primary;
       color: #fff !important;
+    }
+
+    &[disabled], &[disabled]:hover {
+      background: transparent !important;
+      color: rgba($secondary, .3) !important;
+      box-shadow: inset 0 0 0 2px rgba($secondary, .3) !important;
     }
   }
 
@@ -108,13 +116,20 @@
       background: transparent !important;
       @include transform(none !important);
     }
+
+    &[disabled] {
+      border-color: #e1e1e1;
+      background: #EBEDEF !important;
+      color: rgba($secondary, .3) !important;
+      opacity: 1;
+    }
   }
 
   &--red {
     background: #FF3E2E;
 
-    &:hover {
-      background: #dd1500 !important;
+    &:not([disabled]):hover {
+      background: #dd1500;
     }
 
     &:after {
@@ -125,8 +140,8 @@
   &--green {
     background: #13B72A;
 
-    &:hover {
-      background: #009907 !important;
+    &:not([disabled]):hover {
+      background: #009907;
     }
 
     &:after {
@@ -138,8 +153,18 @@
     background: transparent !important;
   }
 
+  &.btn-lg {
+    @include rem(padding, 16px 40px);
+    @include rem(font-size, 20px);
+  }
+
   &.btn-sm {
     @include rem(padding, 8px 22px);
+    @include rem(font-size, 16px);
+  }
+
+  &.btn-xs {
+    @include rem(padding, 6px 24px);
     @include rem(font-size, 16px);
   }
 }

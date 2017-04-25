@@ -31,7 +31,3 @@ crashlytics-build.properties
 
 node_modules/
 npm-debug.log
-
-public/fonts
-public/img
-public/js

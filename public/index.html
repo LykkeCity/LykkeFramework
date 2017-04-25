@@ -227,8 +227,17 @@
     </div>
   </nav>
 
-  <article class="content">
-    <section class="section section--padding">
+  <article class="content page">
+    <section class="section section--lead section--padding">
+      <div class="container">
+        <div class="col-sm-8 automargin">
+          <h1 class="text-center page__title">Lykke<span>City</span></h1>
+          <h2 class="h3 page__subtitle">The Lykke community</h2>
+        </div>
+      </div>
+    </section>
+
+    <section class="section  section--padding_bottom">
       <div class="container">
         <div class="row">
           <div class="col-sm-8 automargin">
@@ -262,6 +271,300 @@
             <figure>
               <figcaption>Figure 1: Software Architecture Basics</figcaption>
             </figure>
+
+            <br>
+            <br>
+            <br>
+            <br>
+
+
+            <h1 class="page__title">UI Kit <span>Controls</span></h1>
+
+            <br>
+
+            <div class="row">
+              <div class="col-sm-8">
+                <h4 class="h4_uppercase">Button styles</h4>
+                <div class="buttons-inline form-group">
+                  <button type="button" class="btn">Normal</button>
+                  <button type="button" class="btn active">Active</button>
+                  <button type="button" class="btn" disabled>Disabled</button>
+                </div>
+                <div class="buttons-inline form-group">
+                  <button type="button" class="btn btn--flat">Normal</button>
+                  <button type="button" class="btn btn--stroke">Normal</button>
+                  <button type="button" class="btn btn--stroke" disabled>Disabled</button>
+                </div>
+                <div class="buttons-inline form-group">
+                  <button type="button" class="btn btn--default">Normal</button>
+                  <button type="button" class="btn btn--default" disabled>Disabled</button>
+                </div>
+                <div class="buttons-inline form-group">
+                  <button type="button" class="btn btn--red">Normal</button>
+                  <button type="button" class="btn btn--green">Normal</button>
+                </div>
+                <div class="buttons-inline form-group">
+                  <button type="button" class="btn"><i class="icon icon--download"></i> Normal</button>
+                  &nbsp;
+                  <button type="button" class="btn btn--icon"><i class="icon icon--download"></i></button>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <h4 class="h4_uppercase">Button sizes</h4>
+                <div class="form-group">
+                  <button type="button" class="btn btn-lg">btn-lg</button>
+                </div>
+                <div class="form-group">
+                  <button type="button" class="btn btn-md">btn-md</button>
+                </div>
+                <div class="form-group">
+                  <button type="button" class="btn btn-sm">btn-sm</button>
+                </div>
+                <div class="form-group">
+                  <button type="button" class="btn btn-xs">btn-xs</button>
+                </div>
+
+              </div>
+            </div>
+
+            <br>
+            <br>
+            <h4 class="h4_uppercase">Input field</h4>
+            <form action="" class="form form--default">
+              <div class="row">
+                <div class="col-sm-6">
+                  <label for="select1" class="control-label">Category:</label>
+                  <div class="select form-group" data-control="select">
+                    <div class="select__value"><span class="_value">All</span></div>
+                    <select id="select1" class="form-control select__elem">
+                      <option>All</option>
+                      <option>All2</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <label for="select3" class="control-label">Category:</label>
+                  <div class="select form-group disabled" data-control="select">
+                    <div class="select__value"><span class="_value">All</span></div>
+                    <select id="select3" class="form-control select__elem" disabled>
+                      <option>All</option>
+                      <option>All2</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <label for="f5" class="control-label">Input</label>
+                    <input type="text" id="f5" class="form-control">
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <label for="f4" class="control-label">Tags (comma separated)</label>
+                    <input type="text" id="f4" class="form-control" disabled value="Java, Futures, Lending, Margin trading, Swaps">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <label for="f8" class="control-label">Input</label>
+                    <input type="text" id="f8" class="form-control error">
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <label for="select5" class="control-label">Category:</label>
+                  <div class="select form-group error" data-control="select">
+                    <div class="select__value"><span class="_value">All</span></div>
+                    <select id="select5" class="form-control error select__elem">
+                      <option>All</option>
+                      <option>All2</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <label for="datetimepicker" class="control-label">datetimepicker</label>
+                    <div class="input-group date datetimepicker">
+                      <input type="text" id="datetimepicker" class="form-control datetimepicker" value="10.11.2016"/>
+                      <span class="input-group-addon">
+                          <span class="icon icon--cal"></span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="f6" class="control-label">Textarea</label>
+                <textarea id="f6" class="form-control"></textarea>
+              </div>
+
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="radio-group form-group">
+                    <div class="radio">
+                      <input type="radio" name="radio11" id="radio11" class="radio__control" checked>
+                      <label for="radio11" class="control-label radio__label">URL</label>
+                    </div>
+                    <div class="radio">
+                      <input type="radio" name="radio11" id="radio12" class="radio__control">
+                      <label for="radio12" class="control-label radio__label">URL</label>
+                    </div>
+                    <div class="radio">
+                      <input type="radio" name="radio11" id="radio13" class="radio__control" disabled>
+                      <label for="radio13" class="control-label radio__label">URL</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="checkbox-group form-group">
+                    <div class="checkbox">
+                      <input type="checkbox" name="checkbox1" id="checkbox12" class="checkbox__control" checked>
+                      <label for="checkbox12" class="control-label checkbox__label">I agree with <a href="">Terms of Use</a></label>
+                    </div>
+                    <div class="checkbox">
+                      <input type="checkbox" name="checkbox1" id="checkbox13" class="checkbox__control">
+                      <label for="checkbox13" class="control-label checkbox__label">I agree with <a href="">Terms of Use</a></label>
+                    </div>
+                    <div class="checkbox">
+                      <input type="checkbox" name="checkbox1" id="checkbox14" class="checkbox__control" disabled checked>
+                      <label for="checkbox14" class="control-label checkbox__label">I agree with</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="switcher">
+                    <input id="ch1" type="checkbox" class="switcher__elem" checked>
+                    <label for="ch1" class="switcher__control"></label>
+                  </div>
+                </div>
+              </div>
+            </form>
+
+            <br>
+            <br>
+            <h4 class="h4_uppercase">Files</h4>
+
+            <div class="asset_link_list">
+              <div class="asset_link">
+                <div class="asset_link__icon">
+                  <div class="asset_icon asset_icon--red">PDF</div>
+                </div>
+                <div class="asset_link__info">
+                  <div class="asset_link__title"><a href="">Brief and concept.pdf</a></div>
+                  <div class="asset_link__desc">24.8MB</div>
+                </div>
+              </div>
+              <div class="asset_link">
+                <div class="asset_link__icon">
+                  <div class="asset_icon asset_icon--primary">AI</div>
+                </div>
+                <div class="asset_link__info">
+                  <div class="asset_link__title"><a href="">Brief and concept.ai</a></div>
+                  <div class="asset_link__desc">24.8MB</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="asset_link_list">
+              <div class="asset_link asset_link--alt">
+                <div class="asset_link__icon">
+                  <div class="asset_icon asset_icon--red">PDF</div>
+                </div>
+                <div class="asset_link__action">
+                  <button class="btn btn--icon _delete_asset"><i class="icon icon--download"></i></button>
+                </div>
+                <div class="asset_link__info">
+                  <div class="asset_link__title"><a href="">Brief and concept.pdf</a></div>
+                  <div class="asset_link__desc">24.8MB</div>
+                </div>
+              </div>
+              <div class="asset_link asset_link--alt">
+                <div class="asset_link__icon">
+                  <div class="asset_icon asset_icon--primary">AI</div>
+                </div>
+                <div class="asset_link__action">
+                  <button class="btn btn--icon _delete_asset"><i class="icon icon--download"></i></button>
+                </div>
+                <div class="asset_link__info">
+                  <div class="asset_link__title"><a href="">Brief and concept.ai</a></div>
+                  <div class="asset_link__desc">24.8MB</div>
+                </div>
+              </div>
+            </div>
+
+            <br>
+            <br>
+            <h4 class="h4_uppercase">Labels</h4>
+
+            <span class="label label--primary">Primary</span>
+            <span class="label label--gray">Gray</span>
+            <span class="label label--red">Red</span>
+            <span class="label label--green">Green</span>
+            <span class="label label--yellow">Yellow</span>
+            <a href="" class="label label--blue">Blue</a>
+            <br>
+            <br>
+            <span class="label label--rounded label--primary">Primary</span>
+            <span class="label label--rounded label--gray">Gray</span>
+            <span class="label label--rounded label--red">Red</span>
+            <span class="label label--rounded label--green">Green</span>
+            <span class="label label--rounded label--yellow">Yellow</span>
+            <a href="" class="label label--rounded label--blue">Blue</a>
+            <br>
+            <br>
+            <span class="label label--flat label--primary">Primary</span>
+            <span class="label label--flat label--gray">Gray</span>
+            <span class="label label--flat label--red">Red</span>
+            <span class="label label--flat label--green">Green</span>
+            <span class="label label--flat label--yellow">Yellow</span>
+            <a href="" class="label label--flat label--blue">Blue</a>
+            <br>
+            <br>
+            <span class="label label--rounded label--flat label--primary">Primary</span>
+            <span class="label label--rounded label--flat label--gray">Gray</span>
+            <span class="label label--rounded label--flat label--red">Red</span>
+            <span class="label label--rounded label--flat label--green">Green</span>
+            <span class="label label--rounded label--flat label--yellow">Yellow</span>
+            <a href="" class="label label--rounded label--flat label--blue">Blue</a>
+            <br>
+            <br>
+            <span class="label label--text label--primary">Primary</span>
+            <span class="label label--text label--gray">Gray</span>
+            <span class="label label--text label--red">Red</span>
+            <span class="label label--text label--green">Green</span>
+            <span class="label label--text label--yellow">Yellow</span>
+            <a href="" class="label label--text label--blue">Blue</a>
+
+
+            <br>
+            <br>
+            <br>
+            <h4 class="h4_uppercase">Tabs</h4>
+            <div class="tabs_stack">
+              <div class="tab_item tab_item--active"><a class="tab_item__link" href="">Active &middot; 5</a></div>
+              <div class="tab_item"><a class="tab_item__link" href="">Drafts &middot; 1</a></div>
+              <div class="tab_item"><a class="tab_item__link" href="">Recycle &middot; 1</a></div>
+            </div>
+
+            <div class="nav_scroll">
+              <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#info" aria-controls="info" role="tab" data-toggle="tab">Info</a></li>
+                <li role="presentation"><a href="#participants" aria-controls="participants" role="tab" data-toggle="tab">Participants <sup>7</sup></a></li>
+                <li role="presentation"><a href="#comments" aria-controls="comments" role="tab" data-toggle="tab">Comments <sup>32</sup></a></li>
+                <li role="presentation"><a href="#results" aria-controls="results" role="tab" data-toggle="tab">Results</a></li>
+                <li role="presentation"><a href="#winner" aria-controls="winner" role="tab" data-toggle="tab">Winners <sup>4</sup></a></li>
+              </ul>
+
+              <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="info">1</div>
+                <div role="tabpanel" class="tab-pane" id="participants">2</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -295,16 +598,28 @@
   </footer>
 
 
-  <!--<script src="js/vendor/bootstrap.min.js"></script>
-  <script src="js/vendor/fastclick.min.js"></script>
-  <script src="js/vendor/jquery.inview.min.js"></script>
-  <script src="js/vendor/jquery.royalslider.custom.min.js"></script>
-  <script src="js/vendor/jquery.ajaxchimp.min.js"></script>
-  <script src="js/functions.js"></script>-->
   <!-- build:js js/scripts.js -->
   <script src="js/vendor/jquery.min.js"></script>
+  <script src="js/vendor/bootstrap.min.js"></script>
+  <script src="js/vendor/moment.min.js"></script>
+  <script src="js/vendor/bootstrap-datetimepicker.min.js"></script>
   <script src="js/app.js"></script>
   <!-- endbuild -->
+
+  <script>
+    $('.datetimepicker').datetimepicker({
+//    debug: true,
+      format: 'DD.MM.YYYY',
+      icons: {
+        time: "icon--clock",
+        date: "icon--cal",
+        up: "icon--chevron-thin-up",
+        down: "icon--chevron-thin-down",
+        previous: "icon--chevron-thin-left",
+        next: "icon--chevron-thin-right"
+      }
+    });
+  </script>
 
 </body>
 </html>

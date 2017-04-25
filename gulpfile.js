@@ -21,7 +21,8 @@ gulp.task('sass', function () {
 gulp.task('copy-js-vendors', function () {
   return gulp.src([
       './node_modules/jquery/dist/jquery.min.js',
-      './assets/vendor/bootstrap-custom.min.js'
+      './assets/vendor/bootstrap-custom.min.js',
+      './node_modules/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js',
     ])
     .pipe(gulp.dest('./public/js/vendor'));
 });

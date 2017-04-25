@@ -1,6 +1,6 @@
 .asset_link {
   @include clearfix;
-  @include rem(margin, 40px 0);
+  @include rem(margin, 0 0 40px);
 
   &__icon {
     float: left;
@@ -153,7 +153,7 @@
 }
 
 .asset_link_list {
-  @include rem(margin, 40px 0);
+  @include rem(margin, 0 0 40px);
 
   .asset_link {
     margin: 0;
