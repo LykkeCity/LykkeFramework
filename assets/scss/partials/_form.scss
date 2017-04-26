@@ -296,7 +296,11 @@ label.error {
       content: '';
       color: $white;
       position: absolute;
+      line-height: 18px;
+      display: inline-block;
+      vertical-align: middle;
 
+      @include rem(line-height, 18px);
       @include transform(scale(0));
       @include transition(opacity $transition-default, visibility $transition-default, transform $transition-default);
     }
