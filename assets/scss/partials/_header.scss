@@ -495,7 +495,7 @@
   screen and (max-device-width: $screen-tablet),
   screen and (pointer:coarse) {
     .social {
-      text-align: center;
+      text-align: center !important;
 
       li {
         float: none;

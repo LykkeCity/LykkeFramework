@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icon';
-  src:  url('../fonts/icon.eot?ksyjyd');
-  src:  url('../fonts/icon.eot?ksyjyd#iefix') format('embedded-opentype'),
-  url('../fonts/icon.ttf?ksyjyd') format('truetype'),
-  url('../fonts/icon.woff?ksyjyd') format('woff'),
-  url('../fonts/icon.svg?ksyjyd#icon') format('svg');
+  src:  url('../fonts/icon.eot?psc8v3');
+  src:  url('../fonts/icon.eot?psc8v3#iefix') format('embedded-opentype'),
+  url('../fonts/icon.ttf?psc8v3') format('truetype'),
+  url('../fonts/icon.woff?psc8v3') format('woff'),
+  url('../fonts/icon.svg?psc8v3#icon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -30,7 +30,9 @@
   @include rem(font-size, 20px);
   @include rem(margin-right, 6px);
 }
-
+.icon--drag:before {
+  content: "\e959";
+}
 .icon--prize .path1:before {
   content: "\e900";
   color: rgb(255, 174, 44);
