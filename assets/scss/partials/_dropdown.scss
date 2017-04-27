@@ -1,7 +1,4 @@
 .dropdown {
-	&__control {
-
-	}
 	&__nav {
 		background: #fff;
 		width: 220px;
@@ -86,111 +83,6 @@
 
 .dropdown {
   position: relative;
-}
-
-.dropdown-menu {
-  &:not(.bootstrap-datetimepicker-widget) {
-    position: absolute;
-    left: 50%;
-    top: 100%;
-    box-shadow: $box-shadow-popup;
-    border-radius: $border-radius;
-    opacity: 0;
-    visibility: hidden;
-    display: block;
-    float: none;
-    padding: 0;
-    background: $white;
-    z-index: 20;
-
-    @include rem(width, 387px);
-    @include rem(margin-left, -193px);
-    @include rem(margin-top, 10px);
-    @include transition(opacity $transition-default, visibility $transition-default);
-
-    &:after {
-      bottom: 100%;
-      left: 50%;
-      border: solid transparent;
-      content: " ";
-      height: 0;
-      width: 0;
-      position: absolute;
-      pointer-events: none;
-    }
-
-    &:after {
-      border-color: rgba($white, 0);
-      border-bottom-color: $white;
-
-      @include rem(margin-left, -10px);
-      @include rem(border-width, 10px);
-    }
-  }
-
-  &--sm {
-    @include rem(width, 296px);
-    @include rem(margin-left, -148px);
-  }
-
-  &--tiny {
-    @include rem(width, 120px);
-    @include rem(margin-left, -60px);
-  }
-
-  .dropdown__inner {
-    overflow: hidden;
-    @include rem(padding, 32px 32px 40px);
-  }
-
-  &--static {
-    position: relative;
-    top: 0;
-    right: auto;
-    left: auto;
-    margin-left: 0;
-    opacity: 1;
-    visibility: visible;
-  }
-
-  &--show, &.show, .show &, .open &, &.open {
-    opacity: 1;
-    visibility: visible;
-  }
-
-  .form-group:last-child {
-    margin-bottom: 0;
-  }
-
-  ol, ul {
-    @extend %disable-list-style;
-  }
-
-  .divider {
-    clear: both;
-    border-bottom: 1px solid $gray-5;
-    width: 100%;
-
-    @include rem(margin-bottom, 20px);
-    @include rem(margin-top, 24px);
-
-    + .h5, + h5 {
-      @include rem(margin-top, -8px);
-    }
-
-    &--ver {
-      width: 1px;
-      height: 100%;
-      border-left: 1px solid $gray-25;
-      border-bottom: 0;
-      clear: none;
-      display: inline-block;
-      vertical-align: middle;
-
-      @include rem(margin, 0 15px);
-      @include rem(min-height, 32px);
-    }
-  }
 }
 
 .dropdown-list {
