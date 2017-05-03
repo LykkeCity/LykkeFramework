@@ -63,6 +63,17 @@
     }
   }
 
+  &--link {
+    padding: 0 !important;
+    background: transparent !important;
+    color: inherit;
+    font-weight: normal;
+
+    &:hover, &:active, &:focus {
+      color: inherit !important;
+    }
+  }
+
   &--stroke {
     background: transparent;
     box-shadow: inset 0 0 0 2px $primary !important;
