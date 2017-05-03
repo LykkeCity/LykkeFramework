@@ -393,10 +393,10 @@ label.error {
   border-radius: 3px;
   position: relative;
   display: table;
-  table-layout: fixed;
   width: 100%;
 
-  &__value, &__label {
+  &__value,
+  &__label {
     display: table-cell;
     vertical-align: baseline;
   }
@@ -421,6 +421,7 @@ label.error {
 
   &__label {
     margin: 0;
+    white-space: nowrap;
 
     @include rem(width, 10px);
     @include rem(font-size, 16px);
@@ -472,6 +473,10 @@ label.error {
       border-color: #CFD2D7;
       color: rgba(63, 77, 96, 0.6);
     }
+  }
+
+  &--fixed {
+    table-layout: fixed;
   }
 }
 
