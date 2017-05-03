@@ -393,6 +393,7 @@ label.error {
   border-radius: 3px;
   position: relative;
   display: table;
+  table-layout: fixed;
   width: 100%;
 
   &__value,
@@ -475,8 +476,8 @@ label.error {
     }
   }
 
-  &--fixed {
-    table-layout: fixed;
+  &--with_label {
+    table-layout: auto;
   }
 }
 
