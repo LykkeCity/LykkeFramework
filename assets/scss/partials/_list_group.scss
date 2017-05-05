@@ -1,0 +1,43 @@
+.list_group {
+  border-left: 1px solid $border-alt;
+
+  @include rem(margin-bottom, 60px);
+
+  &__item {
+    display: block;
+    position: relative;
+
+    &--active {
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        border-left: 2px solid $primary;
+        left: -1px;
+        height: 100%;
+      }
+
+      .list_group__link {
+        color: $primary;
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+    letter-spacing: 0;
+    font-weight: $fw-semi;
+    color: $text;
+
+    @include rem(padding, 12px 14px 12px 24px);
+    @include rem(font-size, 16px);
+
+    a {
+      color: inherit;
+    }
+
+    &:hover {
+      color: $primary;
+    }
+  }
+}

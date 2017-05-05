@@ -2,7 +2,7 @@
   text-align: left;
   background: #fff;
   color: $secondary;
-  border: 1px solid $border;
+  border: 1px solid #cfd2d7;
   border-radius: 4px;
 
   @include box-shadow(none!important);
@@ -30,7 +30,7 @@
   &[disabled]:not(.select__elem), &.disabled,
   &.form-control--disabled {
     background: #F5F6F7;
-    border-color: #CFD2D7;
+    border-color: #cfd2d7;
     color: rgba($secondary, .6);
   }
 }
@@ -462,7 +462,7 @@ label.error {
     content: "\e90f";
     position: absolute;
     top: 50%;
-    color: rgba($secondary, .6);
+    color: #cfd2d7;
 
     @include rem(font-size, 10px);
     @include rem(right, 15px);

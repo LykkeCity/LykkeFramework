@@ -43,6 +43,7 @@
 
     a {
       color: rgba($secondary, .80);
+      white-space: nowrap;
     }
   }
 
@@ -86,6 +87,12 @@
     &__top .row > div {
       width: 100%;
       text-align: center;
+    }
+
+    .social--footer_alt {
+      > li {
+        margin-left: 5px;
+      }
     }
   }
 }

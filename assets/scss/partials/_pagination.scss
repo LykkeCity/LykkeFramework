@@ -1,0 +1,60 @@
+.pagination_container {
+  text-align: center;
+
+  @include rem(margin, 80px 0);
+
+  > .btn {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include rem(width, 370px);
+    @include rem(margin-bottom, 50px);
+  }
+}
+
+.pagination {
+  max-width: 100%;
+  cursor: default;
+
+  .icon {
+    position: relative;
+    margin-right: 0;
+
+    @include rem(font-size, -2px);
+  }
+
+  li {
+    color: #B2B8BF;
+    letter-spacing: 0;
+    line-height: 30px;
+    font-weight: $fw-semi;
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+
+    @include rem(font-size, 18px);
+
+    &.active {
+      color: $text;
+    }
+
+    a {
+      color: inherit;
+      display: block;
+
+      @include rem(padding, 10px 15px);
+
+      &:hover {
+        color: $text;
+      }
+    }
+  }
+
+  @media all and (max-width: $screen-mobile) {
+
+    li a {
+      @include rem(padding, 10px);
+    }
+  }
+}
