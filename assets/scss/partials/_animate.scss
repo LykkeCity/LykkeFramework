@@ -12,10 +12,10 @@
 
   .animated {
     @include animation-duration(1s);
+
     -webkit-animation-fill-mode: both;
     -moz-animation-fill-mode: both;
     animation-fill-mode: both;
-    opacity: 0;
   }
 
   .animated {
@@ -67,14 +67,13 @@
 
   .animElemFade {
     opacity: 0;
+
     &.inview {
       opacity:1;
     }
   }
 
   .animElem {
-    opacity: 0;
-
     &--dur1 {
       @include animation-duration(1s);
     }
@@ -104,6 +103,7 @@
   .zoomOut {
     .form-control, .btn {
       visibility: hidden;
+
       @include opacity(0);
       @include transition($all);
     }
@@ -126,12 +126,10 @@
 
 @include keyframes(fadeInDown) {
   from {
-    opacity: 0;
     @include transform(translate3d(0, -100%, 0));
   }
 
   to {
-    opacity: 1;
     @include transform(none);
   }
 }
@@ -139,12 +137,10 @@
 
 @include keyframes(fadeInUp) {
   from {
-    @include opacity(0);
     @include transform(translate3d(0, 100%, 0));
   }
 
   to {
-    @include opacity(1);
     @include transform(none);
   }
 }
