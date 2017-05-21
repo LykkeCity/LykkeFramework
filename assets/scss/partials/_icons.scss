@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icon';
-  src:  url('../fonts/icon.eot?3y33cx');
-  src:  url('../fonts/icon.eot?3y33cx#iefix') format('embedded-opentype'),
-  url('../fonts/icon.ttf?3y33cx') format('truetype'),
-  url('../fonts/icon.woff?3y33cx') format('woff'),
-  url('../fonts/icon.svg?3y33cx#icon') format('svg');
+  src:  url('../fonts/icon.eot?wc1rxo');
+  src:  url('../fonts/icon.eot?wc1rxo#iefix') format('embedded-opentype'),
+  url('../fonts/icon.ttf?wc1rxo') format('truetype'),
+  url('../fonts/icon.woff?wc1rxo') format('woff'),
+  url('../fonts/icon.svg?wc1rxo#icon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -374,7 +374,15 @@
 .icon--slack:before {
   content: "\e95c";
 }
-
+.icon--copy_thin:before {
+  content: "\e95e";
+}
+.icon--done:before {
+  content: "\e964";
+}
+.icon--recycle:before {
+  content: "\e95f";
+}
 .store_icon {
   background-position: center;
   background-repeat: no-repeat;

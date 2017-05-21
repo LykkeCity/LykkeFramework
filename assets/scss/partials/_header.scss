@@ -131,11 +131,20 @@
   }
 }
 
+.header_nav_container {
+  @include rem(height, 60px);
+}
+
 .header_nav {
   background: $gray-5;
-  overflow: hidden;
+  z-index:109;
+  width: 100%;
+  left: 0;
+  position: fixed;
 
+  @include transition(transform $transition-default, top $transition-default);
   @include rem(height, 60px);
+  @include rem(top, 91px);
 
   .btn {
     @include rem(margin, 10px 0 0);
@@ -145,19 +154,12 @@
     @include rem(margin, 20px 0 0);
   }
 
-  &__inner {
-    overflow: hidden;
-    overflow-x: auto;
-
-    @include rem(height, 80px);
-  }
-
   &__list {
     float: left;
 
     @extend %disable-list-style;
 
-    @include rem(padding, 19px 0 21px);
+    @include rem(padding, 13px 0 11px);
     @include rem(margin-left, -14px);
   }
 
@@ -178,6 +180,33 @@
       }
     }
   }
+
+  &.nav_down {
+    @include translate(0,0);
+  }
+
+  &.nav_up {
+    @include translate(0,-100px);
+  }
+
+  @media all and (max-width: $screen-landscape) {
+    overflow: hidden;
+
+    &__inner {
+      overflow: hidden;
+      overflow-x: auto;
+
+      @include rem(height, 80px);
+    }
+  }
+
+  @media all and (max-width: $screen-landscape) {
+    top: 83px;
+  }
+
+  @media all and (max-width: $screen-mobile) {
+    top: 62px;
+  }
 }
 
 .nav_list {
@@ -187,23 +216,39 @@
     color: $secondary;
     display: inline-block;
     vertical-align: middle;
+    position: relative;
 
     @include rem(font-size, 15px);
 
-    &--active {
-      a {
-        color: $primary !important;
+    &:hover {
+      .submenu {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: all;
       }
     }
-  }
 
-  a {
-    color: inherit;
+    > a {
+      color: inherit;
+      display: block;
 
-    @include rem(padding, 10px 13px);
+      @include rem(padding, 10px 13px);
 
-    &:hover {
-      color: rgba($secondary, .6);
+      &:hover {
+        color: rgba($secondary, .6);
+
+        + .submenu {
+          opacity: 1;
+          visibility: visible;
+          pointer-events: all;
+        }
+      }
+    }
+
+    &--active {
+      > a {
+        color: $primary !important;
+      }
     }
   }
 }
@@ -226,21 +271,25 @@
   }
 
   .nav_list {
-    @include rem(padding, 9px 0);
+    padding: 0;
 
     &__item {
       color: rgba($secondary, .6);
 
       @include rem(font-size, 18px);
 
-      a:hover {
-        color: $secondary;
+      > a {
+        color: inherit;
+
+        &:hover {
+          color: $secondary;
+        }
       }
 
       &--active {
         font-weight: $fw-semi;
 
-        a {
+        > a {
           position: relative;
           color: $secondary !important;
 
@@ -767,6 +816,61 @@
 
     .form-control {
       @include rem(padding-left, 40px);
+    }
+  }
+}
+
+.submenu {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  min-width: 110%;
+
+  @extend %disable-list-style;
+  @include rem(margin-left, -5px);
+  @include rem(padding-top, 12px);
+  @include transition(opacity $transition-default, visibility $transition-default);
+
+  @media all and (max-width: $screen-landscape) {
+    display: none;
+  }
+}
+
+.submenu_list {
+  text-transform: none;
+  letter-spacing: 0;
+  border-radius: $border-radius;
+  background-color: $white;
+  font-weight: normal;
+  z-index:111;
+  box-shadow: 0 8px 50px 0 rgba(63, 77, 96, 0.4), 0 5px 5px 0 rgba(63, 77, 96, 0.05);
+
+  @include rem(padding, 5px);
+  @include rem(font-size, 16px);
+
+  &__item {
+    color: $secondary;
+
+    a {
+      color: $secondary;
+      display: block;
+
+      @include rem(padding, 10px 13px);
+
+      &:hover {
+        color: rgba($secondary, .7);
+        background-color: #f5f6f7;
+      }
+    }
+
+    &--active {
+      a {
+        color: rgba($secondary, .7);
+        background-color: #f5f6f7;
+      }
     }
   }
 }
