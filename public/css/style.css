@@ -477,7 +477,7 @@ figcaption { font-weight: normal; font-style: normal; font-stretch: normal; line
 
 .site_nav .container { max-width: 1200px; }
 
-.site_nav__inner { overflow: hidden; overflow-x: auto; padding: 20px 0; padding: 1.25rem 0; height: 100px; height: 6.25rem; }
+.site_nav__inner { overflow: hidden; overflow-x: auto; padding: 19px 0; padding: 1.1875rem 0; height: 100px; height: 6.25rem; }
 
 .site_nav .nav_list { padding: 0; }
 

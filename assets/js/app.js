@@ -135,7 +135,7 @@ function initAffix() {
 }
 
 
-function toggleMenuOnScroll() {
+function initStickyNav() {
   var didScroll;
   var lastScrollTop = 0;
   var delta = 5;
@@ -194,6 +194,6 @@ $(document).ready(function() {
   initCollapse();
   initSmoothScroll();
   initAffix();
-  toggleMenuOnScroll()
+  initStickyNav()
 });
 
