@@ -20,6 +20,7 @@
   border-bottom: 1px solid #EBEDEF;
 
   @include rem(padding, 25px 0);
+  @include transition(transform $transition-default);
 
   .container {
     max-width: 1170px + 30px;
@@ -42,8 +43,26 @@
     }
   }
 
+  &.nav_down {
+    @include translate(0,0);
+  }
+
+  &.nav_up {
+    @include translate(0,-100px);
+  }
+
+  @media all and (max-width: $screen-landscape) {
+    &.nav_up {
+      @include translate(0,-80px);
+    }
+  }
+
   @media all and (max-width: $screen-mobile) {
     padding: 12px 0;
+
+    &.nav_up {
+      @include translate(0,-58px);
+    }
 
     &__menu_button {
       margin-top: 2px;
@@ -140,11 +159,12 @@
   z-index:109;
   width: 100%;
   left: 0;
+  top: 0;
   position: fixed;
+  height: auto;
 
   @include transition(transform $transition-default, top $transition-default);
-  @include rem(height, 60px);
-  @include rem(top, 91px);
+  @include rem(padding-top, 91px);
 
   .btn {
     @include rem(margin, 10px 0 0);
@@ -186,26 +206,33 @@
   }
 
   &.nav_up {
-    @include translate(0,-100px);
+    @include translate(0,-91px);
   }
 
   @media all and (max-width: $screen-landscape) {
+    height: 132px;
+    padding-top: 83px;
     overflow: hidden;
 
     &__inner {
       overflow: hidden;
       overflow-x: auto;
 
-      @include rem(height, 80px);
+      @include rem(height, 85px);
+    }
+
+    &.nav_up {
+      @include translate(0,-80px);
     }
   }
 
-  @media all and (max-width: $screen-landscape) {
-    top: 83px;
-  }
-
   @media all and (max-width: $screen-mobile) {
-    top: 62px;
+    padding-top: 62px;
+    height: 105px;
+
+    &.nav_up {
+      @include translate(0,-60px);
+    }
   }
 }
 
@@ -220,34 +247,40 @@
 
     @include rem(font-size, 15px);
 
-    &:hover {
-      .submenu {
-        opacity: 1;
-        visibility: visible;
-        pointer-events: all;
-      }
-    }
-
     > a {
       color: inherit;
       display: block;
 
       @include rem(padding, 10px 13px);
-
-      &:hover {
-        color: rgba($secondary, .6);
-
-        + .submenu {
-          opacity: 1;
-          visibility: visible;
-          pointer-events: all;
-        }
-      }
     }
 
     &--active {
       > a {
         color: $primary !important;
+      }
+    }
+  }
+
+  @media all and (min-width: $screen-landscape + 1) {
+    &__item {
+      &:hover {
+        .submenu {
+          opacity: 1;
+          visibility: visible;
+          pointer-events: all;
+        }
+      }
+
+      > a {
+        &:hover {
+          color: rgba($secondary, .6);
+
+          + .submenu {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: all;
+          }
+        }
       }
     }
   }
@@ -318,6 +351,8 @@
 }
 
 .header_actions {
+  @include rem(margin-bottom, -5px);
+
   &__search,
   &__notifications,
   &__logout {
@@ -870,6 +905,65 @@
       a {
         color: rgba($secondary, .7);
         background-color: #f5f6f7;
+      }
+    }
+  }
+}
+
+.is_mobile {
+  .nav_list {
+    &__item {
+      position: static;
+
+      &--selected {
+        > a {
+          color: rgba($secondary, .6);
+        }
+
+        .submenu {
+          opacity: 1;
+          visibility: visible;
+          pointer-events: all;
+        }
+      }
+    }
+  }
+
+  .header_nav {
+    &--selected {
+      overflow: visible;
+    }
+  }
+
+  .submenu {
+    padding-top: 0;
+    z-index: 1;
+    left: auto;
+    width: auto;
+    min-width: 0;
+    display: block;
+  }
+
+  .submenu_list {
+    box-shadow: 0 8px 20px 0 rgba(63, 77, 96, 0.2), 0 5px 5px 0 rgba(63, 77, 96, 0.05);
+    border-radius: 0 0 $border-radius $border-radius;
+
+    &__item > a {
+      padding: 10px 15px;
+      font-size: 14px;
+    }
+  }
+  
+  @media all and (max-width: $screen-mobile) {
+    .nav_list {
+      &__item {
+
+        &:last-child,
+        &:last-of-type {
+          .submenu {
+            right: 0;
+          }
+        }
       }
     }
   }
