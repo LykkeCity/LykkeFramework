@@ -959,7 +959,8 @@
       &__item {
 
         &:last-child,
-        &:last-of-type {
+        &:last-of-type,
+        &:nth-child(4){
           .submenu {
             right: 0;
           }

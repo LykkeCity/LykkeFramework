@@ -1,4 +1,4 @@
-$primary: #ab00ff;
+$violet: #ab00ff;
 $secondary: #3F4D60;
 $blue: #0DA7FC;
 $green: #13B72A;
@@ -17,6 +17,8 @@ $gray-dark: #8c94a0;
 $grey: rgba($secondary, .35);
 $border: #e1e1e1;
 $border-alt: #EBEDEF;
+
+$primary: $blue;
 
 $border-radius: 4px;
 
