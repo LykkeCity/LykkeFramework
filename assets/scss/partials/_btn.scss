@@ -102,6 +102,10 @@
   &--flat {
     background: transparent !important;
     color: $primary !important;
+
+    &[disabled] {
+      background-color: transparent !important;
+    }
   }
 
   &--go {
@@ -312,5 +316,37 @@
       border-radius: 0 50px 50px 0;
       padding: 7px 18px;
     }
+  }
+}
+
+.btn_loading {
+  overflow: hidden;
+  pointer-events: none;
+  cursor: default;
+  background-color: #EBEDEF !important;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #EBEDEF;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    margin: -12px auto 0;
+    width: 24px;
+    height: 24px;
+    border-radius: 100px;
+    border: 3px solid rgba(63, 77, 96, 0.3);
+    border-top-color: transparent;
+    animation: spin .5s linear infinite;
   }
 }

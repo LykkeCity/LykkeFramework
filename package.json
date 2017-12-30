@@ -1,6 +1,6 @@
 {
   "name": "LykkeFramework",
-  "version": "0.3.38",
+  "version": "0.3.58",
   "description": "Framework for Lykke projects",
   "keywords": "Lykke",
   "license": "MIT",
@@ -18,12 +18,12 @@
     "gulp-livereload": "3.8.1",
     "gulp-minify-html": "1.0.4",
     "gulp-rev": "6.0.1",
-    "gulp-sass": "2.1.1",
+    "gulp-sass": "latest",
     "gulp-uglify": "1.5.1",
     "gulp-usemin": "0.3.16"
   },
   "dependencies": {
-    "jquery": "1.12.4",
-    "eonasdan-bootstrap-datetimepicker": "git+https://github.com/Eonasdan/bootstrap-datetimepicker.git"
+    "eonasdan-bootstrap-datetimepicker": "git+https://github.com/Eonasdan/bootstrap-datetimepicker.git",
+    "jquery": "1.12.4"
   }
 }

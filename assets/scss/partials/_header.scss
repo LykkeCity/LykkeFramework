@@ -17,7 +17,7 @@
   right: 0;
   top: 0;
   z-index: 110;
-  border-bottom: 1px solid #EBEDEF;
+  //border-bottom: 1px solid #EBEDEF;
 
   @include rem(padding, 25px 0);
   @include transition(transform $transition-default);

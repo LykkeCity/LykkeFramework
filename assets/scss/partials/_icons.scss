@@ -149,9 +149,6 @@
 .icon--fb:before {
   content: "\e927";
 }
-.icon--mail:before {
-  content: "\e937";
-}
 .icon--comment:before {
   content: "\e922";
 }
@@ -386,6 +383,70 @@
 .icon--recycle:before {
   content: "\e95f";
 }
+.icon--reverse:before {
+  content: "\e961";
+}
+.icon--show_password:before {
+  content: "\e965";
+}
+.icon--hide_password:before {
+  content: "\e966";
+}
+.icon--arrow_expand:before {
+  content: "\e968";
+}
+.icon--upload:before {
+  content: "\e969";
+}
+.icon--photo:before {
+  content: "\e96a";
+}
+.icon--telegram_dev:before {
+  content: "\e977";
+  color: #3f4d60;
+}
+.icon--warning_icn .path1:before {
+  content: "\e973";
+  color: rgb(255, 255, 255);
+}
+.icon--warning_icn .path2:before {
+  content: "\e974";
+  margin-left: -1em;
+  color: rgb(7, 7, 7);
+}
+.icon--warning_icn .path3:before {
+  content: "\e975";
+  margin-left: -1em;
+  color: rgb(5, 5, 6);
+}
+.icon--upgrade_icn:before {
+  content: "\e976";
+}
+.icon--plastic_card:before {
+  content: "\e972";
+}
+.icon--activate:before {
+  content: "\e96b";
+}
+.icon--block:before {
+  content: "\e96c";
+}
+.icon--check_small:before {
+  content: "\e96d";
+}
+.icon--pay:before {
+  content: "\e96e";
+}
+.icon--show_pin:before {
+  content: "\e96f";
+}
+.icon--unblock:before {
+  content: "\e970";
+}
+.icon--virtual_card:before {
+  content: "\e971";
+}
+
 .store_icon {
   background-position: center;
   background-repeat: no-repeat;

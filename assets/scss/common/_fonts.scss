@@ -69,3 +69,39 @@
   font-style:   normal;
   font-weight:  900;
 }
+
+@font-face {
+  font-family: 'Akrobat';
+  src: url('../fonts/Akrobat-Bold.eot');
+  src: url('../fonts/Akrobat-Bold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Akrobat-Bold.woff') format('woff'),
+  url('../fonts/Akrobat-Bold.ttf')  format('truetype'),
+  url('../fonts/Akrobat-Bold.svg#bff61a4db5fb15606168d32444c57f07') format('svg');
+
+  font-style:   normal;
+  font-weight:  700;
+}
+
+@font-face {
+  font-family: 'Akrobat';
+  src: url('../fonts/Akrobat-Regular.eot');
+  src: url('../fonts/Akrobat-Regular.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Akrobat-Regular.woff') format('woff'),
+  url('../fonts/Akrobat-Regular.ttf')  format('truetype'),
+  url('../fonts/Akrobat-Regular.svg#24d9fa92277e9e6319561a1d49ff2a1b') format('svg');
+
+  font-style:   normal;
+  font-weight:  400;
+}
+
+@font-face {
+  font-family: 'Akrobat';
+  src: url('../fonts/Akrobat-SemiBold.eot');
+  src: url('../fonts/Akrobat-SemiBold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Akrobat-SemiBold.woff') format('woff'),
+  url('../fonts/Akrobat-SemiBold.ttf')  format('truetype'),
+  url('../fonts/Akrobat-SemiBold.svg#c5220bbd9082def0fe13096ef74a92bf') format('svg');
+
+  font-style:   normal;
+  font-weight:  600;
+}

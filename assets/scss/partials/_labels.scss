@@ -63,6 +63,59 @@
       @include color-modifier(color);
     }
   }
+
+  &--muted {
+    &.label--primary {
+      background-color: rgba($primary, .15);
+      color: $primary;
+    }
+
+    &.label--violet {
+      background-color: rgba($violet, .15);
+      color: $violet;
+    }
+
+    &.label--green {
+      background-color: rgba($green, .15);
+      color: $green;
+    }
+
+    &.label--red {
+      background-color: rgba($red, .15);
+      color: $red;
+    }
+
+    &.label--yellow {
+      background-color: rgba($yellow, .15);
+      color: $yellow;
+    }
+
+    &.label--gray {
+      background-color: $border-alt;
+      color: $gray-dark;
+    }
+  }
+}
+
+.label_group {
+  font-size: 0;
+
+  .label {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+    border-radius: 0;
+    margin-left: 0;
+    margin-right: 0;
+
+    &:first-child {
+      border-radius: $border-radius 0 0 $border-radius;
+    }
+
+    &:last-child {
+      border-radius: 0 $border-radius $border-radius 0;
+    }
+  }
 }
 
 .winner_label {
