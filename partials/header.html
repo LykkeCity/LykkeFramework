@@ -1,87 +1,237 @@
-<div class="container">
-  <div class="row">
-    <div class="col-xs-2 col-sm-2"><a href="/" class="logo header__logo"><img src="img/lykke_new.svg" height="50" alt=""/></a></div>
-    <div class="col-xs-10 col-sm-10 col-md-8 text-center">
-      <button type="button" class="navbar-toggle collapsed btn btn--stroke pull-right" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
+<aside class="menu_overlay"></aside>
+
+<aside class="sidebar_menu">
+  <div class="sidebar_menu__inner">
+    <div class="sidebar_menu__header">
+      <button class="btn btn--icon btn_close_menu">
+        <i class="icon icon--close"></i>
       </button>
-      <!--a class="visible-xs visible-sm btn btn-red pull-right" href="https://lykke.com/ico">ICO</a-->
-      <div class="collapse navbar-collapse" id="navbar-collapse">
-        <div class="t-simulate">
-          <div class="t-row">
-            <div class="t-cell">
-              <!--<a href="https://lykke.com/city/start?do=login" class="btn btn--stroke pull-right hidden-xs hidden-sm">Sign In</a>-->
-
-              <ul class="nav nav--header">
-                <!--<li>
-                    <a class="dropdown__control" href="https://lykke.com/lykkewallet/" >Wallet</a>
-                    <div class="dropdown__container">
-                        <ul class="dropdown__nav">
-                            <li ><a href="https://youtu.be/h5T2gRGcMso" target="_blank">Watch the video</a></li>
-                            <li><a href="https://lykke.com/lykkewallet/privacy_policy.html">Privacy Policy</a></li>
-                            <li><a href="https://lykke.com/city/terms_of_use">Terms of Use</a></li>
-                        </ul>
-                    </div>
-                </li>-->
-                <li class="_add_active_exchange">
-                  <a class="dropdown__control" href="https://lykke.com/exchange.php" >Exchange</a>
-                  <div class="dropdown__container">
-                    <ul class="dropdown__nav">
-                      <li><a href="https://lykke.com/lykkex_rulebook.php">LykkeX Rulebook</a></li>
-                      <li><a href="https://lykke.com/term_conditions_colored_coins.php">Terms of Issuance</a></li>
-                      <li><a href="https://api.lykkex.com/swagger/ui/index#/" target="_blank">LykkeX API</a></li>
-                      <li><a href="https://github.com/LykkeCity/" target="_blank">Github</a></li>
-                      <li><a href="https://lykke.com/Whitepaper_LykkeExchange.pdf">White Paper</a></li>
-                    </ul>
-                  </div>
-                </li>
-                <li class="_add_active_city">
-                  <a class="dropdown__control" href="https://lykke.com/city.php">City</a>
-                  <div class="dropdown__container">
-                    <ul class="dropdown__nav">
-                      <li><a href="https://lykke.com/city/faq">FAQ</a></li>
-                      <li><a href="https://lykke.com/city/about/openposition">Open Positions</a></li>
-                      <!--<li><a href="https://lykke.com/city/openprojects/index">Projects Board</a></li>-->
-                      <li><a href="https://lykke.com/city/lykketimes">Lykke Times</a></li>
-                      <li><a href="https://lykke.com/city/blog/index">Blog</a></li>
-                    </ul>
-                  </div>
-                </li>
-                <li class="_add_active_corp"><a class="dropdown__control" href="https://lykke.com/corp.php">Corp</a>
-                  <div class="dropdown__container">
-                    <ul class="dropdown__nav">
-                      <li><a href="https://lykke.com/leadership.php">Leadership</a></li>
-                      <li><a href="https://lykke.com/technology.php">Technology </a></li>
-                      <li><a href="https://lykke.com/contacts.php">Contacts</a></li>
-                    </ul>
-                  </div>
-                </li>
-                <li><a href="http://blockchainexplorer.lykke.com/">Explorer</a></li>
-                <li><a href="https://streams.lykke.com/">Streams</a></li>
-                <!--<li class="hidden-xs hidden-sm">
-                  <a class="btn btn-red" href="https://lykke.com/ico/">ICO</a>
-                </li>-->
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <ul class="social social--header visible-xs visible-sm">
-          <li><a href="https://www.linkedin.com/company/lykke-ag" target="_blank" class="social__item"><i class="icon_img icon_img--in"></i></a></li>
-          <li><a href="https://www.facebook.com/groups/542506412568917/" target="_blank" class="social__item"><i class="icon_img icon_img--fb"></i></a></li>
-          <li><a href="https://twitter.com/LykkeCity" target="_blank" class="social__item"><i class="icon_img icon_img--tw"></i></a></li>
-          <li><a href="http://instagram.com/lykkecity" target="_blank" class="social__item"><i class="icon_img icon_img--inst"></i></a></li>
-          <li><a href="https://www.youtube.com/channel/UCmMYipGdKMF0kzfaE-PXsNQ" target="_blank" class="social__item"><i class="icon_img icon_img--yt"></i></a></li>
-          <li><a href="https://www.reddit.com/r/lykke/" target="_blank" class="social__item"><i class="icon icon--reddit"></i></a></li>
-          <li><a href="https://t.co/TmjMYnQD7T" target="_blank" class="social__item"><i class="icon icon--telegram"></i></a></li>
-        </ul>
+      <div class="header_logo">
+        <a href="/">
+          <img class="header_logo__img" src="img/lykke_new.svg" height="40" alt="lykke_logo">
+        </a>
       </div>
     </div>
 
-    <div class="col-sm-3">
+    <div class="sidebar_menu__body">
+      <ul class="main_projects_list">
+        <li class="main_projects_list__item">
+          <a href="https://www.lykke.com/" target="_blank" class="main_projects_list__link">
+            <div class="main_projects_list__img">
+              <img src="img/lykke_wallet_logo.svg" alt="lykke_wallet_logo" width="50">
+            </div>
+            <div class="main_projects_list__content">
+              <div class="main_projects_list__title">Lykke Wallet</div>
+              <div class="main_projects_list__text">
+                Trade FX and Digital Assets
+              </div>
+            </div>
+          </a>
+        </li>
+
+        <li class="main_projects_list__item">
+          <a href="https://streams.lykke.com/" target="_blank" class="main_projects_list__link">
+            <div class="main_projects_list__img">
+              <img src="img/streams_logo.svg" alt="streams_logo" width="50">
+            </div>
+            <div class="main_projects_list__content">
+              <div class="main_projects_list__title">Streams</div>
+              <div class="main_projects_list__text">
+                Competition platform. Is helping the great ideas to meet the bright minds
+              </div>
+            </div>
+          </a>
+        </li>
+
+        <li class="main_projects_list__item">
+          <a href="https://blockchainexplorer.lykke.com/" target="_blank" class="main_projects_list__link">
+            <div class="main_projects_list__img">
+              <img src="img/bl_explorer_logo.svg" alt="bl_explorer_logo" width="50">
+            </div>
+            <div class="main_projects_list__content">
+              <div class="main_projects_list__title">Blockchain Explorer</div>
+              <div class="main_projects_list__text">
+                Explore the Blockchain. Search transaction, assets, addresses or blocks
+              </div>
+            </div>
+          </a>
+        </li>
+
+        <li class="main_projects_list__item">
+          <a href="" target="_blank" class="main_projects_list__link">
+            <div class="main_projects_list__img">
+              <img src="img/issuer_portal_logo.svg" alt="issuer_portal_logo" width="50">
+            </div>
+            <div class="main_projects_list__content">
+              <div class="main_projects_list__title">Issuer Portal</div>
+              <div class="main_projects_list__text">
+                Create and manage your digital assets
+              </div>
+            </div>
+          </a>
+        </li>
+      </ul>
+
     </div>
 
+    <div class="sidebar_menu__footer">
+      <ul class="social">
+        <li><a href="https://www.facebook.com/groups/542506412568917/" target="_blank" class="social__item"><i class="icon icon--fb_simple"></i><span> Facebook</span></a></li>
+        <li><a href="https://twitter.com/LykkeCity" target="_blank" class="social__item"><i class="icon icon--tw"></i><span> Twitter</span></a></li>
+        <li><a href="http://instagram.com/lykkecity" target="_blank" class="social__item"><i class="icon icon--instagram"></i><span> Instagram</span></a></li>
+        <li><a href="https://www.youtube.com/channel/UCmMYipGdKMF0kzfaE-PXsNQ" target="_blank" class="social__item"><i class="icon icon--youtube"></i><span> Youtube</span></a></li>
+        <li><a href="https://www.linkedin.com/company/lykke-ag" target="_blank" class="social__item"><i class="icon icon--linkedin-icn"></i><span> Linkedin</span></a></li>
+        <li><a href="https://www.reddit.com/r/lykke/" target="_blank" class="social__item"><i class="icon icon--reddit"></i><span> Reddit</span></a></li>
+        <li><a href="https://t.co/TmjMYnQD7T" target="_blank" class="social__item"><i class="icon icon--telegram"></i><span> Telegram</span></a></li>
+      </ul>
+    </div>
   </div>
+</aside>
+
+<div class="header_container">
+  <header class="header">
+    <div class="container">
+      <div class="header__logo header_logo">
+        <a href="/">
+          <img class="header_logo__img" src="img/streams_logo.png" height="36" alt="lykke_logo">
+          <div class="header_logo__title">Streams</div>
+        </a>
+      </div>
+      <div class="header__actions header_actions pull-right">
+        <div class="header_actions__logout visible-xs pull-right">
+          <a href="/Home/LogOut" class="btn btn--icon btn_logout">
+            <i class="icon icon--exit"></i>
+          </a>
+        </div>
+        <div class="header_actions__login header_login pull-right">
+
+          <div class="header_user dropdown__control">
+            <a href="/Home/SignIn">
+              <div class="header_login__title">Sign in</div>
+
+              <!--<div class="header_user__img">
+                <img src="img/user_default.svg" width="40" alt="user_image">
+              </div>
+
+              <div class="header_login__title">Leroy</div>-->
+            </a>
+          </div>
+
+          <div class="dropdown__container">
+            <ul class="dropdown__nav">
+              <li><a href="/Home/LogOut">Sign Out</a></li>
+            </ul>
+          </div>
+
+        </div>
+        <div class="header_actions__search">
+          <button class="btn btn--icon btn_open_search" type="button">
+            <i class="icon icon--search"></i>
+          </button>
+        </div>
+        <!--
+        <div class="header_actions__notifications">
+          <button class="btn btn--icon" type="button">
+            <i class="icon icon--notificaton"></i>
+          </button>
+        </div>
+        -->
+
+      </div>
+    </div>
+
+    <div class="header_search">
+      <div class="container">
+        <div class="header_search__inner">
+          <div class="header_search__buttons">
+            <button type="button" class="btn btn-sm btn--flat hidden-xs btn_close_header">Cancel</button>
+            <button type="button" class="btn btn-sm btn--primary hidden-xs">Search</button>
+            <button type="button" class="btn btn--icon visible-xs btn_close_header">
+              <i class="icon icon--cancel_round"></i>
+            </button>
+          </div>
+          <div class="header_search__field">
+            <button class="header_search__btn btn btn--icon" type="button">
+              <i class="icon icon--search"></i>
+            </button>
+            <input type="text" class="form-control" placeholder="Search block, address, transaction…">
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
 </div>
+
+<div class="header_nav_container">
+  <nav class="header_nav">
+    <div class="header_nav__inner">
+      <div class="container">
+        <ul class="header_nav__list nav_list">
+          <li class="nav_list__item visible-xs-inline-block"><a href=""><i class="icon icon--add"></i>Create project</a></li>
+          <li class="nav_list__item">
+            <a href="">Exchange</a>
+            <menu class="header_nav__submenu submenu">
+              <ul class="submenu_list">
+                <li class="submenu_list__item"><a href="">LykkeX Rulebook</a></li>
+                <li class="submenu_list__item"><a href="">Terms of Issuance</a></li>
+                <li class="submenu_list__item"><a href="">LykkeX API</a></li>
+                <li class="submenu_list__item"><a href="">Github</a></li>
+                <li class="submenu_list__item"><a href="">White Paper</a></li>
+              </ul>
+            </menu>
+          </li>
+          <li class="nav_list__item">
+            <a href="">Community</a>
+            <menu class="header_nav__submenu submenu">
+              <ul class="submenu_list">
+                <li class="submenu_list__item"><a href="">FAQ</a></li>
+                <li class="submenu_list__item"><a href="">Open Positions</a></li>
+                <li class="submenu_list__item"><a href="">Blog</a></li>
+              </ul>
+            </menu>
+          </li>
+          <li class="nav_list__item nav_list__item--active">
+            <a href="">Company</a>
+            <menu class="header_nav__submenu submenu">
+              <ul class="submenu_list">
+                <li class="submenu_list__item"><a href="">Leadership</a></li>
+                <li class="submenu_list__item"><a href="">Technology</a></li>
+                <li class="submenu_list__item"><a href="">Blog</a></li>
+                <li class="submenu_list__item"><a href="">Contacts</a></li>
+                <li class="submenu_list__item"><a href="">News</a></li>
+              </ul>
+            </menu>
+          </li>
+          <li class="nav_list__item">
+            <a href="">B2B</a>
+            <menu class="header_nav__submenu submenu">
+              <ul class="submenu_list">
+                <li class="submenu_list__item"><a href="">Deploy Blockchain Projects</a></li>
+                <li class="submenu_list__item"><a href="">Join as Blockchain Accelerator</a></li>
+              </ul>
+            </menu>
+          </li>
+        </ul>
+        <a type="button" class="btn btn_create_project pull-right hidden-xs"><i class="icon icon--add"></i></a>
+
+      </div>
+    </div>
+  </nav>
+</div>
+
+<nav class="site_nav">
+  <div class="site_nav__inner">
+    <div class="container">
+      <button type="button" class="btn btn-sm pull-right">Register</button>
+
+      <ul class="header_nav__list nav_list nav_list--alt">
+        <li class="nav_list__item"><a href="">Leadership</a></li>
+        <li class="nav_list__item"><a href="">Technology</a></li>
+        <li class="nav_list__item"><a href="">Contacts</a></li>
+        <li class="nav_list__item"><a href="">News</a></li>
+        <li class="nav_list__item"><a href="">Invest</a></li>
+        <li class="nav_list__item nav_list__item--active"><a href="">Affiliates</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
