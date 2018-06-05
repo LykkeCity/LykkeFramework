@@ -3,12 +3,12 @@
   padding-right: 8px !important;
   height: 40px;
   display: none;
-  border-color: rgba($secondary, .6) !important;
+  border-color: rgba($black, .6) !important;
 
   &:not(.collapsed) {
     .icon-bar {
       position: relative;
-      background-color: rgba($secondary, .6);
+      background-color: rgba($black, .6);
       left: 2px;
 
       @include transform-origin(10%);
@@ -33,12 +33,12 @@
   &:hover {
     background: transparent !important;
     .icon-bar {
-      background-color: rgba($secondary, .6);
+      background-color: rgba($black, .6);
     }
   }
 
   .icon-bar {
-    background-color: rgba($secondary, .6);
+    background-color: rgba($black, .6);
     display: block;
     width: 20px;
     height: 2px;
@@ -135,7 +135,7 @@
 
         &.active {
           a {
-            color: $secondary !important;
+            color: $black !important;
           }
         }
 
@@ -144,7 +144,7 @@
           font-size: 20px;
           line-height: normal;
           letter-spacing: 0;
-          color: rgba($secondary, .6) !important;
+          color: rgba($black, .6) !important;
         }
       }
     }
@@ -229,7 +229,7 @@
   > li > a:not(.btn) {
     border: 0;
     border-bottom: 2px solid transparent;
-    color: rgba($secondary, .6);
+    color: rgba($black, .6);
     font-weight: $fw-semi;
 
     @include rem(font-size, 18px);
@@ -252,7 +252,7 @@
   ul {
     list-style: none;
     li {
-      color: $secondary;
+      color: $black;
       position: relative;
 
       @include rem(margin-bottom, 15px);
@@ -269,7 +269,7 @@
         @include rem(margin-right, 11px);
       }
     }
-    .li {color: $secondary;}
+    .li {color: $black;}
 
     + h3, + h4, + h2 {
       @include rem(margin-top, 45px);
@@ -292,19 +292,19 @@
     > a {
       font-size: 18px;
       letter-spacing: 0;
-      color: rgba($secondary, .6) !important;
+      color: rgba($black, .6) !important;
       margin-right: 0;
 
       @include rem(font-size, 18px);
 
       &:hover {
-        color: rgba($secondary, 1) !important;
+        color: rgba($black, 1) !important;
       }
     }
 
     &.active {
       > a {
-        color: rgba($secondary, 1) !important;
+        color: rgba($black, 1) !important;
       }
     }
   }

@@ -47,10 +47,6 @@ h4, .h4 {
   text-transform: none;
   line-height: 1.67;
 
-  @include rem(font-size, 18px);
-
-
-
   @include rem(font-size, 21px);
 }
 
@@ -93,7 +89,7 @@ h1, .h1 {
   line-height: 1.2;
   color: $text;
 
-  @include rem(font-size, 50px);
+  @include rem(font-size, 60px);
   @include rem(margin-bottom, 30px);
 }
 
@@ -106,7 +102,7 @@ p {
   font-style: normal;
   font-stretch: normal;
   line-height: 1.67;
-  color: $secondary;
+  color: $text;
 
   @include rem(font-size, 18px);
   @include rem(margin-bottom, 15px);
@@ -126,7 +122,7 @@ hr {
 
 blockquote {
   font-weight: $fw-semi;
-  color: $secondary;
+  color: $text;
   line-height: 1.9;
   text-align: center;
   border: 0;
@@ -139,7 +135,7 @@ blockquote {
 
   p {
     font-weight: $fw-semi;
-    color: $secondary;
+    color: $text;
     line-height: 1.9;
 
     @include rem(font-size, 21px);
@@ -165,7 +161,7 @@ figcaption {
   font-style: normal;
   font-stretch: normal;
   line-height: 1.82;
-  color: rgba($secondary, .6);
+  color: rgba($text, .6);
 
   @include rem(font-size, 16px);
 }
@@ -180,7 +176,7 @@ figcaption {
   font-style: normal;
   font-stretch: normal;
   line-height: 1.64;
-  color: $secondary;
+  color: $text;
 
   @include rem(font-size, 22px);
   @include rem(margin-bottom, 48px);
@@ -195,7 +191,7 @@ figcaption {
     font-weight: normal;
     font-style: normal;
     line-height: 1.67;
-    color: $secondary;
+    color: $text;
 
     @include rem(font-size, 18px);
     @include rem(margin-bottom, 15px);
@@ -233,7 +229,7 @@ figcaption {
 
 
     li {
-      color: $secondary;
+      color: $text;
       position: relative;
 
       @include rem(margin-bottom, 15px);
@@ -251,7 +247,7 @@ figcaption {
       }
     }
 
-    .li {color: $secondary;}
+    .li {color: $text;}
 
     a:not(.btn) {
       color: $blue;
@@ -288,4 +284,29 @@ figcaption {
   html {
     font-size: 12px;
   }
+}
+
+.section__title,
+.page__title,
+h1, .h1, h2, .h2,
+.text .h2, .text h3 {
+  font-weight: $fw-semi;
+  font-family: $ff-alt;
+  color: #000;
+  letter-spacing: -0.9px;
+  line-height: 1;
+}
+
+.block_subscribe__title,
+.block_support__title,
+.features__title,
+.features_title {
+  font-weight: $fw-bold;
+  font-family: $ff-alt;
+}
+
+.section__subtitle,
+.page__subtitle {
+  font-weight: $fw-regular;
+  font-family: $ff-alt;
 }

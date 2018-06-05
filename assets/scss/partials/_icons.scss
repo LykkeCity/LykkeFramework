@@ -233,9 +233,6 @@
 .icon--edit_alt:before {
   content: "\e939";
 }
-.icon--trash:before {
-  content: "\e93c";
-}
 .icon--cal:before {
   content: "\e948";
 }
@@ -335,6 +332,9 @@
 .icon--add_circle:before {
   content: "\e954";
 }
+.icon--remove_circle:before {
+  content: "\e97c";
+}
 .icon--add:before {
   content: "\e950";
 }
@@ -381,7 +381,7 @@
   content: "\e964";
 }
 .icon--recycle:before {
-  content: "\e95f";
+  content: "\e97b";
 }
 .icon--reverse:before {
   content: "\e961";
@@ -452,7 +452,37 @@
 .icon--location:before {
   content: "\e979";
 }
-
+.icon--download_alt:before {
+  content: "\e97a";
+}
+.icon--delete:before,
+.icon--trash:before {
+  content: "\e97b";
+}
+.icon--rss_feed:before {
+  content: "\e95f";
+}
+.icon--help:before {
+  content: "\e97e";
+}
+.icon--refund:before {
+  content: "\e97d";
+}
+.icon--driver_license:before {
+  content: "\e97f";
+}
+.icon--id:before {
+  content: "\e980";
+}
+.icon--passport:before {
+  content: "\e981";
+}
+.icon--exchange:before {
+  content: "\e982";
+}
+.icon--cancel_alt:before {
+  content: "\e983";
+}
 .store_icon {
   background-position: center;
   background-repeat: no-repeat;

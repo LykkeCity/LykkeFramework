@@ -20,7 +20,7 @@
   //border-bottom: 1px solid #EBEDEF;
 
   @include rem(padding, 25px 0);
-  @include transition(transform $transition-default);
+  @include transition(margin $transition-default);
 
   .container {
     max-width: 1170px + 30px;
@@ -44,16 +44,16 @@
   }
 
   &.nav_down {
-    @include translate(0,0);
+    margin-top: 0;
   }
 
   &.nav_up {
-    @include translate(0,-100px);
+    margin-top: -100px;
   }
 
   @media all and (max-width: $screen-landscape) {
     &.nav_up {
-      @include translate(0,-80px);
+      margin-top: -80px;
     }
   }
 
@@ -61,7 +61,7 @@
     padding: 12px 0;
 
     &.nav_up {
-      @include translate(0,-58px);
+      margin-top: -58px;
     }
 
     &__menu_button {
@@ -105,6 +105,12 @@
 
     span {
       font-weight: normal;
+    }
+  }
+
+  @media all and (max-width: $screen-landscape) {
+    &__title {
+      top: 2px;
     }
   }
 
@@ -155,7 +161,7 @@
     &:after,
     &:before,
     span {
-      background: $secondary
+      background: $black
     }
   }
 }
@@ -173,7 +179,7 @@
   position: fixed;
   height: auto;
 
-  @include transition(transform $transition-default, top $transition-default);
+  @include transition(margin $transition-default, top $transition-default);
   @include rem(padding-top, 91px);
 
   .btn {
@@ -212,11 +218,11 @@
   }
 
   &.nav_down {
-    @include translate(0,0);
+    margin-top: 0;
   }
 
   &.nav_up {
-    @include translate(0,-91px);
+    margin-top: -91px;
   }
 
   @media all and (max-width: $screen-landscape) {
@@ -232,7 +238,7 @@
     }
 
     &.nav_up {
-      @include translate(0,-77px);
+      margin-top: -77px;
     }
   }
 
@@ -241,7 +247,7 @@
     height: 101px;
 
     &.nav_up {
-      @include translate(0,-56px);
+      margin-top: -56px;
     }
   }
 }
@@ -250,7 +256,7 @@
   white-space: nowrap;
 
   &__item {
-    color: $secondary;
+    color: $black;
     display: inline-block;
     vertical-align: middle;
     position: relative;
@@ -283,7 +289,7 @@
 
       > a {
         &:hover {
-          color: rgba($secondary, .6);
+          color: rgba($black, .6);
 
           + .submenu {
             opacity: 1;
@@ -317,7 +323,7 @@
     padding: 0;
 
     &__item {
-      color: rgba($secondary, .6);
+      color: rgba($black, .6);
 
       @include rem(font-size, 18px);
 
@@ -325,7 +331,7 @@
         color: inherit;
 
         &:hover {
-          color: $secondary;
+          color: $black;
         }
       }
 
@@ -334,7 +340,7 @@
 
         > a {
           position: relative;
-          color: $secondary !important;
+          color: $black !important;
 
           @include rem(top, 1px);
         }
@@ -385,6 +391,15 @@
     }
   }
 
+  &__search {
+    > .btn--icon {
+      .icon {
+        @include rem(font-size, 26px);
+        @include rem(line-height, 32px);
+      }
+    }
+  }
+
   &__logout {
     @include rem(margin-right, -10px);
   }
@@ -409,7 +424,7 @@
       @include rem(padding, 5px 10px);
 
       &:hover {
-        color: rgba($secondary, .8);
+        color: rgba($black, .8);
       }
     }
   }
@@ -517,13 +532,13 @@
     white-space: nowrap;
 
     @include rem(font-size, 16px);
-    @include rem(padding, 9px 0);
+    @include rem(padding, 8px 0);
     @include rem(max-width, 170px);
   }
 
-  @media all and (max-width: $screen-mobile) {
+  @media all and (max-width: $screen-landscape) {
     &__title {
-      padding: 9px 0;
+      padding: 11px 0;
     }
   }
 }
@@ -615,7 +630,7 @@
 
     &__item {
       letter-spacing: 0;
-      color: rgba($secondary, .8);
+      color: rgba($black, .8);
       display: block;
 
       @include rem(font-size, 16px);
@@ -763,14 +778,14 @@
     a {
       &:hover {
         .main_projects_list__title {
-          color: rgba($secondary, .8);
+          color: rgba($black, .8);
         }
       }
     }
   }
 
   &__text {
-    color: rgba($secondary, .6);
+    color: rgba($black, .6);
 
     @include rem(font-size, 16px);
     @include rem(line-height, 24px);
@@ -950,23 +965,23 @@
   @include rem(font-size, 16px);
 
   &__item {
-    color: $secondary;
+    color: $black;
 
     a {
-      color: $secondary;
+      color: $black;
       display: block;
 
       @include rem(padding, 10px 13px);
 
       &:hover {
-        color: rgba($secondary, .7);
+        color: rgba($black, .7);
         background-color: #f5f6f7;
       }
     }
 
     &--active {
       a {
-        color: rgba($secondary, .7);
+        color: rgba($black, .7);
         background-color: #f5f6f7;
       }
     }
@@ -980,7 +995,7 @@
 
       &--selected {
         > a {
-          color: rgba($secondary, .6);
+          color: rgba($black, .6);
         }
 
         .submenu {
@@ -1035,9 +1050,11 @@
 
 .header_submenu {
   min-width: 270px;
+  left: auto;
+  right: 0;
 
   @include rem(padding-top, 20px);
-  @include rem(margin-left, -55px);
+  @include rem(margin-right, -84px);
 
   .submenu_list {
     padding: 8px;
@@ -1182,7 +1199,16 @@
   }
 }
 
-.submenu_opened {
-  overflow: hidden;
-  height: 100%;
+.container,
+.header .container,
+.header_nav .container,
+.site_nav .container {
+  max-width: 1250px;
+}
+
+@media all and (max-width: $screen-landscape) {
+  .submenu_opened {
+    overflow: hidden;
+    height: 100%;
+  }
 }
